@@ -1,4 +1,4 @@
-﻿Build started 10/27/2016 1:24:26 AM.
+﻿Build started 10/27/2016 2:24:20 AM.
      1>Project "G:\TFQuake\source\idlib.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Win32\Release\idlib.lastbuildstate".
@@ -154,4 +154,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:01:07.46
+Time Elapsed 00:01:14.48

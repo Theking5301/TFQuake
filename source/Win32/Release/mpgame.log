@@ -1,4 +1,4 @@
-﻿Build started 10/27/2016 1:25:33 AM.
+﻿Build started 10/27/2016 2:20:59 AM.
      1>Project "G:\TFQuake\source\mpgame.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Win32\Release\mpgame.lastbuildstate".
@@ -7,7 +7,7 @@
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc /Fp"Win32\Release\mpgame/mpgame.pch" /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\AF.cpp
          AF.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\Actor.cpp mpgame\AFEntity.cpp mpgame\BrittleFracture.cpp mpgame\Camera.cpp mpgame\Effect.cpp mpgame\Entity.cpp mpgame\Game_Debug.cpp mpgame\Game_local.cpp mpgame\Game_Log.cpp mpgame\Game_network.cpp mpgame\GameEdit.cpp mpgame\Healing_Station.cpp mpgame\Icon.cpp mpgame\IconManager.cpp mpgame\IK.cpp mpgame\Instance.cpp mpgame\Item.cpp mpgame\Light.cpp mpgame\LipSync.cpp mpgame\Misc.cpp mpgame\Moveable.cpp mpgame\Mover.cpp mpgame\MultiplayerGame.cpp mpgame\Playback.cpp mpgame\Player_Cheats.cpp mpgame\Projectile.cpp mpgame\Pvs.cpp mpgame\SecurityCamera.cpp mpgame\Sound.cpp mpgame\SplineMover.cpp mpgame\Target.cpp mpgame\TramGate.cpp mpgame\Trigger.cpp mpgame\WorldSpawn.cpp mpgame\Lagometer.cpp mpgame\ai\AAS.cpp mpgame\ai\AAS_debug.cpp mpgame\ai\AAS_Find.cpp mpgame\ai\AAS_pathing.cpp mpgame\ai\AAS_routing.cpp mpgame\ai\AAS_tactical.cpp mpgame\ai\AI.cpp mpgame\ai\AI_Actions.cpp mpgame\ai\AI_Announcements.cpp mpgame\ai\AI_Debug.cpp mpgame\ai\AI_events.cpp mpgame\ai\AI_Manager.cpp mpgame\ai\AI_Medic.cpp mpgame\ai\AI_Move.cpp mpgame\ai\AI_pathing.cpp mpgame\ai\AI_States.cpp mpgame\ai\AI_Tactical.cpp mpgame\ai\AI_Util.cpp mpgame\ai\Monster_Berserker.cpp mpgame\ai\Monster_BossBuddy.cpp mpgame\ai\Monster_BossMakron.cpp mpgame\ai\Monster_ConvoyGround.cpp mpgame\ai\Monster_ConvoyHover.cpp mpgame\ai\Monster_FailedTransfer.cpp mpgame\ai\Monster_Fatty.cpp mpgame\ai\Monster_Gladiator.cpp mpgame\ai\Monster_Grunt.cpp mpgame\ai\Monster_Gunner.cpp mpgame\ai\Monster_Harvester.cpp mpgame\ai\Monster_HarvesterDispersal.cpp mpgame\ai\Monster_HeavyHoverTank.cpp mpgame\ai\Monster_IronMaiden.cpp mpgame\ai\Monster_LightTank.cpp mpgame\ai\Monster_NetworkGuardian.cpp mpgame\ai\Monster_RepairBot.cpp mpgame\ai\Monster_Scientist.cpp mpgame\ai\Monster_Sentry.cpp mpgame\ai\Monster_SlimyTransfer.cpp mpgame\ai\Monster_StreamProtector.cpp mpgame\ai\Monster_StroggFlyer.cpp mpgame\ai\Monster_StroggHover.cpp mpgame\ai\Monster_StroggMarine.cpp mpgame\ai\Monster_TeleportDropper.cpp mpgame\ai\Monster_Turret.cpp mpgame\ai\Monster_TurretFlying.cpp mpgame\spawner.cpp mpgame\ai\VehicleAI.cpp mpgame\anim\Anim.cpp mpgame\anim\Anim_Blend.cpp mpgame\anim\Anim_Import.cpp mpgame\anim\Anim_Testmodel.cpp mpgame\client\ClientAFEntity.cpp mpgame\client\ClientEffect.cpp mpgame\client\ClientEntity.cpp mpgame\client\ClientModel.cpp mpgame\client\ClientMoveable.cpp mpgame\gamesys\Class.cpp mpgame\gamesys\DebugGraph.cpp mpgame\gamesys\Event.cpp mpgame\gamesys\SaveGame.cpp mpgame\gamesys\State.cpp mpgame\gamesys\SysCmds.cpp mpgame\gamesys\SysCvar.cpp mpgame\physics\Clip.cpp mpgame\physics\Force.cpp mpgame\physics\Force_Constant.cpp mpgame\physics\Force_Drag.cpp mpgame\physics\Force_Field.cpp mpgame\physics\Force_Spring.cpp mpgame\physics\Physics.cpp mpgame\physics\Physics_Actor.cpp mpgame\physics\Physics_AF.cpp mpgame\physics\Physics_Base.cpp mpgame\physics\Physics_Monster.cpp mpgame\physics\Physics_Parametric.cpp mpgame\physics\Physics_Particle.cpp mpgame\physics\Physics_Player.cpp mpgame\physics\Physics_RigidBody.cpp mpgame\physics\Physics_Static.cpp mpgame\physics\Physics_StaticMulti.cpp mpgame\physics\Physics_VehicleMonster.cpp mpgame\physics\Push.cpp mpgame\Player.cpp mpgame\Player_States.cpp mpgame\PlayerView.cpp mpgame\script\Script_Compiler.cpp mpgame\script\Script_Interpreter.cpp mpgame\script\Script_Program.cpp mpgame\script\Script_Thread.cpp mpgame\script\ScriptFuncUtility.cpp mpgame\vehicle\Vehicle.cpp mpgame\vehicle\Vehicle_DropPod.cpp mpgame\vehicle\Vehicle_Walker.cpp mpgame\vehicle\VehicleAnimated.cpp mpgame\vehicle\VehicleController.cpp mpgame\vehicle\VehicleDriver.cpp mpgame\vehicle\VehicleMonster.cpp mpgame\vehicle\VehicleParts.cpp mpgame\vehicle\VehiclePosition.cpp mpgame\vehicle\VehicleRigid.cpp mpgame\vehicle\VehicleSpline.cpp mpgame\vehicle\VehicleStatic.cpp mpgame\Weapon.cpp mpgame\weapon\WeaponBlaster.cpp mpgame\weapon\WeaponDarkMatterGun.cpp mpgame\weapon\WeaponGauntlet.cpp mpgame\weapon\WeaponGrenadeLauncher.cpp mpgame\weapon\WeaponHyperblaster.cpp mpgame\weapon\WeaponLightningGun.cpp mpgame\weapon\WeaponMachinegun.cpp mpgame\weapon\WeaponNailgun.cpp mpgame\weapon\WeaponNapalmGun.cpp mpgame\weapon\WeaponRailgun.cpp mpgame\weapon\WeaponRocketLauncher.cpp mpgame\weapon\WeaponShotgun.cpp mpgame\mp\Buying.cpp mpgame\mp\CTF.cpp mpgame\mp\GameState.cpp mpgame\mp\Tourney.cpp mpgame\mp\VoiceComms.cpp mpgame\mp\stats\StatEvent.cpp mpgame\mp\stats\StatManager.cpp mpgame\mp\stats\StatWindow.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\Actor.cpp mpgame\AFEntity.cpp mpgame\BrittleFracture.cpp mpgame\Camera.cpp mpgame\Effect.cpp mpgame\Entity.cpp mpgame\Game_Debug.cpp mpgame\Game_local.cpp mpgame\Game_Log.cpp mpgame\Game_network.cpp mpgame\GameEdit.cpp mpgame\Healing_Station.cpp mpgame\Icon.cpp mpgame\IconManager.cpp mpgame\IK.cpp mpgame\Instance.cpp mpgame\Item.cpp mpgame\Light.cpp mpgame\LipSync.cpp mpgame\Misc.cpp mpgame\Moveable.cpp mpgame\Mover.cpp mpgame\MultiplayerGame.cpp mpgame\Playback.cpp mpgame\Player_Cheats.cpp mpgame\Projectile.cpp mpgame\Pvs.cpp mpgame\SecurityCamera.cpp mpgame\Sound.cpp mpgame\SplineMover.cpp mpgame\Target.cpp mpgame\TFQuake\Gameplay\TFCapturePoint.cpp mpgame\TFQuake\Gameplay\TFQuakeUtils.cpp mpgame\TFQuake\Player\TFPlayer.cpp mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp mpgame\TFQuake\Weapons\TFHeavyKGB.cpp mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp mpgame\TFQuake\Weapons\TFMedicMedigun.cpp mpgame\TFQuake\Weapons\TFPyroFlamethrower.cpp mpgame\TFQuake\Weapons\TFScoutPistol.cpp mpgame\TFQuake\Weapons\TFScoutShotgun.cpp mpgame\TFQuake\Weapons\TFSniperRifle.cpp mpgame\TFQuake\Weapons\TFSniperSMG.cpp mpgame\TFQuake\Weapons\TFSoldierRocketLauncher.cpp mpgame\TramGate.cpp mpgame\Trigger.cpp mpgame\WorldSpawn.cpp mpgame\Lagometer.cpp mpgame\ai\AAS.cpp mpgame\ai\AAS_debug.cpp mpgame\ai\AAS_Find.cpp mpgame\ai\AAS_pathing.cpp mpgame\ai\AAS_routing.cpp mpgame\ai\AAS_tactical.cpp mpgame\ai\AI.cpp mpgame\ai\AI_Actions.cpp mpgame\ai\AI_Announcements.cpp mpgame\ai\AI_Debug.cpp mpgame\ai\AI_events.cpp mpgame\ai\AI_Manager.cpp mpgame\ai\AI_Medic.cpp mpgame\ai\AI_Move.cpp mpgame\ai\AI_pathing.cpp mpgame\ai\AI_States.cpp mpgame\ai\AI_Tactical.cpp mpgame\ai\AI_Util.cpp mpgame\ai\Monster_Berserker.cpp mpgame\ai\Monster_BossBuddy.cpp mpgame\ai\Monster_BossMakron.cpp mpgame\ai\Monster_ConvoyGround.cpp mpgame\ai\Monster_ConvoyHover.cpp mpgame\ai\Monster_FailedTransfer.cpp mpgame\ai\Monster_Fatty.cpp mpgame\ai\Monster_Gladiator.cpp mpgame\ai\Monster_Grunt.cpp mpgame\ai\Monster_Gunner.cpp mpgame\ai\Monster_Harvester.cpp mpgame\ai\Monster_HarvesterDispersal.cpp mpgame\ai\Monster_HeavyHoverTank.cpp mpgame\ai\Monster_IronMaiden.cpp mpgame\ai\Monster_LightTank.cpp mpgame\ai\Monster_NetworkGuardian.cpp mpgame\ai\Monster_RepairBot.cpp mpgame\ai\Monster_Scientist.cpp mpgame\ai\Monster_Sentry.cpp mpgame\ai\Monster_SlimyTransfer.cpp mpgame\ai\Monster_StreamProtector.cpp mpgame\ai\Monster_StroggFlyer.cpp mpgame\ai\Monster_StroggHover.cpp mpgame\ai\Monster_StroggMarine.cpp mpgame\ai\Monster_TeleportDropper.cpp mpgame\ai\Monster_Turret.cpp mpgame\ai\Monster_TurretFlying.cpp mpgame\spawner.cpp mpgame\ai\VehicleAI.cpp mpgame\anim\Anim.cpp mpgame\anim\Anim_Blend.cpp mpgame\anim\Anim_Import.cpp mpgame\anim\Anim_Testmodel.cpp mpgame\client\ClientAFEntity.cpp mpgame\client\ClientEffect.cpp mpgame\client\ClientEntity.cpp mpgame\client\ClientModel.cpp mpgame\client\ClientMoveable.cpp mpgame\gamesys\Class.cpp mpgame\gamesys\DebugGraph.cpp mpgame\gamesys\Event.cpp mpgame\gamesys\SaveGame.cpp mpgame\gamesys\State.cpp mpgame\gamesys\SysCmds.cpp mpgame\gamesys\SysCvar.cpp mpgame\physics\Clip.cpp mpgame\physics\Force.cpp mpgame\physics\Force_Constant.cpp mpgame\physics\Force_Drag.cpp mpgame\physics\Force_Field.cpp mpgame\physics\Force_Spring.cpp mpgame\physics\Physics.cpp mpgame\physics\Physics_Actor.cpp mpgame\physics\Physics_AF.cpp mpgame\physics\Physics_Base.cpp mpgame\physics\Physics_Monster.cpp mpgame\physics\Physics_Parametric.cpp mpgame\physics\Physics_Particle.cpp mpgame\physics\Physics_Player.cpp mpgame\physics\Physics_RigidBody.cpp mpgame\physics\Physics_Static.cpp mpgame\physics\Physics_StaticMulti.cpp mpgame\physics\Physics_VehicleMonster.cpp mpgame\physics\Push.cpp mpgame\Player.cpp mpgame\Player_States.cpp mpgame\PlayerView.cpp mpgame\script\Script_Compiler.cpp mpgame\script\Script_Interpreter.cpp mpgame\script\Script_Program.cpp mpgame\script\Script_Thread.cpp mpgame\script\ScriptFuncUtility.cpp mpgame\vehicle\Vehicle.cpp mpgame\vehicle\Vehicle_DropPod.cpp mpgame\vehicle\Vehicle_Walker.cpp mpgame\vehicle\VehicleAnimated.cpp mpgame\vehicle\VehicleController.cpp mpgame\vehicle\VehicleDriver.cpp mpgame\vehicle\VehicleMonster.cpp mpgame\vehicle\VehicleParts.cpp mpgame\vehicle\VehiclePosition.cpp mpgame\vehicle\VehicleRigid.cpp mpgame\vehicle\VehicleSpline.cpp mpgame\vehicle\VehicleStatic.cpp mpgame\Weapon.cpp mpgame\weapon\WeaponBlaster.cpp mpgame\weapon\WeaponDarkMatterGun.cpp mpgame\weapon\WeaponGauntlet.cpp mpgame\weapon\WeaponGrenadeLauncher.cpp mpgame\weapon\WeaponHyperblaster.cpp mpgame\weapon\WeaponLightningGun.cpp mpgame\weapon\WeaponMachinegun.cpp mpgame\weapon\WeaponNailgun.cpp mpgame\weapon\WeaponNapalmGun.cpp mpgame\weapon\WeaponRailgun.cpp mpgame\weapon\WeaponRocketLauncher.cpp mpgame\weapon\WeaponShotgun.cpp mpgame\mp\Buying.cpp mpgame\mp\CTF.cpp mpgame\mp\GameState.cpp mpgame\mp\Tourney.cpp mpgame\mp\VoiceComms.cpp mpgame\mp\stats\StatEvent.cpp mpgame\mp\stats\StatManager.cpp mpgame\mp\stats\StatWindow.cpp TFQuakeUtils.cpp
          Actor.cpp
          AFEntity.cpp
          BrittleFracture.cpp
@@ -41,15 +41,302 @@
          Sound.cpp
          SplineMover.cpp
          Target.cpp
-         TramGate.cpp
-         Trigger.cpp
-         WorldSpawn.cpp
-         Lagometer.cpp
-         AAS.cpp
-         AAS_debug.cpp
-         AAS_Find.cpp
-         AAS_pathing.cpp
-         AAS_routing.cpp
+         TFCapturePoint.cpp
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(51): error C2146: syntax error : missing ';' before identifier 'OwningTeam'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(53): error C2061: syntax error : identifier 'ETeamColor'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(54): error C2146: syntax error : missing ';' before identifier 'GetOwnership'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(54): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(54): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(54): warning C4183: 'GetOwnership': missing return type; assumed to be a member function returning 'int'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(176): error C2011: 'riDeadZonePowerup' : 'class' type redefinition
+                 g:\tfquake\source\mpgame\Item.h(167) : see declaration of 'riDeadZonePowerup'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(209): error C2011: 'rvItemCTFFlag' : 'class' type redefinition
+                 g:\tfquake\source\mpgame\Item.h(200) : see declaration of 'rvItemCTFFlag'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(241): error C2011: 'idObjective' : 'class' type redefinition
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(274): error C2011: 'idMoveableItem' : 'class' type redefinition
+                 g:\tfquake\source\mpgame\Item.h(265) : see declaration of 'idMoveableItem'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(327): error C2011: 'idObjectiveComplete' : 'class' type redefinition
+                 g:\tfquake\source\mpgame\Item.h(318) : see declaration of 'idObjectiveComplete'
+     1>g:\tfquake\source\mpgame\tfquake\gameplay\TFCapturePoint.h(359): error C2011: 'rvObjectiveFailed' : 'class' type redefinition
+                 g:\tfquake\source\mpgame\Item.h(350) : see declaration of 'rvObjectiveFailed'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(74): error C2065: 'OwningTeam' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(74): error C2065: 'Grey' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(78): error C2065: 'ETeamColor' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(78): error C2146: syntax error : missing ')' before identifier 'ColorTo'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(78): error C2761: 'bool TFCapturePoint::ChangeOwnership(void)' : member function redeclaration not allowed
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(78): error C2059: syntax error : ')'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(78): error C2143: syntax error : missing ';' before '{'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(78): error C2447: '{' : missing function header (old-style formal list?)
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(95): error C2143: syntax error : missing ';' before 'TFCapturePoint::GetOwnership'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(95): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(95): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(97): error C2065: 'OwningTeam' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(540): error C2027: use of undefined type 'rvItemCTFFlag'
+                 g:\tfquake\source\mpgame\Item.h(200) : see declaration of 'rvItemCTFFlag'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(633): error C2664: 'bool idPlayer::GiveItem(idItem *)' : cannot convert parameter 1 from 'TFCapturePoint *const ' to 'idItem *'
+                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(934): error C2664: 'bool idPlayer::GiveItem(idItem *)' : cannot convert parameter 1 from 'TFCapturePoint *const ' to 'idItem *'
+                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2065: 'eventCallbacks' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2065: 'CreateInstance' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2065: 'Spawn' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2065: 'stateCallbacks' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2065: 'Save' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2065: 'Restore' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2227: left of '->{ctor}' must point to class/struct/union/generic type
+                 type is 'idObjective *'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2227: left of '->FindUninitializedMemory' must point to class/struct/union/generic type
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2270: 'GetType' : modifiers not allowed on nonmember functions
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1279): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1280): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1280): error C2065: 'Event_Trigger' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1281): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1281): error C2065: 'Event_HideObjective' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1282): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1282): error C2065: 'Event_GetPlayerPos' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1283): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1283): error C2065: 'Event_CamShot' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1291): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1291): error C2059: syntax error : ')'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1291): error C2143: syntax error : missing ';' before '{'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1291): error C2447: '{' : missing function header (old-style formal list?)
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1305): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1305): error C2270: 'Save' : modifiers not allowed on nonmember functions
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1306): error C2065: 'playerPos' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1314): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1315): error C2065: 'playerPos' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1319): error C3861: 'PostEventMS': identifier not found
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1329): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1330): error C3861: 'Hide': identifier not found
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1335): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1335): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1336): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1336): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1337): error C3861: 'PostEventMS': identifier not found
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1348): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1353): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1353): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1356): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1356): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1379): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1382): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1382): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1388): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1388): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1392): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1392): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1393): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1393): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1395): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1395): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1395): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1395): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1401): error C2027: use of undefined type 'idObjectiveComplete'
+                 g:\tfquake\source\mpgame\Item.h(318) : see declaration of 'idObjectiveComplete'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1403): error C2065: 'spawnArgs' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1403): error C2228: left of '.GetString' must have class/struct/union
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1410): error C3861: 'PostEventMS': identifier not found
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1413): error C2065: 'triggerTime' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1425): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1428): error C2065: 'playerPos' : undeclared identifier
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1429): error C3861: 'PostEventMS': identifier not found
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1438): error C2027: use of undefined type 'idObjective'
+                 g:\tfquake\source\mpgame\Item.h(232) : see declaration of 'idObjective'
+     1>mpgame\TFQuake\Gameplay\TFCapturePoint.cpp(1438): fatal error C1003: error count exceeds 100; stopping compilation
+         TFQuakeUtils.cpp
+         TFPlayer.cpp
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'eventCallbacks' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'CreateInstance' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'Spawn' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'stateCallbacks' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'Save' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'Restore' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'TFPlayer' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'ptr' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2061: syntax error : identifier 'TFPlayer'
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'ptr' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2227: left of '->FindUninitializedMemory' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'ptr' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2270: 'GetType' : modifiers not allowed on nonmember functions
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2065: 'TFPlayer' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(119): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(121): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(121): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(121): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(121): error C2065: 'Event_ZoomIn' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(122): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(122): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(122): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(122): error C2065: 'Event_ZoomOut' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(123): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(123): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(123): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(123): error C2065: 'Event_GetButtons' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(124): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(124): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(124): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(124): error C2065: 'Event_GetMove' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(125): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(125): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(125): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(125): error C2065: 'Event_GetViewAngles' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(126): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(126): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(126): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(126): error C2065: 'Event_SetViewAngles' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(127): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(127): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(127): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(127): error C2065: 'Event_StopFxFov' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(128): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(128): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(128): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(128): error C2065: 'Event_EnableWeapon' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(129): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(129): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(129): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(129): error C2065: 'Event_DisableWeapon' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(130): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(130): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(130): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(130): error C2065: 'Event_GetCurrentWeapon' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(131): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(131): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(131): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(131): error C2065: 'Event_GetPreviousWeapon' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(132): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(132): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(132): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(132): error C2065: 'Event_SelectWeapon' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(133): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(133): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(133): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(133): error C2065: 'Event_GetWeaponEntity' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(134): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(134): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(134): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(134): error C2065: 'Event_ExitTeleporter' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(135): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(135): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(135): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(135): error C2065: 'Event_HideTip' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(136): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(136): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(136): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(136): error C2065: 'Event_LevelTrigger' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(137): error C2552: 'eventCallbacks' : non-aggregates cannot be initialized with initializer list
+                 'idEventFunc' : Types with user defined constructors are not aggregate
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(137): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(137): error C2653: 'TFPlayer' : is not a class or namespace name
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(137): error C2065: 'Event_GetViewPos' : undeclared identifier
+     1>mpgame\TFQuake\Player\TFPlayer.cpp(137): fatal error C1003: error count exceeds 100; stopping compilation
+         TFDemoGrenadeLauncher.cpp
+     1>mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFHeavyKGB.cpp
+     1>mpgame\TFQuake\Weapons\TFHeavyKGB.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFHeavyMinigun.cpp
+     1>mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFMedicMedigun.cpp
+     1>mpgame\TFQuake\Weapons\TFMedicMedigun.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFPyroFlamethrower.cpp
+     1>mpgame\TFQuake\Weapons\TFPyroFlamethrower.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFScoutPistol.cpp
+     1>mpgame\TFQuake\Weapons\TFScoutPistol.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
          Generating Code...
      1>g:\tfquake\source\idlib\math\curve.h(240): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
      1>g:\tfquake\source\idlib\math\curve.h(225): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
@@ -62,6 +349,23 @@
      1>g:\tfquake\source\idlib\math\curve.h(326): warning C4750: 'float __thiscall idCurve<class idVec3>::GetLengthBetweenKnots(int,int)const ': function with _alloca() inlined into a loop
      1>g:\tfquake\source\mpgame\mover.cpp(2139): warning C4750: 'float __thiscall idCurve<class idVec3>::GetTimeForLength(float,float)const ': function with _alloca() inlined into a loop
          Compiling...
+         TFScoutShotgun.cpp
+     1>mpgame\TFQuake\Weapons\TFScoutShotgun.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFSniperRifle.cpp
+     1>mpgame\TFQuake\Weapons\TFSniperRifle.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFSniperSMG.cpp
+     1>mpgame\TFQuake\Weapons\TFSniperSMG.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TFSoldierRocketLauncher.cpp
+     1>mpgame\TFQuake\Weapons\TFSoldierRocketLauncher.cpp(1): fatal error C1083: Cannot open include file: '../../idlib/precompiled.h': No such file or directory
+         TramGate.cpp
+         Trigger.cpp
+         WorldSpawn.cpp
+         Lagometer.cpp
+         AAS.cpp
+         AAS_debug.cpp
+         AAS_Find.cpp
+         AAS_pathing.cpp
+         AAS_routing.cpp
          AAS_tactical.cpp
          AI.cpp
          AI_Actions.cpp
@@ -69,6 +373,8 @@
          AI_Debug.cpp
          AI_events.cpp
          AI_Manager.cpp
+         Generating Code...
+         Compiling...
          AI_Medic.cpp
          AI_Move.cpp
          AI_pathing.cpp
@@ -82,8 +388,6 @@
          Monster_ConvoyHover.cpp
          Monster_FailedTransfer.cpp
          Monster_Fatty.cpp
-         Generating Code...
-         Compiling...
          Monster_Gladiator.cpp
          Monster_Grunt.cpp
          Monster_Gunner.cpp
@@ -91,6 +395,8 @@
          Monster_HarvesterDispersal.cpp
          Monster_HeavyHoverTank.cpp
          Monster_IronMaiden.cpp
+         Generating Code...
+         Compiling...
          Monster_LightTank.cpp
          Monster_NetworkGuardian.cpp
          Monster_RepairBot.cpp
@@ -104,8 +410,6 @@
          Monster_TeleportDropper.cpp
          Monster_Turret.cpp
          Monster_TurretFlying.cpp
-         Generating Code...
-         Compiling...
          spawner.cpp
          VehicleAI.cpp
          Anim.cpp
@@ -113,6 +417,8 @@
          Anim_Import.cpp
          Anim_Testmodel.cpp
          ClientAFEntity.cpp
+         Generating Code...
+         Compiling...
          ClientEffect.cpp
          ClientEntity.cpp
          ClientModel.cpp
@@ -126,8 +432,6 @@
          SysCvar.cpp
          Clip.cpp
          Force.cpp
-         Generating Code...
-         Compiling...
          Force_Constant.cpp
          Force_Drag.cpp
          Force_Field.cpp
@@ -135,6 +439,8 @@
          Physics.cpp
          Physics_Actor.cpp
          Physics_AF.cpp
+         Generating Code...
+         Compiling...
          Physics_Base.cpp
          Physics_Monster.cpp
          Physics_Parametric.cpp
@@ -148,12 +454,6 @@
          Player.cpp
          Player_States.cpp
          PlayerView.cpp
-         Generating Code...
-     1>g:\tfquake\source\idlib\math\curve.h(240): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
-     1>g:\tfquake\source\idlib\math\curve.h(225): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
-     1>g:\tfquake\source\idlib\math\curve.h(263): warning C4750: 'float __thiscall idCurve<class idVec3>::GetLengthBetweenKnots(int,int)const ': function with _alloca() inlined into a loop
-     1>g:\tfquake\source\idlib\math\curve.h(285): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
-         Compiling...
          Script_Compiler.cpp
          Script_Interpreter.cpp
          Script_Program.cpp
@@ -161,6 +461,18 @@
          ScriptFuncUtility.cpp
          Vehicle.cpp
          Vehicle_DropPod.cpp
+         Generating Code...
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(347): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1008): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1302): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1336): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1347): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1379): warning C4702: unreachable code
+     1>g:\tfquake\source\idlib\math\curve.h(240): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(225): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(263): warning C4750: 'float __thiscall idCurve<class idVec3>::GetLengthBetweenKnots(int,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(285): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+         Compiling...
          Vehicle_Walker.cpp
          VehicleAnimated.cpp
          VehicleController.cpp
@@ -174,14 +486,6 @@
          Weapon.cpp
          WeaponBlaster.cpp
          WeaponDarkMatterGun.cpp
-         Generating Code...
-     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(347): warning C4702: unreachable code
-     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1008): warning C4702: unreachable code
-     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1302): warning C4702: unreachable code
-     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1336): warning C4702: unreachable code
-     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1347): warning C4702: unreachable code
-     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1379): warning C4702: unreachable code
-         Compiling...
          WeaponGauntlet.cpp
          WeaponGrenadeLauncher.cpp
          WeaponHyperblaster.cpp
@@ -189,6 +493,8 @@
          WeaponMachinegun.cpp
          WeaponNailgun.cpp
          WeaponNapalmGun.cpp
+         Generating Code...
+         Compiling...
          WeaponRailgun.cpp
          WeaponRocketLauncher.cpp
          WeaponShotgun.cpp
@@ -200,217 +506,10 @@
          StatEvent.cpp
          StatManager.cpp
          StatWindow.cpp
+         TFQuakeUtils.cpp
          Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Win32\Release\mpgamex86.dll" /INCREMENTAL:NO /NOLOGO Win32\Release\idLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\mpgame\mpgame.def" /MANIFEST /ManifestFile:"Win32\Release\mpgamex86.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Win32\Release\mpgamex86.pdb" /MAP:"Win32\Release\mpgamex86.map" /MAPINFO:EXPORTS /STACK:"4194304" /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /TLBID:1 /BASE:"0x20000000" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Win32\Release\mpgame/Actor.obj
-         Win32\Release\mpgame/AF.obj
-         Win32\Release\mpgame/AFEntity.obj
-         Win32\Release\mpgame/BrittleFracture.obj
-         Win32\Release\mpgame/Camera.obj
-         Win32\Release\mpgame/Effect.obj
-         Win32\Release\mpgame/Entity.obj
-         Win32\Release\mpgame/Game_Debug.obj
-         Win32\Release\mpgame/Game_local.obj
-         Win32\Release\mpgame/Game_Log.obj
-         Win32\Release\mpgame/Game_network.obj
-         Win32\Release\mpgame/GameEdit.obj
-         Win32\Release\mpgame/Healing_Station.obj
-         Win32\Release\mpgame/Icon.obj
-         Win32\Release\mpgame/IconManager.obj
-         Win32\Release\mpgame/IK.obj
-         Win32\Release\mpgame/Instance.obj
-         Win32\Release\mpgame/Item.obj
-         Win32\Release\mpgame/Light.obj
-         Win32\Release\mpgame/LipSync.obj
-         Win32\Release\mpgame/Misc.obj
-         Win32\Release\mpgame/Moveable.obj
-         Win32\Release\mpgame/Mover.obj
-         Win32\Release\mpgame/MultiplayerGame.obj
-         Win32\Release\mpgame/Playback.obj
-         Win32\Release\mpgame/Player_Cheats.obj
-         Win32\Release\mpgame/Projectile.obj
-         Win32\Release\mpgame/Pvs.obj
-         Win32\Release\mpgame/SecurityCamera.obj
-         Win32\Release\mpgame/Sound.obj
-         Win32\Release\mpgame/SplineMover.obj
-         Win32\Release\mpgame/Target.obj
-         Win32\Release\mpgame/TramGate.obj
-         Win32\Release\mpgame/Trigger.obj
-         Win32\Release\mpgame/WorldSpawn.obj
-         Win32\Release\mpgame/Lagometer.obj
-         Win32\Release\mpgame/AAS.obj
-         Win32\Release\mpgame/AAS_debug.obj
-         Win32\Release\mpgame/AAS_Find.obj
-         Win32\Release\mpgame/AAS_pathing.obj
-         Win32\Release\mpgame/AAS_routing.obj
-         Win32\Release\mpgame/AAS_tactical.obj
-         Win32\Release\mpgame/AI.obj
-         Win32\Release\mpgame/AI_Actions.obj
-         Win32\Release\mpgame/AI_Announcements.obj
-         Win32\Release\mpgame/AI_Debug.obj
-         Win32\Release\mpgame/AI_events.obj
-         Win32\Release\mpgame/AI_Manager.obj
-         Win32\Release\mpgame/AI_Medic.obj
-         Win32\Release\mpgame/AI_Move.obj
-         Win32\Release\mpgame/AI_pathing.obj
-         Win32\Release\mpgame/AI_States.obj
-         Win32\Release\mpgame/AI_Tactical.obj
-         Win32\Release\mpgame/AI_Util.obj
-         Win32\Release\mpgame/Monster_Berserker.obj
-         Win32\Release\mpgame/Monster_BossBuddy.obj
-         Win32\Release\mpgame/Monster_BossMakron.obj
-         Win32\Release\mpgame/Monster_ConvoyGround.obj
-         Win32\Release\mpgame/Monster_ConvoyHover.obj
-         Win32\Release\mpgame/Monster_FailedTransfer.obj
-         Win32\Release\mpgame/Monster_Fatty.obj
-         Win32\Release\mpgame/Monster_Gladiator.obj
-         Win32\Release\mpgame/Monster_Grunt.obj
-         Win32\Release\mpgame/Monster_Gunner.obj
-         Win32\Release\mpgame/Monster_Harvester.obj
-         Win32\Release\mpgame/Monster_HarvesterDispersal.obj
-         Win32\Release\mpgame/Monster_HeavyHoverTank.obj
-         Win32\Release\mpgame/Monster_IronMaiden.obj
-         Win32\Release\mpgame/Monster_LightTank.obj
-         Win32\Release\mpgame/Monster_NetworkGuardian.obj
-         Win32\Release\mpgame/Monster_RepairBot.obj
-         Win32\Release\mpgame/Monster_Scientist.obj
-         Win32\Release\mpgame/Monster_Sentry.obj
-         Win32\Release\mpgame/Monster_SlimyTransfer.obj
-         Win32\Release\mpgame/Monster_StreamProtector.obj
-         Win32\Release\mpgame/Monster_StroggFlyer.obj
-         Win32\Release\mpgame/Monster_StroggHover.obj
-         Win32\Release\mpgame/Monster_StroggMarine.obj
-         Win32\Release\mpgame/Monster_TeleportDropper.obj
-         Win32\Release\mpgame/Monster_Turret.obj
-         Win32\Release\mpgame/Monster_TurretFlying.obj
-         Win32\Release\mpgame/spawner.obj
-         Win32\Release\mpgame/VehicleAI.obj
-         Win32\Release\mpgame/Anim.obj
-         Win32\Release\mpgame/Anim_Blend.obj
-         Win32\Release\mpgame/Anim_Import.obj
-         Win32\Release\mpgame/Anim_Testmodel.obj
-         Win32\Release\mpgame/ClientAFEntity.obj
-         Win32\Release\mpgame/ClientEffect.obj
-         Win32\Release\mpgame/ClientEntity.obj
-         Win32\Release\mpgame/ClientModel.obj
-         Win32\Release\mpgame/ClientMoveable.obj
-         Win32\Release\mpgame/Class.obj
-         Win32\Release\mpgame/DebugGraph.obj
-         Win32\Release\mpgame/Event.obj
-         Win32\Release\mpgame/SaveGame.obj
-         Win32\Release\mpgame/State.obj
-         Win32\Release\mpgame/SysCmds.obj
-         Win32\Release\mpgame/SysCvar.obj
-         Win32\Release\mpgame/Clip.obj
-         Win32\Release\mpgame/Force.obj
-         Win32\Release\mpgame/Force_Constant.obj
-         Win32\Release\mpgame/Force_Drag.obj
-         Win32\Release\mpgame/Force_Field.obj
-         Win32\Release\mpgame/Force_Spring.obj
-         Win32\Release\mpgame/Physics.obj
-         Win32\Release\mpgame/Physics_Actor.obj
-         Win32\Release\mpgame/Physics_AF.obj
-         Win32\Release\mpgame/Physics_Base.obj
-         Win32\Release\mpgame/Physics_Monster.obj
-         Win32\Release\mpgame/Physics_Parametric.obj
-         Win32\Release\mpgame/Physics_Particle.obj
-         Win32\Release\mpgame/Physics_Player.obj
-         Win32\Release\mpgame/Physics_RigidBody.obj
-         Win32\Release\mpgame/Physics_Static.obj
-         Win32\Release\mpgame/Physics_StaticMulti.obj
-         Win32\Release\mpgame/Physics_VehicleMonster.obj
-         Win32\Release\mpgame/Push.obj
-         Win32\Release\mpgame/Player.obj
-         Win32\Release\mpgame/Player_States.obj
-         Win32\Release\mpgame/PlayerView.obj
-         Win32\Release\mpgame/Script_Compiler.obj
-         Win32\Release\mpgame/Script_Interpreter.obj
-         Win32\Release\mpgame/Script_Program.obj
-         Win32\Release\mpgame/Script_Thread.obj
-         Win32\Release\mpgame/ScriptFuncUtility.obj
-         Win32\Release\mpgame/Vehicle.obj
-         Win32\Release\mpgame/Vehicle_DropPod.obj
-         Win32\Release\mpgame/Vehicle_Walker.obj
-         Win32\Release\mpgame/VehicleAnimated.obj
-         Win32\Release\mpgame/VehicleController.obj
-         Win32\Release\mpgame/VehicleDriver.obj
-         Win32\Release\mpgame/VehicleMonster.obj
-         Win32\Release\mpgame/VehicleParts.obj
-         Win32\Release\mpgame/VehiclePosition.obj
-         Win32\Release\mpgame/VehicleRigid.obj
-         Win32\Release\mpgame/VehicleSpline.obj
-         Win32\Release\mpgame/VehicleStatic.obj
-         Win32\Release\mpgame/Weapon.obj
-         Win32\Release\mpgame/WeaponBlaster.obj
-         Win32\Release\mpgame/WeaponDarkMatterGun.obj
-         Win32\Release\mpgame/WeaponGauntlet.obj
-         Win32\Release\mpgame/WeaponGrenadeLauncher.obj
-         Win32\Release\mpgame/WeaponHyperblaster.obj
-         Win32\Release\mpgame/WeaponLightningGun.obj
-         Win32\Release\mpgame/WeaponMachinegun.obj
-         Win32\Release\mpgame/WeaponNailgun.obj
-         Win32\Release\mpgame/WeaponNapalmGun.obj
-         Win32\Release\mpgame/WeaponRailgun.obj
-         Win32\Release\mpgame/WeaponRocketLauncher.obj
-         Win32\Release\mpgame/WeaponShotgun.obj
-         Win32\Release\mpgame/Buying.obj
-         Win32\Release\mpgame/CTF.obj
-         Win32\Release\mpgame/GameState.obj
-         Win32\Release\mpgame/Tourney.obj
-         Win32\Release\mpgame/VoiceComms.obj
-         Win32\Release\mpgame/StatEvent.obj
-         Win32\Release\mpgame/StatManager.obj
-         Win32\Release\mpgame/StatWindow.obj
-         G:\TFQuake\source\Win32\Release\idlib.lib /MACHINE:I386 /fixed:no 
-            Creating library Win32\Release\mpgamex86.lib and object Win32\Release\mpgamex86.exp
-     1>idLib.lib(BitMsg.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(BitMsg.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(CmdArgs.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(CmdArgs.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Dict.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Dict.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Heap.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Heap.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Lexer.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Lexer.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(LexerFactory.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(LexerFactory.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Lib.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Lib.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(mapfile.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(mapfile.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Parser.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Parser.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Str.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Str.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Timer.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Timer.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Token.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Token.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Bounds.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Bounds.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Box.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Box.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Frustum.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Frustum.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Sphere.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Sphere.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(HashIndex.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(HashIndex.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(JointTransform.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(JointTransform.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Surface.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Surface.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Surface_Patch.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Surface_Patch.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(TraceModel.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(TraceModel.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Winding.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Winding.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Winding2D.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Winding2D.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Angles.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Angles.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Lcp.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Lcp.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Math.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Math.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Matrix.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Matrix.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Ode.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Ode.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Polynomial.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Polynomial.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Quat.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Quat.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Rotation.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Rotation.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Simd.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Simd.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Simd_3DNow.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Simd_3DNow.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Simd_generic.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Simd_generic.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Simd_MMX.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Simd_MMX.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Simd_SSE.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Simd_SSE.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Simd_SSE2.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Simd_SSE2.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Simd_SSE3.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Simd_SSE3.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(Vector.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(Vector.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(CRC32.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(CRC32.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(MD4.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(MD4.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-     1>idLib.lib(MD5.obj) : warning LNK4099: PDB 'idlib.pdb' was not found with 'idLib.lib(MD5.obj)' or at 'G:\TFQuake\source\Win32\Release\idlib.pdb'; linking object as if no debug info
-         mpgame.vcxproj -> G:\TFQuake\source\Win32\Release\mpgamex86.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"Win32\Release\mpgamex86.dll;#2" /manifest Win32\Release\mpgamex86.dll.intermediate.manifest
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(562,5): error MSB6006: "mt.exe" exited with code 31.
      1>Done Building Project "G:\TFQuake\source\mpgame.vcxproj" (rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:02:16.79
+Time Elapsed 00:02:26.73

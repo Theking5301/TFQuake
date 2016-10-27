@@ -40,8 +40,17 @@
     <Filter Include="Game\Resource">
       <UniqueIdentifier>{d173eb42-05af-4fb2-960d-aac37bee359c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Weapon\TFWeapons">
+    <Filter Include="Game\TFQuake">
+      <UniqueIdentifier>{d6305e83-df16-46b6-a7f7-05140926a433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\TFQuake\Gameplay">
+      <UniqueIdentifier>{3e6e5d1f-97e5-40e5-b506-876a04a32277}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\TFQuake\Weapons">
       <UniqueIdentifier>{fde49ca7-7216-4545-9d82-460af7d45615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\TFQuake\Player">
+      <UniqueIdentifier>{ece8f824-b7fa-4d98-a18e-2822fd02b4ab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -522,8 +531,45 @@
     <ClCompile Include="mpgame\mp\stats\StatWindow.cpp">
       <Filter>Game\MP\Stats</Filter>
     </ClCompile>
-    <ClCompile Include="mpgame\weapon\TFWeapons\TFScoutShotgun.cpp">
-      <Filter>Game\Weapon\TFWeapons</Filter>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyKGB.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFMedicMedigun.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFPyroFlamethrower.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutPistol.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutShotgun.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSniperRifle.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSniperSMG.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSoldierRocketLauncher.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Gameplay\TFCapturePoint.cpp">
+      <Filter>Game\TFQuake\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="TFQuakeUtils.cpp" />
+    <ClCompile Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.cpp">
+      <Filter>Game\TFQuake\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Player\TFPlayer.cpp">
+      <Filter>Game\TFQuake\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -835,6 +881,16 @@
     </ClInclude>
     <ClInclude Include="mpgame\mp\stats\StatWindow.h">
       <Filter>Game\MP\Stats</Filter>
+    </ClInclude>
+    <ClInclude Include="mpgame\TFQuake\Gameplay\TFCapturePoint.h">
+      <Filter>Game\TFQuake\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="TFQuakeUtils.h" />
+    <ClInclude Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.h">
+      <Filter>Game\TFQuake\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="mpgame\TFQuake\Player\TFPlayer.h">
+      <Filter>Game\TFQuake\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
