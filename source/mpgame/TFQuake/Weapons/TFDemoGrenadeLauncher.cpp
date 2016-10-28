@@ -1,8 +1,8 @@
-#include "../../idlib/precompiled.h"
+#include "../../../idlib/precompiled.h"
 #pragma hdrstop
 
-#include "../Game_local.h"
-#include "../Weapon.h"
+#include "../../Game_local.h"
+#include "../../Weapon.h"
 
 class TFDemoGrenadeLauncher : public rvWeapon {
 public:

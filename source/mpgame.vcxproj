@@ -63,6 +63,7 @@
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mpgamex86</TargetName>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Project)\mpgame\TFQuake\Gameplay;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -244,14 +245,10 @@
     <ClCompile Include="mpgame\Sound.cpp" />
     <ClCompile Include="mpgame\SplineMover.cpp" />
     <ClCompile Include="mpgame\Target.cpp" />
-    <ClCompile Include="mpgame\TFQuake\Gameplay\TFCapturePoint.cpp" />
     <ClCompile Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.cpp" />
-    <ClCompile Include="mpgame\TFQuake\Player\TFPlayer.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyKGB.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp" />
-    <ClCompile Include="mpgame\TFQuake\Weapons\TFMedicMedigun.cpp" />
-    <ClCompile Include="mpgame\TFQuake\Weapons\TFPyroFlamethrower.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutPistol.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutShotgun.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFSniperRifle.cpp" />
@@ -384,7 +381,6 @@
     <ClCompile Include="mpgame\mp\stats\StatEvent.cpp" />
     <ClCompile Include="mpgame\mp\stats\StatManager.cpp" />
     <ClCompile Include="mpgame\mp\stats\StatWindow.cpp" />
-    <ClCompile Include="TFQuakeUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mpgame\Actor.h" />
@@ -417,9 +413,7 @@
     <ClInclude Include="mpgame\Sound.h" />
     <ClInclude Include="mpgame\SplineMover.h" />
     <ClInclude Include="mpgame\Target.h" />
-    <ClInclude Include="mpgame\TFQuake\Gameplay\TFCapturePoint.h" />
     <ClInclude Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.h" />
-    <ClInclude Include="mpgame\TFQuake\Player\TFPlayer.h" />
     <ClInclude Include="mpgame\TramGate.h" />
     <ClInclude Include="mpgame\Trigger.h" />
     <ClInclude Include="mpgame\WorldSpawn.h" />
@@ -493,7 +487,6 @@
     <ClInclude Include="mpgame\mp\stats\StatEvent.h" />
     <ClInclude Include="mpgame\mp\stats\StatManager.h" />
     <ClInclude Include="mpgame\mp\stats\StatWindow.h" />
-    <ClInclude Include="TFQuakeUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mpgame\Game.def" />

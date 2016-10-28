@@ -1,157 +1,19 @@
-﻿Build started 10/27/2016 2:24:20 AM.
-     1>Project "G:\TFQuake\source\idlib.vcxproj" on node 2 (rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Win32\Release\idlib.lastbuildstate".
-       InitializeBuildStatus:
+﻿Build started 10/27/2016 2:25:44 PM.
+     1>Project "C:\Program Files (x86)\Steam\steamapps\common\Quake 4\TFQuake\source\idlib.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
          Creating "Win32\Release\idlib.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Imssdk/include /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D _CRT_SECURE_NO_WARNINGS /D Q4SDK /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc /Fp"Win32\Release\idlib/idlib.pch" /Fo"Win32\Release\idlib/" /Fd"Win32\Release\idlib.pdb" /Gd /TP /analyze- /errorReport:prompt idlib\Lib.cpp
-         Lib.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Imssdk/include /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D _CRT_SECURE_NO_WARNINGS /D Q4SDK /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu /Fp"Win32\Release\idlib/idlib.pch" /Fo"Win32\Release\idlib/" /Fd"Win32\Release\idlib.pdb" /Gd /TP /analyze- /errorReport:prompt idlib\Base64.cpp
-         Base64.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Imssdk/include /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D _CRT_SECURE_NO_WARNINGS /D Q4SDK /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Release\idlib/" /Fd"Win32\Release\idlib.pdb" /Gd /TP /analyze- /errorReport:prompt idlib\BitMsg.cpp idlib\CmdArgs.cpp idlib\Dict.cpp idlib\Heap.cpp idlib\LangDict.cpp idlib\Lexer.cpp idlib\LexerFactory.cpp idlib\mapfile.cpp idlib\Parser.cpp idlib\rvHeap.cpp idlib\rvHeapArena.cpp idlib\rvMemSys.cpp idlib\Str.cpp idlib\TextCompiler.cpp idlib\Timer.cpp idlib\TimingCollection.cpp idlib\Token.cpp idlib\bv\Bounds.cpp idlib\bv\Box.cpp idlib\bv\Frustum.cpp idlib\bv\Sphere.cpp idlib\containers\HashIndex.cpp idlib\geometry\JointTransform.cpp idlib\geometry\Surface.cpp idlib\geometry\Surface_Patch.cpp idlib\geometry\Surface_Polytope.cpp idlib\geometry\Surface_SweptSpline.cpp idlib\geometry\TraceModel.cpp idlib\geometry\Winding.cpp idlib\geometry\Winding2D.cpp idlib\math\Angles.cpp idlib\math\Complex.cpp idlib\math\FFT.cpp idlib\math\Lcp.cpp idlib\math\Math.cpp idlib\math\Matrix.cpp idlib\math\Ode.cpp idlib\math\Plane.cpp idlib\math\Pluecker.cpp idlib\math\Polynomial.cpp idlib\math\Quat.cpp idlib\math\Radians.cpp idlib\math\Rotation.cpp idlib\math\Simd.cpp idlib\math\Simd_3DNow.cpp idlib\math\Simd_generic.cpp idlib\math\Simd_MMX.cpp idlib\math\Simd_SSE.cpp idlib\math\Simd_SSE2.cpp idlib\math\Simd_SSE3.cpp idlib\math\Vector.cpp idlib\hashing\CRC16.cpp idlib\hashing\CRC32.cpp idlib\hashing\CRC8.cpp idlib\hashing\Honeyman.cpp idlib\hashing\MD4.cpp idlib\hashing\MD5.cpp
-         BitMsg.cpp
-         CmdArgs.cpp
-         Dict.cpp
-         Heap.cpp
-         LangDict.cpp
-         Lexer.cpp
-         LexerFactory.cpp
-         mapfile.cpp
-         Parser.cpp
-         rvHeap.cpp
-         rvHeapArena.cpp
-         rvMemSys.cpp
-         Str.cpp
-         TextCompiler.cpp
-         Timer.cpp
-         TimingCollection.cpp
-         Token.cpp
-         Bounds.cpp
-         Box.cpp
-         Frustum.cpp
-         Generating Code...
-         Compiling...
-         Sphere.cpp
-         HashIndex.cpp
-         JointTransform.cpp
-         Surface.cpp
-         Surface_Patch.cpp
-         Surface_Polytope.cpp
-         Surface_SweptSpline.cpp
-         TraceModel.cpp
-         Winding.cpp
-         Winding2D.cpp
-         Angles.cpp
-         Complex.cpp
-         FFT.cpp
-         Lcp.cpp
-         Math.cpp
-         Matrix.cpp
-         Ode.cpp
-         Plane.cpp
-         Pluecker.cpp
-         Polynomial.cpp
-         Generating Code...
-     1>g:\tfquake\source\idlib\math\matrix.cpp(3782): warning C4750: 'class idMatX & __thiscall idMatX::SwapRows(int,int)': function with _alloca() inlined into a loop
-     1>g:\tfquake\source\idlib\math\lcp.cpp(640): warning C4750: 'void __thiscall idLCP_Square::CalcForceDelta(int,float)': function with _alloca() inlined into a loop
-         Compiling...
-         Quat.cpp
-         Radians.cpp
-         Rotation.cpp
-         Simd.cpp
-         Simd_3DNow.cpp
-         Simd_generic.cpp
-         Simd_MMX.cpp
-         Simd_SSE.cpp
-         Simd_SSE2.cpp
-         Simd_SSE3.cpp
-         Vector.cpp
-         CRC16.cpp
-         CRC32.cpp
-         CRC8.cpp
-         Honeyman.cpp
-         MD4.cpp
-         MD5.cpp
-         Generating Code...
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2737): warning C4740: flow in or out of inline asm code suppresses global optimization
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2748): warning C4740: flow in or out of inline asm code suppresses global optimization
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2759): warning C4740: flow in or out of inline asm code suppresses global optimization
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2770): warning C4740: flow in or out of inline asm code suppresses global optimization
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2781): warning C4740: flow in or out of inline asm code suppresses global optimization
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2792): warning C4740: flow in or out of inline asm code suppresses global optimization
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2803): warning C4740: flow in or out of inline asm code suppresses global optimization
-     1>g:\tfquake\source\idlib\math\simd_sse.cpp(2814): warning C4740: flow in or out of inline asm code suppresses global optimization
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+         All outputs are up-to-date.
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"Win32\Release\idlib.lib" /NOLOGO Win32\Release\idlib/Base64.obj
-         Win32\Release\idlib/BitMsg.obj
-         Win32\Release\idlib/CmdArgs.obj
-         Win32\Release\idlib/Dict.obj
-         Win32\Release\idlib/Heap.obj
-         Win32\Release\idlib/LangDict.obj
-         Win32\Release\idlib/Lexer.obj
-         Win32\Release\idlib/LexerFactory.obj
-         Win32\Release\idlib/Lib.obj
-         Win32\Release\idlib/mapfile.obj
-         Win32\Release\idlib/Parser.obj
-         Win32\Release\idlib/rvHeap.obj
-         Win32\Release\idlib/rvHeapArena.obj
-         Win32\Release\idlib/rvMemSys.obj
-         Win32\Release\idlib/Str.obj
-         Win32\Release\idlib/TextCompiler.obj
-         Win32\Release\idlib/Timer.obj
-         Win32\Release\idlib/TimingCollection.obj
-         Win32\Release\idlib/Token.obj
-         Win32\Release\idlib/Bounds.obj
-         Win32\Release\idlib/Box.obj
-         Win32\Release\idlib/Frustum.obj
-         Win32\Release\idlib/Sphere.obj
-         Win32\Release\idlib/HashIndex.obj
-         Win32\Release\idlib/JointTransform.obj
-         Win32\Release\idlib/Surface.obj
-         Win32\Release\idlib/Surface_Patch.obj
-         Win32\Release\idlib/Surface_Polytope.obj
-         Win32\Release\idlib/Surface_SweptSpline.obj
-         Win32\Release\idlib/TraceModel.obj
-         Win32\Release\idlib/Winding.obj
-         Win32\Release\idlib/Winding2D.obj
-         Win32\Release\idlib/Angles.obj
-         Win32\Release\idlib/Complex.obj
-         Win32\Release\idlib/FFT.obj
-         Win32\Release\idlib/Lcp.obj
-         Win32\Release\idlib/Math.obj
-         Win32\Release\idlib/Matrix.obj
-         Win32\Release\idlib/Ode.obj
-         Win32\Release\idlib/Plane.obj
-         Win32\Release\idlib/Pluecker.obj
-         Win32\Release\idlib/Polynomial.obj
-         Win32\Release\idlib/Quat.obj
-         Win32\Release\idlib/Radians.obj
-         Win32\Release\idlib/Rotation.obj
-         Win32\Release\idlib/Simd.obj
-         Win32\Release\idlib/Simd_3DNow.obj
-         Win32\Release\idlib/Simd_generic.obj
-         Win32\Release\idlib/Simd_MMX.obj
-         Win32\Release\idlib/Simd_SSE.obj
-         Win32\Release\idlib/Simd_SSE2.obj
-         Win32\Release\idlib/Simd_SSE3.obj
-         Win32\Release\idlib/Vector.obj
-         Win32\Release\idlib/CRC16.obj
-         Win32\Release\idlib/CRC32.obj
-         Win32\Release\idlib/CRC8.obj
-         Win32\Release\idlib/Honeyman.obj
-         Win32\Release\idlib/MD4.obj
-         Win32\Release\idlib/MD5.obj
-     1>TextCompiler.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-     1>rvMemSys.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-     1>rvHeapArena.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-     1>rvHeap.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-         idlib.vcxproj -> G:\TFQuake\source\Win32\Release\idlib.lib
+         All outputs are up-to-date.
+         idlib.vcxproj -> C:\Program Files (x86)\Steam\steamapps\common\Quake 4\TFQuake\source\Win32\Release\idlib.lib
        FinalizeBuildStatus:
          Deleting file "Win32\Release\idlib.unsuccessfulbuild".
          Touching "Win32\Release\idlib.lastbuildstate".
-     1>Done Building Project "G:\TFQuake\source\idlib.vcxproj" (rebuild target(s)).
+     1>Done Building Project "C:\Program Files (x86)\Steam\steamapps\common\Quake 4\TFQuake\source\idlib.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:01:14.48
+Time Elapsed 00:00:00.22

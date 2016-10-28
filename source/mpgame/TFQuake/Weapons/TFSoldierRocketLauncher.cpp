@@ -1,12 +1,12 @@
-#include "../../idlib/precompiled.h"
+#include "../../../idlib/precompiled.h"
 #pragma hdrstop
 
-#include "../Game_local.h"
-#include "../Weapon.h"
-#include "../client/ClientEffect.h"
+#include "../../Game_local.h"
+#include "../../Weapon.h"
+#include "../../client/ClientEffect.h"
 
 #ifndef __GAME_PROJECTILE_H__
-#include "../Projectile.h"
+#include "../../Projectile.h"
 #endif
 
 class TFSoldierRocketLauncher : public rvWeapon {

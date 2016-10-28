@@ -540,12 +540,6 @@
     <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp">
       <Filter>Game\TFQuake\Weapons</Filter>
     </ClCompile>
-    <ClCompile Include="mpgame\TFQuake\Weapons\TFMedicMedigun.cpp">
-      <Filter>Game\TFQuake\Weapons</Filter>
-    </ClCompile>
-    <ClCompile Include="mpgame\TFQuake\Weapons\TFPyroFlamethrower.cpp">
-      <Filter>Game\TFQuake\Weapons</Filter>
-    </ClCompile>
     <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutPistol.cpp">
       <Filter>Game\TFQuake\Weapons</Filter>
     </ClCompile>
@@ -561,15 +555,8 @@
     <ClCompile Include="mpgame\TFQuake\Weapons\TFSoldierRocketLauncher.cpp">
       <Filter>Game\TFQuake\Weapons</Filter>
     </ClCompile>
-    <ClCompile Include="mpgame\TFQuake\Gameplay\TFCapturePoint.cpp">
-      <Filter>Game\TFQuake\Gameplay</Filter>
-    </ClCompile>
-    <ClCompile Include="TFQuakeUtils.cpp" />
     <ClCompile Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.cpp">
       <Filter>Game\TFQuake\Gameplay</Filter>
-    </ClCompile>
-    <ClCompile Include="mpgame\TFQuake\Player\TFPlayer.cpp">
-      <Filter>Game\TFQuake\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -882,15 +869,8 @@
     <ClInclude Include="mpgame\mp\stats\StatWindow.h">
       <Filter>Game\MP\Stats</Filter>
     </ClInclude>
-    <ClInclude Include="mpgame\TFQuake\Gameplay\TFCapturePoint.h">
-      <Filter>Game\TFQuake\Gameplay</Filter>
-    </ClInclude>
-    <ClInclude Include="TFQuakeUtils.h" />
     <ClInclude Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.h">
       <Filter>Game\TFQuake\Gameplay</Filter>
-    </ClInclude>
-    <ClInclude Include="mpgame\TFQuake\Player\TFPlayer.h">
-      <Filter>Game\TFQuake\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
