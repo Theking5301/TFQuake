@@ -161,7 +161,7 @@ entityDef weapon_railgun
 
 	"zoomFov"					"40"
 	"zoomTime"					".1"
-	"zoomHideCrosshair"			"0"
+	"zoomHideCrosshair"			"1"
 	"gui_zoom"					"guis/weapons/railgun_scope.gui"
 
 	"net_syncPhysics"			"1"
@@ -184,7 +184,7 @@ entityDef weapon_railgun_mp
 	"muzzle_kick_offset"		"0.5 .15 .15" // 1 1 2" //"2.5 1 2" //was 0 0 0
 	
 	"recoilTime"				"600" //was 0	
-	"recoilAngles"				"-.10 0 0" //was 0 0 0
+	"recoilAngles"				"-.20 0 0" //was 0 0 0
 	"muzzleTint"				"1"
 	
 	"respawn_Team DM"			"30"
