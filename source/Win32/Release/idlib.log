@@ -1,5 +1,5 @@
-﻿Build started 10/27/2016 2:25:44 PM.
-     1>Project "C:\Program Files (x86)\Steam\steamapps\common\Quake 4\TFQuake\source\idlib.vcxproj" on node 2 (build target(s)).
+﻿Build started 10/29/2016 12:30:42 AM.
+     1>Project "G:\TFQuake\source\idlib.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Win32\Release\idlib.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
@@ -8,12 +8,12 @@
          All outputs are up-to-date.
        Lib:
          All outputs are up-to-date.
-         idlib.vcxproj -> C:\Program Files (x86)\Steam\steamapps\common\Quake 4\TFQuake\source\Win32\Release\idlib.lib
+         idlib.vcxproj -> G:\TFQuake\source\Win32\Release\idlib.lib
        FinalizeBuildStatus:
          Deleting file "Win32\Release\idlib.unsuccessfulbuild".
          Touching "Win32\Release\idlib.lastbuildstate".
-     1>Done Building Project "C:\Program Files (x86)\Steam\steamapps\common\Quake 4\TFQuake\source\idlib.vcxproj" (build target(s)).
+     1>Done Building Project "G:\TFQuake\source\idlib.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.22
+Time Elapsed 00:00:00.08

@@ -1423,6 +1423,17 @@ void idClass::RegisterClasses( void )
 	REGISTER(rvWeaponRailgun); // ..\..\code\game\weapon\WeaponRailgun.cpp
 	REGISTER(rvWeaponRocketLauncher); // ..\..\code\game\weapon\WeaponRocketLauncher.cpp
 	REGISTER(rvWeaponShotgun); // ..\..\code\game\weapon\WeaponShotgun.cpp
+
+	//SD BEGIN
+	REGISTER(TFDemoGrenadeLauncher); 
+	REGISTER(TFHeavyKGB); 
+	REGISTER(TFHeavyMinigun); 
+	REGISTER(TFScoutPistol); 
+	REGISTER(TFScoutShotgun); 
+	REGISTER(TFSniperRifle); 
+	REGISTER(TFSniperSMG); 
+	REGISTER(TFSoldierRocketLauncher); 
+
 // RITUAL BEGIN
 	REGISTER(riDeadZonePowerup); // ..\..\code\game\Item.cpp
 	REGISTER(WeaponNapalmGun);	// ..\..\code\game\weapon\WeaponNapalmGun.cpp

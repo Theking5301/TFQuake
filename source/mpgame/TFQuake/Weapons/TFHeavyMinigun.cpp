@@ -51,6 +51,12 @@ protected:
 	int									guideHoldTime;
 	int									guideAquireTime;
 
+	//SD_BEGIN
+	bool								bIsAttackHeld;
+	float								currentSpinSpeed;
+	float								maxSpinSpeed;
+	//SD_END
+
 	jointHandle_t						jointDrumView;
 	jointHandle_t						jointPinsView;
 	jointHandle_t						jointSteamRightView;
@@ -131,6 +137,8 @@ void TFHeavyMinigun::Spawn ( void ) {
 	drumSpeed		= NAILGUN_DRUMSPEED_STOPPED;
 	drumSpeedIdeal	= drumSpeed;
 	drumMultiplier	= spawnArgs.GetFloat ( "drumSpeed" );
+
+	maxSpinSpeed = spawnArgs.GetFloat ( "maxSpinSpeed" );
 	
 	ExecuteState ( "ClaspClose" );	
 	SetState ( "Raise", 0 );	
@@ -660,18 +668,26 @@ stateResult_t TFHeavyMinigun::State_Fire( const stateParms_t& parms ) {
 			if ( !wsfl.attack || wsfl.reload || wsfl.lowerWeapon || !AmmoInClip ( ) ) {
 				return SRESULT_STAGE ( STAGE_DONE );
 			}
-			if ( mods & NAILGUN_MOD_ROF_AMMO ) {
-				PlayCycle ( ANIMCHANNEL_LEGS, "fire_fast", 4 );
-			} else {
-				PlayCycle ( ANIMCHANNEL_LEGS, "fire_slow", 4 );
-			}
+			//if ( mods & NAILGUN_MOD_ROF_AMMO ) {
+			//	PlayCycle ( ANIMCHANNEL_LEGS, "fire_fast", 4 );
+			//} else {
+			//	PlayCycle ( ANIMCHANNEL_LEGS, "fire_slow", 4 );
+			//}
+			//if ( wsfl.zoom ) {				
+			//	Attack ( true, 1, spread, 0.0f, 1.0f );
+			//	nextAttackTime = gameLocal.time + (altFireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
+			//} else {
+			//	Attack ( false, 1, spread, 0.0f, 1.0f );
+			//	nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
+			//}
 
-			if ( wsfl.zoom ) {				
-				Attack ( true, 1, spread, 0.0f, 1.0f );
-				nextAttackTime = gameLocal.time + (altFireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
-			} else {
+			//SD BEGIN
+			if(currentSpinSpeed >= maxSpinSpeed) {
+				PlayCycle ( ANIMCHANNEL_LEGS, "fire_slow", 4 );
 				Attack ( false, 1, spread, 0.0f, 1.0f );
 				nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
+			}else{
+				currentSpinSpeed += gameLocal.time;
 			}
 			
 			// Play the exhaust effects
