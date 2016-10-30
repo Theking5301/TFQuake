@@ -187,8 +187,7 @@ stateResult_t TFDemoGrenadeLauncher::State_Reload ( const stateParms_t& parms ) 
 			
 		case STAGE_WAIT:
 			if ( AnimDone ( ANIMCHANNEL_ALL, 4 ) ) {
-				//AddToClip ( ClipSize() );
-				AddToClip (1);
+				AddToClip ( ClipSize() );
 				SetState ( "Idle", 4 );
 				return SRESULT_DONE;
 			}

@@ -2,7 +2,6 @@
 #pragma hdrstop
 
 #include "../../Game_local.h"
-#include "Math.h"
 #include "../../Weapon.h"
 
 const idEventDef EV_Railgun_RestoreHum( "<railgunRestoreHum>", "" );
@@ -13,9 +12,6 @@ public:
 	CLASS_PROTOTYPE( TFSniperRifle );
 
 	TFSniperRifle ( void );
-
-	float					maxChargeTime;
-	float					currentCharge;
 
 	virtual void			Spawn				( void );
 	virtual void			Think				( void );
@@ -57,8 +53,6 @@ TFSniperRifle::Spawn
 ================
 */
 void TFSniperRifle::Spawn ( void ) {
-	maxChargeTime   = spawnArgs.GetFloat( "chargetime" );
-	currentCharge = 0;
 	SetState ( "Raise", 0 );	
 }
 
@@ -111,17 +105,7 @@ void TFSniperRifle::Think ( void ) {
 
 	// Let the real weapon think first
 	rvWeapon::Think ( );
-	if(owner->IsZoomed()) {
-		if(currentCharge < maxChargeTime) {
-			currentCharge = idMath::ClampFloat(currentCharge + ((float)gameLocal.msec/1000.0f), maxChargeTime, 0);
-			gameLocal.Printf("Current Charge: %f Max Charnge: %f  Delta Time: %f\n", currentCharge, maxChargeTime, ((float)gameLocal.msec/1000.0f));
-		}
-	}else{
-		if(currentCharge > 0) {
-			currentCharge = idMath::ClampFloat(currentCharge - ((float)gameLocal.msec/1000.0f), maxChargeTime, 0);
-			gameLocal.Printf("Current Charge: %f Max Charnge: %f Delta Time: %f\n", currentCharge, maxChargeTime, ((float)gameLocal.msec/1000.0f));
-		}
-	}
+
 	if ( zoomGui && wsfl.zoom && !gameLocal.isMultiplayer ) {
 		int ammo = AmmoInClip();
 		if ( ammo >= 0 ) {
@@ -203,9 +187,10 @@ stateResult_t TFSniperRifle::State_Fire ( const stateParms_t& parms ) {
 	switch ( parms.stage ) {
 		case STAGE_INIT:
 			nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
-			Attack ( false, 1, spread, 0, (1.0f + 0.5f*(currentCharge/maxChargeTime)));
+			Attack ( false, 1, spread, 0, 1.0f );
 			PlayAnim ( ANIMCHANNEL_ALL, "fire", 0 );	
 			return SRESULT_STAGE ( STAGE_WAIT );
+	
 		case STAGE_WAIT:		
 			if ( ( gameLocal.isMultiplayer && gameLocal.time >= nextAttackTime ) || 
 				 ( !gameLocal.isMultiplayer && ( AnimDone ( ANIMCHANNEL_ALL, 2 ) ) ) ) {

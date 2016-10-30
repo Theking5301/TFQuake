@@ -683,14 +683,6 @@ entityDef player_marine
 	"weapon10_best"						"0"
 	"weapon10_cycle"					"1"	
 
-	"def_weapon11"						"weapon_scattergun"
-	"weapon11_best"						"0"
-	"weapon11_cycle"					"1"	
-	
-	"def_weapon10"						"weapon_sniperrifle"
-	"weapon12_best"						"0"
-	"weapon12_cycle"					"1"	
-	
 	"mtr_wound"						"textures/decals/hurt02"
 	"mtr_splat"						"textures/decals/dsplat2"
 	"mtr_splat2"						"textures/decals/dsplat5"
@@ -731,31 +723,6 @@ entityDef player_marine
 	// stats
 	"health"						"100"
 	"maxhealth"						"100"
-	
-	"scoutHealth"					"125"
-	"medicHealth"					"150"
-	"soldierHealth"					"200"
-	"heavyHealth"					"300"
-	"sniperHealth"					"125"
-	"demomanHealth"					"175"
-	"pyroHealth"					"175"
-	
-	"scoutMaxHealth"				"125"
-	"medicMaxHealth"				"150"
-	"soldierMaxHealth"				"200"
-	"heavyMaxHealth"				"300"
-	"sniperMaxHealth"				"125"
-	"demomanMaxHealth"				"175"
-	"pyroMaxHealth"					"175"
-		
-	"scoutSpeed"					"400"
-	"medicSpeed"					"270"
-	"soldierSpeed"					"225"
-	"heavySpeed"					"180"
-	"sniperSpeed"					"270"
-	"demomanSpeed"					"225"
-	"pyroSpeed"						"250"
-	
 	"armor"							"0"
 	"maxarmor"						"100"
 	"minRestoreHealth0"					"20"		// Minimum health when loading a game for skill level 0
@@ -930,17 +897,56 @@ model model_player_marine_ui {
 }
 
 // Team-less models (for DM)
+playerModel model_player_failed_transfer {
+	"model"			"model_player_failed_transfer"
+	"def_head"		""
+	"skin"			""
+	"description"		"#str_108000"
+}
+
+playerModel model_player_slimy_transfer {
+	"model"			"model_player_slimy_transfer"
+	"def_head"		""
+	"skin"			""
+	"description"		"#str_108001"
+}
+
+playerModel model_player_corpse {
+	"model"			"model_player_corpse"
+	"def_head"		""
+	"skin"			""
+	"team"			""
+	"description"		"#str_108002"
+}
+
+playerModel model_player_tactical_elite {
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_kanestrg_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			"skins/characters/kane_strogg/tactical_elite"
+	"description"		"#str_108017"
+}
+
+
+playerModel model_player_tactical_command {
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_kanestrg_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			"skins/characters/kane_strogg/tactical_command"
+	"description"		"#str_108018"
+}
 
 // Marine team models
-playerModel model_player_marine_helmeted_bright { //Sniper
+playerModel model_player_marine {
 	"model"			"model_player_marine"
-	"def_head"		"char_marinehead_helmet_bright_client"
-	"def_head_ui"		"char_marinehead_helmet_bright_mp"
-	"skin"			"skins/multiplayer/marine_bright"
+	"def_head"		"char_marinehead_kane2_client"
+	"def_head_ui"		"char_marinehead_kane2_mp"
+	"skin"			"skins/multiplayer/marine"
 	"team"			"marine"
-	"description"		"#str_110100"
+	"description"		"#str_108003"
 }
-playerModel model_player_marine_morris { //Scout
+
+playerModel model_player_marine_morris {
 	"model"			"model_player_marine"
 	"def_head"		"char_marinehead_morris_client"
 	"def_head_ui"		"char_marinehead_morris_mp"
@@ -948,7 +954,8 @@ playerModel model_player_marine_morris { //Scout
 	"team"			"marine"
 	"description"		"#str_108004"
 }
-playerModel model_player_marine_voss { //Heavy
+
+playerModel model_player_marine_voss {
 	"model"			"model_player_marine"
 	"def_head"		"char_marinehead_voss_client"
 	"def_head_ui"		"char_marinehead_voss_mp"
@@ -956,7 +963,8 @@ playerModel model_player_marine_voss { //Heavy
 	"team"			"marine"
 	"description"		"#str_108005"
 }
-playerModel model_player_marine_cortez { //Soldier
+
+playerModel model_player_marine_cortez {
 	"model"			"model_player_marine"
 	"def_head"		"char_marinehead_cortez_client"
 	"def_head_ui"		"char_marinehead_cortez_mp"
@@ -964,7 +972,26 @@ playerModel model_player_marine_cortez { //Soldier
 	"team"			"marine"
 	"description"		"#str_108006"
 }
-playerModel model_player_marine_medic { //Medic
+
+playerModel model_player_marine_helmeted {
+	"model"			"model_player_marine"
+	"def_head"		"char_marinehead_helmet_client"
+	"def_head_ui"		"char_marinehead_helmet_mp"
+	"skin"			"skins/multiplayer/marine"
+	"team"			"marine"
+	"description"		"#str_108007"
+}
+
+playerModel model_player_marine_helmeted_bright {
+	"model"			"model_player_marine"
+	"def_head"		"char_marinehead_helmet_bright_client"
+	"def_head_ui"		"char_marinehead_helmet_bright_mp"
+	"skin"			"skins/multiplayer/marine_bright"
+	"team"			"marine"
+	"description"		"#str_110100"
+}
+
+playerModel model_player_marine_medic {
 	"model"			"model_player_marine"
 	"def_head"		"char_marinehead_anderson_client"
 	"def_head_ui"		"char_marinehead_anderson_mp"
@@ -972,7 +999,25 @@ playerModel model_player_marine_medic { //Medic
 	"team"			"marine"
 	"description"		"#str_108009"
 }
-playerModel model_player_marine_tech { //Demoman
+
+playerModel model_player_marine_officer {
+	"model"			"model_player_officer"
+	"def_head"		"char_marinehead_general_harper_client"
+	"def_head_ui"		"char_marinehead_general_harper_mp"
+	"team"			"marine"
+	"description"		"#str_108010"
+}
+
+playerModel model_player_marine_fatigues {
+	"model"			"model_player_fatigue_marine"
+	"def_head"		"char_marinehead_bidwell_client"
+	"def_head_ui"		"char_marinehead_bidwell_mp"
+	"skin"			"skins/models/characters/marine/fatigues5_armsb"
+	"team"			"marine"
+	"description"		"#str_108011"
+}
+
+playerModel model_player_marine_tech {
 	"model"			"model_player_marine"
 	"def_head"		"char_marinehead_strassa_client"
 	"def_head_ui"		"char_marinehead_strassa_mp"
@@ -980,16 +1025,40 @@ playerModel model_player_marine_tech { //Demoman
 	"description"		"#str_108008"
 }
 
+// Strogg team models
+playerModel model_player_tactical_transfer {
+	"model"			"model_player_tactical_transfer"
+	"def_head"		""
+	"team"			"strogg"
+	"description"		"#str_108013"
+}
+
+playerModel model_player_tactical_transfer_bright {
+	"model"			"model_player_tactical_transfer"
+	"def_head"		""
+	"skin"			"skins/multiplayer/strogg_bright"
+	"team"			"strogg"
+	"description"		"#str_110101"
+}
+
+playerModel model_player_kane_strogg {
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_kanestrg_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			""
+	"team"			"strogg"
+	"description"		"#str_108014"
+}
 
 entityDef player_marine_mp  
 {
 	"inherit"			"player_marine"
 
-	"weapon"			"" //was weapon_machinegun
+	"weapon"			"weapon_machinegun,weapon_gauntlet,weapon_shotgun,weapon_railgun,weapon_nailgun,weapon_rocketlauncher,weapon_lightninggun,weapon_blaster"
 	"current_weapon"		"3"
 
 	// replce blaster with gauntlet in MP
-	"def_weapon0"						"weapon_scattergun"
+	"def_weapon0"						"weapon_gauntlet"
 	"weapon0_best"						"1"
 	"weapon0_cycle"						"1"
 	"weapon0_flashlight"					"0"
@@ -1003,9 +1072,7 @@ entityDef player_marine_mp
 	"weapon7_best"			"1"
 	"weapon9_best"			"1"
 	"weapon10_best"			"1"
-	"weapon11_best"			"1"
-	"weapon12_best"			"1"
-		
+
 	// stats
 	"health"			"125"
 	"armor"				"0"
@@ -1023,7 +1090,7 @@ entityDef player_marine_mp
 	"powerup_effect_joints"		"*body -*r_wrist r_wrist -*l_wrist l_wrist"
 
 	"pm_crouchspeed"		"160"
-	"pm_speed"				"320"
+	"pm_speed"			"320"
 	"pm_walkspeed"			"160"
 
 	"fx_spawn"			"effects/mp/player/spawn.fx"

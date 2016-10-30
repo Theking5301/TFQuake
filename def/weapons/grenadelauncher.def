@@ -139,17 +139,17 @@ entityDef weapon_grenadelauncher
 entityDef weapon_grenadelauncher_mp
 {
 	"inherit"				"weapon_grenadelauncher"
-	"clipsize"				"4"
+	"clipsize"				"0"
 	"editor_ignore"				"1"
 	"inv_icon"				"gfx/guis/hud/icons/item_grenade_colored"
 	"triggerSize"				"32"
 	
-	//"muzzle_kick_time"			"0"
-	//"muzzle_kick_maxtime"			"0"
-	//"muzzle_kick_angles"			"0 0 0"
-	//"muzzle_kick_offset"			"0 0 0"
-	//"recoilTime"				"0"
-	//"recoilAngles"				"0 0 0"
+	"muzzle_kick_time"			"0"
+	"muzzle_kick_maxtime"			"0"
+	"muzzle_kick_angles"			"0 0 0"
+	"muzzle_kick_offset"			"0 0 0"
+	"recoilTime"				"0"
+	"recoilAngles"				"0 0 0"
 
 	"respawn_Team DM"			"30"
 	"respawn_Tourney"			"15"
