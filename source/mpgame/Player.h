@@ -84,6 +84,16 @@ typedef enum {
 	FOCUS_MAX
 } playerFocus_t;
 
+typedef enum {
+	Scout,
+	Heavy,
+	Soldier,
+	Sniper,
+	Medic,
+	Demoman,
+	Pyro
+} EPlayerClass;
+
 struct idItemInfo {
 	idStr name;
 	idStr icon;
@@ -412,6 +422,14 @@ public:
 	float					buyMenuCash;
 
 	float					handicap; // multiplier for damage/health
+
+	//SD BEGIN
+	EPlayerClass			Class;
+	bool					bIsInitialized;
+
+	void					initializeClass();
+	void					initializeClassStats();
+	//SD END
 
 public:
 	CLASS_PROTOTYPE( idPlayer );

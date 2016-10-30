@@ -71,12 +71,13 @@ entityDef weapon_railgun
 	"editor_usage"				"Railgun"
 
 	"spawnclass"				"idItem"
-	"weaponclass"				"rvWeaponRailgun"
+	"weaponclass"				"TFSniperRifle"
 	"size"					"32 32 32"
 	"model_view" 				"weapon_railgun_view"
 	"model_view_strogg" 			"weapon_railgun_view_strogg"
   	"model_world"				"weapon_railgun_world"
-	"model"					"models/weapons/railgun/world/w_rg.lwo"
+	//"model"					"models/weapons/railgun/world/w_rg.lwo"
+	"model"						"models/capturepoint/CapturePoint.lwo"
 	"def_dropItem"				"weapon_railgun"
 
 	"joint_attach"				"RG_ATTACHER"
@@ -100,6 +101,7 @@ entityDef weapon_railgun
 	"ammoRequired"				"1"
 	"clipSize"				"1" //was 3
 	"lowAmmo"				"1"
+	"chargetime"				"2"
 	"continuousFire"			"0"
 	"dryFireReload" 			"1"
 	"switchWhenEmpty"			"0"
@@ -173,7 +175,7 @@ entityDef weapon_railgun_mp
 	"model_view" 				"weapon_railgun_view_mp"
 	"editor_ignore"				"1"
 	"clipsize"				"1" //was 0
-	"fireRate"				"1.5" //literally perfect
+	"fireRate"				"1.3" //was 1.5
 	"inv_icon"				"gfx/guis/hud/icons/item_railgun_colored.tga"
 	"triggerSize"				"32"
 	

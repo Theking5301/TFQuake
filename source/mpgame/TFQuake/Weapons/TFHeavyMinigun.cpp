@@ -52,7 +52,6 @@ protected:
 	int									guideAquireTime;
 
 	//SD_BEGIN
-	bool								bIsAttackHeld;
 	float								currentSpinSpeed;
 	float								maxSpinSpeed;
 	//SD_END
@@ -325,6 +324,19 @@ void TFHeavyMinigun::Think ( void ) {
 
 	// Let the real weapon think first
 	rvWeapon::Think ( );
+
+
+	if(owner->IsZoomed()) {
+		if(currentSpinSpeed < maxSpinSpeed) {
+			currentSpinSpeed = idMath::ClampFloat(currentSpinSpeed + ((float)gameLocal.msec/1000.0f), maxSpinSpeed, 0);
+			gameLocal.Printf("Current Spin: %f Max Spin: %f  Delta Time: %f\n", currentSpinSpeed, maxSpinSpeed, ((float)gameLocal.msec/1000.0f));
+		}
+	}else{
+		if(currentSpinSpeed > 0) {
+			currentSpinSpeed = idMath::ClampFloat(currentSpinSpeed - ((float)gameLocal.msec/1000.0f), maxSpinSpeed, 0);
+			gameLocal.Printf("Current Spin: %f Max Spin: %f Delta Time: %f\n", currentSpinSpeed, maxSpinSpeed, ((float)gameLocal.msec/1000.0f));
+		}
+	}
 
 	// If no guide range is set then we dont have the mod yet
 	if ( !guideRange ) {
