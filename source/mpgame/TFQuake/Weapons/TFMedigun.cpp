@@ -65,7 +65,16 @@ protected:
 	float								uberAddTickRate;
 	float								uberUseTickRate;
 	float								uberchargeTimer;
+	idPlayer*							currentHealTarget;
 	bool								bIsInUbermode;
+
+	void								uberModeBegin(idPlayer* otherPlayer);
+	void								uberChargeEnd(idPlayer* otherPlayer);
+	void								uberChargeTick(idPlayer* otherPlayer, float deltaTime);
+	void								incrementUberCharge(int amount);
+	void								decrementUberCharge(int amount);
+	bool								isFullyCharged();
+	void								setFullyCharged();
 	//SD END
 
 	rvClientEntityPtr<rvClientEffect>	trailEffectView;
@@ -134,7 +143,59 @@ TFMedigun::~TFMedigun( void ) {
 		}
 	}
 }
-
+//SD BEGIN
+void TFMedigun::uberModeBegin(idPlayer* otherPlayer) {
+	bIsInUbermode = true;
+	if(otherPlayer) {
+		otherPlayer->godmode = true;
+		otherPlayer->StartPowerUpEffect(POWERUP_REGENERATION);
+		currentHealTarget = otherPlayer;
+	}
+	viewModel->StartSound( "snd_uberstart", SND_CHANNEL_VOICE, 0, false, NULL );
+	zoomFov = -1;
+	owner->StartPowerUpEffect(POWERUP_REGENERATION);
+	owner->godmode = true;
+}
+void TFMedigun::uberChargeTick(idPlayer* otherPlayer, float deltaTime) {
+	if(owner->inventory.ammo[ammoType] <= 1 && bIsInUbermode) {
+		uberChargeEnd(otherPlayer);
+	}
+	//if(currentHealTarget != otherPlayer) {
+	//	currentHealTarget->godmode = false;
+	//	currentHealTarget->StopPowerUpEffect(POWERUP_REGENERATION);
+	//	currentHealTarget = nullptr;
+	//	if(otherPlayer) {
+	//		otherPlayer->godmode = false;
+	//		otherPlayer->StopPowerUpEffect(POWERUP_REGENERATION);
+	//		currentHealTarget = otherPlayer;
+	//	}
+	//}
+}
+void TFMedigun::uberChargeEnd(idPlayer* otherPlayer) {
+	//if(currentHealTarget) {
+	//	otherPlayer->godmode = false;
+	//	otherPlayer->StopPowerUpEffect(POWERUP_REGENERATION);
+	//}
+	zoomFov = 90;
+	viewModel->StartSound( "snd_uberfinished", SND_CHANNEL_VOICE, 0, false, NULL );
+	bIsInUbermode = false;
+	owner->godmode = false;
+	owner->StopPowerUpEffect(POWERUP_REGENERATION);
+}
+void TFMedigun::incrementUberCharge(int amount) {
+	owner->inventory.ammo[ammoType] = idMath::ClampInt(1, 100, owner->inventory.ammo[ammoType]+amount);
+}
+void TFMedigun::decrementUberCharge(int amount) {
+	owner->inventory.ammo[ammoType] = idMath::ClampInt(1, 100, owner->inventory.ammo[ammoType]-amount);
+}
+bool TFMedigun::isFullyCharged() {
+	return owner->inventory.ammo[ammoType] >= 100;
+}
+void TFMedigun::setFullyCharged() {
+	viewModel->StartSound( "snd_ubercharged", SND_CHANNEL_VOICE, 0, false, NULL );
+	zoomFov = 90;
+}
+//SD END
 /*
 ================
 TFMedigun::Spawn
@@ -352,33 +413,18 @@ void TFMedigun::Think ( void ) {
 
 	//SD BEGIN
 	if(wsfl.zoom && owner->inventory.ammo[ammoType] >= 100 && !bIsInUbermode) {
-		bIsInUbermode = true;
-		idPlayer* tempPlayer = (idPlayer*)((idEntity*)currentPath.target);
-		if(tempPlayer) {
-			tempPlayer->godmode = true;
-		}
-		viewModel->StartSound( "snd_uberstart", SND_CHANNEL_VOICE, 0, false, NULL );
-		zoomFov = -1;
+		//should probably be a dynamic_cast. bIsInUbermode is set to true in the following fucntion. Do Once.
+		uberModeBegin((idPlayer*)((idEntity*)currentPath.target));
 	}
 	if(bIsInUbermode) {
 		idVec3 dir;
-
+		uberChargeTick((idPlayer*)((idEntity*)currentPath.target), ((float)gameLocal.msec/1000.0f));
 		uberchargeTimer += ((float)gameLocal.msec/1000.0f);
 		if(uberchargeTimer >= uberUseTickRate) {
 			dir = tr.endpos - origin;
 			dir.Normalize();
 			Attack(currentPath.target, dir, 1.0f);
-
-			owner->inventory.ammo[ammoType] -= 1;
-			if(owner->inventory.ammo[ammoType] <= 1) {
-				bIsInUbermode = false;
-				viewModel->StartSound( "snd_uberfinished", SND_CHANNEL_VOICE, 0, false, NULL );
-				zoomFov = 90;
-				idPlayer* tempPlayer = (idPlayer*)((idEntity*)currentPath.target);
-				if(tempPlayer) {
-					tempPlayer->godmode = false;
-				}
-			}
+			decrementUberCharge(1);
 			uberchargeTimer = 0;
 		}
 	}
@@ -396,13 +442,12 @@ void TFMedigun::Attack ( idEntity* ent, const idVec3& dir, float power ) {
 	if(!bIsInUbermode) {
 		uberchargeTimer += ((float)gameLocal.msec/1000.0f);
 		if(uberchargeTimer >= uberAddTickRate) {
-			if (owner->inventory.ammo[ammoType] < 100) {
-				owner->inventory.ammo[ammoType] += 1;
+			if (!isFullyCharged()) {
+				incrementUberCharge(1);
  				owner->inventory.ammoPredictTime = gameLocal.time; // mp client: we predict this. mark time so we're not confused by snapshots
 				gameLocal.Printf("Ubercharge: %d \n", owner->inventory.ammo[ammoType]);
 				if(owner->inventory.ammo[ammoType] >= 100) {
-					viewModel->StartSound( "snd_ubercharged", SND_CHANNEL_VOICE, 0, false, NULL );
-					zoomFov = 90;
+					setFullyCharged();
 				}
 			}
 			uberchargeTimer = 0;
@@ -413,8 +458,6 @@ void TFMedigun::Attack ( idEntity* ent, const idVec3& dir, float power ) {
 				tempPlayer->health = idMath::ClampInt(0, tempPlayer->inventory.maxHealth*1.5, tempPlayer->health + healPerSecond*((float)gameLocal.msec/1000.0f));
 			}
 		}
-	}else{
-		gameLocal.Printf("Remaining Charge: %d \n", owner->inventory.ammo[ammoType]);
 	}
 	//SD END	
 
@@ -1067,3 +1110,4 @@ void TFMedigunPath::Restore( idRestoreGame* savefile ) {
 	trailEffect.Restore( savefile );
 	impactEffect.Restore( savefile );
 }
+

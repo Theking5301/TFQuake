@@ -1426,7 +1426,7 @@ void idClass::RegisterClasses( void )
 
 	//SD BEGIN
 	REGISTER(TFDemoGrenadeLauncher); 
-	REGISTER(TFHeavyKGB); 
+	//REGISTER(TFHeavyKGB); 
 	REGISTER(TFHeavyMinigun); 
 	REGISTER(TFScoutPistol); 
 	REGISTER(TFScoutShotgun); 

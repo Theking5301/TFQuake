@@ -1825,47 +1825,47 @@ void idPlayer::initializeClass() {
 }
 void idPlayer::initializeClassStats() {
 	switch(Class) {
-	case Scout:
-		inventory.maxHealth = spawnArgs.GetInt( "scoutMaxHealth", "100" );
-		physicsObj.SetSpeed( spawnArgs.GetInt( "scoutSpeed", "100" ), pm_crouchspeed.GetFloat() );
-		this->addWeapon("weapon_scattergun");
-		this->addWeapon("weapon_secondary_pisol");
-		break;
-	case Medic:
-		inventory.maxHealth = spawnArgs.GetInt( "medicMaxHealth", "100" );
-		physicsObj.SetSpeed( spawnArgs.GetInt( "medicSpeed", "100" ), pm_crouchspeed.GetFloat() );	
-		this->addWeapon("weapon_medigun");
-		this->addWeapon("weapon_syringegun");
-		break;
-	case Soldier:
-		inventory.maxHealth = spawnArgs.GetInt( "soldierMaxHealth", "100" );
-		physicsObj.SetSpeed( spawnArgs.GetInt( "soldierSpeed", "100" ), pm_crouchspeed.GetFloat() );	
-		this->addWeapon("weapon_rocketlauncher");
-		this->addWeapon("weapon_secondary_shotgun");
-		break;
-	case Heavy:
-		inventory.maxHealth = spawnArgs.GetInt( "heavyMaxHealth", "100" );
-		physicsObj.SetSpeed( spawnArgs.GetInt( "heavySpeed", "100" ), pm_crouchspeed.GetFloat() );	
-		this->addWeapon("weapon_minigun");
-		this->addWeapon("weapon_secondary_shotgun");
-		break;
-	case Sniper:
-		inventory.maxHealth = spawnArgs.GetInt( "sniperMaxHealth", "100" );
-		physicsObj.SetSpeed( spawnArgs.GetInt( "sniperSpeed", "100" ), pm_crouchspeed.GetFloat() );
-		this->addWeapon("weapon_sniperSMG");
-		this->addWeapon("weapon_sniperrifle");
-		break;
-	case Demoman:
-		inventory.maxHealth = spawnArgs.GetInt( "demomanMaxHealth", "100" );
-		physicsObj.SetSpeed( spawnArgs.GetInt( "demomanSpeed", "100" ), pm_crouchspeed.GetFloat() );
-		this->addWeapon("weapon_grenadelauncher");
-		break;
-	case Pyro:
-		inventory.maxHealth = spawnArgs.GetInt( "pyroMaxHealth", "100" );
-		physicsObj.SetSpeed( spawnArgs.GetInt( "pyroSpeed", "100" ), pm_crouchspeed.GetFloat() );
-		this->addWeapon("weapon_flamethrower");
-		break;
-	default: break;
+		case Scout:
+			inventory.maxHealth = spawnArgs.GetInt( "scoutMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "scoutSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			this->addWeapon("weapon_secondary_pistol");
+			this->addWeapon("weapon_scattergun");
+			break;
+		case Medic:
+			inventory.maxHealth = spawnArgs.GetInt( "medicMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "medicSpeed", "100" ), pm_crouchspeed.GetFloat() );	
+			this->addWeapon("weapon_syringegun");
+			this->addWeapon("weapon_medigun");
+			break;
+		case Soldier:
+			inventory.maxHealth = spawnArgs.GetInt( "soldierMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "soldierSpeed", "100" ), pm_crouchspeed.GetFloat() );	
+			this->addWeapon("weapon_secondary_shotgun");
+			this->addWeapon("weapon_soldier_rocket_launcher");
+			break;
+		case Heavy:
+			inventory.maxHealth = spawnArgs.GetInt( "heavyMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "heavySpeed", "100" ), pm_crouchspeed.GetFloat() );	
+			this->addWeapon("weapon_secondary_shotgun");
+			this->addWeapon("weapon_minigun");
+			break;
+		case Sniper:
+			inventory.maxHealth = spawnArgs.GetInt( "sniperMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "sniperSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			this->addWeapon("weapon_sniperSMG");
+			this->addWeapon("weapon_sniperrifle");
+			break;
+		case Demoman:
+			inventory.maxHealth = spawnArgs.GetInt( "demomanMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "demomanSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			this->addWeapon("weapon_demo_grenade_launcher");
+			break;
+		case Pyro:
+			inventory.maxHealth = spawnArgs.GetInt( "pyroMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "pyroSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			this->addWeapon("weapon_flamethrower");
+			break;
+		default: break;
 	}
 	inventory.maxarmor = 0;
 	health = inventory.maxHealth;
@@ -3388,13 +3388,13 @@ bool idPlayer::UserInfoChanged( void ) {
 		handicap = 1.0f;
 	}
 
-	if( PowerUpActive( POWERUP_GUARD ) ) {
-		inventory.maxHealth = 200;
-		inventory.maxarmor = 200;
-	} else {
-		inventory.maxHealth = spawnArgs.GetInt( "maxhealth", "100" );
-		inventory.maxarmor = spawnArgs.GetInt( "maxarmor", "100" );
-	}
+	//if( PowerUpActive( POWERUP_GUARD ) ) {
+	//	inventory.maxHealth = 200;
+	//	inventory.maxarmor = 200;
+	//} else {
+	//	inventory.maxHealth = spawnArgs.GetInt( "maxhealth", "100" );
+	//	inventory.maxarmor = spawnArgs.GetInt( "maxarmor", "100" );
+	//}
 
  	spec = ( idStr::Icmp( userInfo->GetString( "ui_spectate" ), "Spectate" ) == 0 );
 	if ( gameLocal.serverInfo.GetBool( "si_spectators" ) ) {
@@ -3521,21 +3521,28 @@ idPlayer::UpdateHudAmmo
 void idPlayer::UpdateHudAmmo( idUserInterface *_hud ) {
 	int inclip;
 	int ammoamount;
+	int maxAmmo;
 
 	assert( weapon );
 	assert( _hud );
 
 	inclip		= weapon->AmmoInClip();
 	ammoamount	= weapon->AmmoAvailable();
-	idStr tempAmmo;
-	sprintf(tempAmmo, "%d%s", ammoamount, "%");
+	maxAmmo		= weapon->maxAmmo;
+
+	idStr tempUberPrecent;
+	sprintf(tempUberPrecent, "%d%s", ammoamount, "%");
+
+	idStr tempClipLeft;
+	sprintf(tempClipLeft, "%d/%d", inclip, idMath::ClampInt(0, 1000, ammoamount-maxAmmo));
 
 	if ( ammoamount < 0 ) {
 		// show infinite ammo
 		_hud->SetStateString( "player_ammo", "-1" );
 		_hud->SetStateString( "player_totalammo", "-1" );
 		_hud->SetStateFloat ( "player_ammopct", 1.0f );
-		_hud->SetStateString( "player_ubercharge", tempAmmo.c_str());
+		_hud->SetStateString( "player_ubercharge", tempUberPrecent.c_str());
+		_hud->SetStateString( "player_clipleft", tempClipLeft.c_str());
 	} else if ( weapon->ClipSize ( ) && !gameLocal.isMultiplayer ) {
 		_hud->SetStateInt ( "player_clip_size", weapon->ClipSize() );
 		_hud->SetStateFloat ( "player_ammopct", (float)inclip / (float)weapon->ClipSize ( ) );
@@ -3546,12 +3553,27 @@ void idPlayer::UpdateHudAmmo( idUserInterface *_hud ) {
 			_hud->SetStateInt ( "player_totalammo", ammoamount - inclip );
 		}
 		_hud->SetStateInt ( "player_ammo", inclip );
-		_hud->SetStateString( "player_ubercharge", tempAmmo.c_str());
-	} else {
-		_hud->SetStateFloat ( "player_ammopct", (float)ammoamount / (float)weapon->maxAmmo );
-		_hud->SetStateInt ( "player_totalammo", ammoamount );
+		_hud->SetStateString( "player_ubercharge", tempUberPrecent.c_str());
+		_hud->SetStateString( "player_clipleft", tempClipLeft.c_str());
+	} else {		
+		if(weapon) {
+			if(currentWeapon == 14) {
+				_hud->SetStateString( "player_totalammo", tempUberPrecent.c_str());
+				_hud->SetStateFloat ( "player_ammopct", (float)ammoamount / (float)weapon->maxAmmo );
+			}else if(currentWeapon == 18){
+				_hud->SetStateInt ( "player_totalammo", ammoamount );
+				_hud->SetStateFloat ( "player_ammopct", (float)ammoamount / (float)weapon->maxAmmo );
+			}else{
+				_hud->SetStateString ( "player_totalammo", tempClipLeft );
+				_hud->SetStateFloat ( "player_ammopct", (float)inclip / (float)weapon->maxAmmo);
+			}
+		}else{
+			_hud->SetStateInt ( "player_totalammo", ammoamount );
+		}
+
 		_hud->SetStateInt ( "player_ammo", -1 );
-		_hud->SetStateString( "player_ubercharge", tempAmmo.c_str());
+		_hud->SetStateString( "player_ubercharge", tempUberPrecent.c_str());
+		_hud->SetStateString( "player_clipleft", tempClipLeft.c_str());
 	} 
 	
 	_hud->SetStateBool( "player_ammo_empty", ( ammoamount == 0 ) );
@@ -3566,6 +3588,35 @@ void idPlayer::UpdateHudStats( idUserInterface *_hud ) {
 	int temp;
 	
 	assert ( _hud );
+
+	idStr tempClassName;
+	switch(Class) {
+		case Scout:
+			tempClassName = "Scout";
+			break;
+		case Medic:
+			tempClassName = "Medic";
+			break;
+		case Soldier:
+			tempClassName = "Soldier";
+			break;
+		case Heavy:
+			tempClassName = "Heavy";
+			break;
+		case Sniper:
+			tempClassName = "Sniper";
+			break;
+		case Demoman:
+			tempClassName = "Demoman";
+			break;
+		case Pyro:
+			tempClassName = "Pyro";
+			break;
+		default: break;
+	}
+	_hud->SetStateString ( "player_class", tempClassName);
+	_hud->SetStateInt ( "player_team", team);
+	_hud->HandleNamedEvent ( "updateHealth" );
 
 	temp = _hud->State().GetInt ( "player_health", "-1" );
 	if ( temp != health ) {		
@@ -4909,8 +4960,8 @@ bool idPlayer::GivePowerUp( int powerup, int time, bool team ) {
 		}
 		case POWERUP_GUARD: {
 			nextHealthPulse = gameLocal.time + HEALTH_PULSE;
-			inventory.maxHealth = 200;
-			inventory.maxarmor = 200;
+			//inventory.maxHealth = 200;
+			//inventory.maxarmor = 200;
 
 			break;
 		}

@@ -40,7 +40,8 @@ private:
 	stateResult_t		State_Charged			( const stateParms_t& parms );
 	stateResult_t		State_Fire				( const stateParms_t& parms );
 	stateResult_t		State_Flashlight		( const stateParms_t& parms );
-	
+	stateResult_t		State_Reload			( const stateParms_t& parms );
+
 	CLASS_STATES_PROTOTYPE ( TFSecondaryPistol );
 };
 
@@ -105,20 +106,21 @@ bool TFSecondaryPistol::UpdateAttack ( void ) {
 	// then start the shooting process.
 	if ( wsfl.attack && gameLocal.time >= nextAttackTime ) {
 		// Save the time which the fire button was pressed
-		if ( fireHeldTime == 0 ) {		
-			nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
-			fireHeldTime   = gameLocal.time;
-			viewModel->SetShaderParm ( BLASTER_SPARM_CHARGEGLOW, chargeGlow[0] );
-		}
+		//if ( fireHeldTime == 0 ) {		
+		//	nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
+		//	fireHeldTime   = gameLocal.time;
+		//	viewModel->SetShaderParm ( BLASTER_SPARM_CHARGEGLOW, chargeGlow[0] );
+		//}
+		fireHeldTime = gameLocal.time;
 	}		
 
 	// If they have the charge mod and they have overcome the initial charge 
 	// delay then transition to the charge state.
 	if ( fireHeldTime != 0 ) {
-		if ( gameLocal.time - fireHeldTime > chargeDelay ) {
-			SetState ( "Charge", 4 );
-			return true;
-		}
+		//if ( gameLocal.time - fireHeldTime > chargeDelay ) {
+		//	SetState ( "Charge", 4 );
+		//	return true;
+		//}
 
 		// If the fire button was let go but was pressed at one point then 
 		// release the shot.
@@ -130,7 +132,12 @@ bool TFSecondaryPistol::UpdateAttack ( void ) {
 					//make sure the player isn't looking at a gui first
 					SetState ( "Lower", 0 );
 				} else {
-					SetState ( "Fire", 0 );
+					if(this->AmmoInClip() > 0){ 
+						SetState ( "Fire", 0 );
+					}else{
+						SetState ( "Reload", 0);
+					}
+					//this->UseAmmo(1);
 				}
 			}
 			return true;
@@ -225,6 +232,7 @@ CLASS_STATES_DECLARATION ( TFSecondaryPistol )
 	STATE ( "Charged",						TFSecondaryPistol::State_Charged )
 	STATE ( "Fire",							TFSecondaryPistol::State_Fire )
 	STATE ( "Flashlight",					TFSecondaryPistol::State_Flashlight )
+	STATE ( "Reload",						TFSecondaryPistol::State_Reload )
 END_CLASS_STATES
 
 /*
@@ -323,7 +331,40 @@ stateResult_t TFSecondaryPistol::State_Idle ( const stateParms_t& parms ) {
 	}
 	return SRESULT_ERROR;
 }
-
+//SD BEGIN
+/*
+================
+TFSecondaryPistol::State_Idle
+================
+*/
+stateResult_t TFSecondaryPistol::State_Reload ( const stateParms_t& parms ) {	
+	enum {
+		STAGE_INIT,
+		STAGE_WAIT,
+	};	
+	switch ( parms.stage ) {
+		case STAGE_INIT:
+			if (wsfl.netReload ) {
+				wsfl.netReload = false;
+			} else {
+				NetReload ( );
+			}
+						
+			//SetStatus ( WP_RELOAD );
+			//PlayAnim ( ANIMCHANNEL_ALL, "reload", parms.blendFrames );
+			return SRESULT_STAGE ( STAGE_WAIT );
+			
+		case STAGE_WAIT:
+			AddToClip ( ClipSize() );
+			PlayAnim( ANIMCHANNEL_ALL, "raise", parms.blendFrames );
+			viewModel->StartSound ( "snd_reload", SND_CHANNEL_ANY, 0, false, 0 );
+			SetState ( "Idle", 4 );
+			NetEndReload ( );
+			return SRESULT_DONE;
+	}
+	return SRESULT_ERROR;
+}
+//SD END
 /*
 ================
 TFSecondaryPistol::State_Charge
@@ -426,15 +467,15 @@ stateResult_t TFSecondaryPistol::State_Fire ( const stateParms_t& parms ) {
 
 
 	
-			if ( gameLocal.time - fireHeldTime > chargeTime ) {	
-				Attack ( true, 1, spread, 0, 1.0f );
-				PlayEffect ( "fx_chargedflash", barrelJointView, false );
-				PlayAnim( ANIMCHANNEL_ALL, "chargedfire", parms.blendFrames );
-			} else {
+			//if ( gameLocal.time - fireHeldTime > chargeTime ) {	
+			//	Attack ( true, 1, spread, 0, 1.0f );
+			//	PlayEffect ( "fx_chargedflash", barrelJointView, false );
+			//	PlayAnim( ANIMCHANNEL_ALL, "chargedfire", parms.blendFrames );
+			//} else {
 				Attack ( false, 1, spread, 0, 1.0f );
 				PlayEffect ( "fx_normalflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "fire", parms.blendFrames );
-			}
+			//}
 			fireHeldTime = 0;
 			
 			return SRESULT_STAGE(FIRE_WAIT);

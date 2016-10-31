@@ -12,8 +12,8 @@ const int NAILGUN_DRUMSPEED_SLOW		= 1;
 const int NAILGUN_DRUMSPEED_FAST		= 2;
 
 // Spinup and spindown times
-const int NAILGUN_SPINDOWN_TIME			= 1000;
-const int NAILGUN_SPINUP_TIME			= 1000;
+const int NAILGUN_SPINDOWN_TIME			= 3000;
+const int NAILGUN_SPINUP_TIME			= 3000;
 
 // Nailgun shader parms
 const int NAILGUN_SPARM_PLAYLEADIN		= 7;
@@ -24,6 +24,7 @@ const int NAILGUN_MOD_SEEK				= BIT(1);
 //const int NAILGUN_MOD_AMMO				= BIT(2);
 
 const int NAILGUN_SPIN_SNDCHANNEL		= SND_CHANNEL_BODY2;
+const int NAILGUN_FIRE_SNDCHANNEL		= SND_CHANNEL_BODY3;
 
 class TFHeavyMinigun : public rvWeapon {
 public:
@@ -51,10 +52,12 @@ protected:
 	int									guideHoldTime;
 	int									guideAquireTime;
 
-	//SD_BEGIN
-	float								currentSpinSpeed;
-	float								maxSpinSpeed;
-	//SD_END
+	//SD BEGIN
+	int									shotsPerAmmo;
+	bool								bIsPlayingSpinSound;
+	float								currentSpinRate;
+	float								maxSpinRate;
+	//SD END
 
 	jointHandle_t						jointDrumView;
 	jointHandle_t						jointPinsView;
@@ -125,7 +128,14 @@ void TFHeavyMinigun::Spawn ( void ) {
 	spawnArgs.GetFloat ( "lockRange", "1000", guideRange );
 	guideHoldTime = SEC2MS ( spawnArgs.GetFloat ( "lockHoldTime", "10" ) );
 	guideAquireTime = SEC2MS ( spawnArgs.GetFloat ( "lockAquireTime", ".1" ) );
-	
+
+	//SD BEGIN
+	shotsPerAmmo = spawnArgs.GetInt("shotsPerAmmo", "4");
+	maxSpinRate = spawnArgs.GetFloat("maxSpinRate", ".87");
+	currentSpinRate = 0;
+	bIsPlayingSpinSound = false;
+	//SD END
+
 	jointDrumView		= viewAnimator->GetJointHandle ( spawnArgs.GetString ( "joint_view_drum" ) );
 	jointPinsView		= viewAnimator->GetJointHandle ( spawnArgs.GetString ( "joint_view_pins" ) );
 	jointSteamRightView = viewAnimator->GetJointHandle ( spawnArgs.GetString ( "joint_view_steamRight" ) );
@@ -136,8 +146,6 @@ void TFHeavyMinigun::Spawn ( void ) {
 	drumSpeed		= NAILGUN_DRUMSPEED_STOPPED;
 	drumSpeedIdeal	= drumSpeed;
 	drumMultiplier	= spawnArgs.GetFloat ( "drumSpeed" );
-
-	maxSpinSpeed = spawnArgs.GetFloat ( "maxSpinSpeed" );
 	
 	ExecuteState ( "ClaspClose" );	
 	SetState ( "Raise", 0 );	
@@ -324,20 +332,35 @@ void TFHeavyMinigun::Think ( void ) {
 
 	// Let the real weapon think first
 	rvWeapon::Think ( );
+	//gameLocal.Printf("Current Spin Rate: %f Max Rate: %f \n", currentSpinRate, maxSpinRate);
 
 
-	if(owner->IsZoomed()) {
-		if(currentSpinSpeed < maxSpinSpeed) {
-			currentSpinSpeed = idMath::ClampFloat(currentSpinSpeed + ((float)gameLocal.msec/1000.0f), maxSpinSpeed, 0);
-			gameLocal.Printf("Current Spin: %f Max Spin: %f  Delta Time: %f\n", currentSpinSpeed, maxSpinSpeed, ((float)gameLocal.msec/1000.0f));
+	if(wsfl.zoom || wsfl.attack) {
+		if(drumSpeedIdeal == NAILGUN_DRUMSPEED_STOPPED) {
+			viewModel->StartSound ( "snd_spinup", SND_CHANNEL_ANY, 0, false, 0 );
 		}
-	}else{
-		if(currentSpinSpeed > 0) {
-			currentSpinSpeed = idMath::ClampFloat(currentSpinSpeed - ((float)gameLocal.msec/1000.0f), maxSpinSpeed, 0);
-			gameLocal.Printf("Current Spin: %f Max Spin: %f Delta Time: %f\n", currentSpinSpeed, maxSpinSpeed, ((float)gameLocal.msec/1000.0f));
+		DrumSpin ( NAILGUN_DRUMSPEED_FAST, 2);
+		if(currentSpinRate < maxSpinRate) {
+			currentSpinRate += ((float)gameLocal.msec/1000.0f);
+		}
+		//Super hacky.
+		if(currentSpinRate >= maxSpinRate && !bIsPlayingSpinSound) {
+			viewModel->StopSound ( NAILGUN_SPIN_SNDCHANNEL, false );
+			viewModel->StartSound ( "snd_spinfast", NAILGUN_SPIN_SNDCHANNEL, 0, false, NULL );
+			bIsPlayingSpinSound = true;
 		}
 	}
-
+	if(!wsfl.zoom && !wsfl.attack) {
+		bIsPlayingSpinSound = false;
+		viewModel->StopSound ( NAILGUN_SPIN_SNDCHANNEL, false );
+		if(drumSpeedIdeal == NAILGUN_DRUMSPEED_FAST) {
+			viewModel->StartSound ( "snd_spindown", SND_CHANNEL_ANY, 0, false, 0 );
+		}
+		if(currentSpinRate > 0) {
+			currentSpinRate -= ((float)gameLocal.msec/1000.0f);
+			DrumSpin ( NAILGUN_DRUMSPEED_STOPPED, 2);
+		}
+	}
 	// If no guide range is set then we dont have the mod yet
 	if ( !guideRange ) {
 		return;
@@ -452,7 +475,9 @@ bool TFHeavyMinigun::DrumSpin ( int speed, int blendFrames ) {
 	if ( drumSpeedIdeal == speed ) {
 		return false;
 	}
-
+	if(currentSpinRate >= maxSpinRate) {
+		return false;
+	}
 	drumSpeedIdeal = speed;
 
 	switch ( speed ) {
@@ -624,12 +649,12 @@ stateResult_t TFHeavyMinigun::State_Idle( const stateParms_t& parms ) {
 			}
 		
 			if ( !clipSize ) {
-				if ( gameLocal.time > nextAttackTime && wsfl.attack && AmmoAvailable ( ) ) {
+				if ( gameLocal.time > nextAttackTime && wsfl.attack && AmmoAvailable ( )  && currentSpinRate >= maxSpinRate) {
 					SetState ( "Fire", 0 );
 					return SRESULT_DONE;
 				}
 			} else {
-				if ( gameLocal.time > nextAttackTime && wsfl.attack && AmmoInClip ( ) ) {
+				if ( gameLocal.time > nextAttackTime && wsfl.attack && AmmoInClip ( ) && currentSpinRate >= maxSpinRate) {
 					SetState ( "Fire", 0 );
 					return SRESULT_DONE;
 				}  
@@ -680,35 +705,20 @@ stateResult_t TFHeavyMinigun::State_Fire( const stateParms_t& parms ) {
 			if ( !wsfl.attack || wsfl.reload || wsfl.lowerWeapon || !AmmoInClip ( ) ) {
 				return SRESULT_STAGE ( STAGE_DONE );
 			}
-			//if ( mods & NAILGUN_MOD_ROF_AMMO ) {
-			//	PlayCycle ( ANIMCHANNEL_LEGS, "fire_fast", 4 );
-			//} else {
-			//	PlayCycle ( ANIMCHANNEL_LEGS, "fire_slow", 4 );
-			//}
-			//if ( wsfl.zoom ) {				
-			//	Attack ( true, 1, spread, 0.0f, 1.0f );
-			//	nextAttackTime = gameLocal.time + (altFireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
-			//} else {
-			//	Attack ( false, 1, spread, 0.0f, 1.0f );
-			//	nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
-			//}
-
-			//SD BEGIN
-			if(currentSpinSpeed >= maxSpinSpeed) {
+			if ( mods & NAILGUN_MOD_ROF_AMMO ) {
+				PlayCycle ( ANIMCHANNEL_LEGS, "fire_fast", 4 );
+			} else {
 				PlayCycle ( ANIMCHANNEL_LEGS, "fire_slow", 4 );
-				Attack ( false, 1, spread, 0.0f, 1.0f );
-				nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
-			}else{
-				currentSpinSpeed += gameLocal.time;
 			}
-			
+			Attack ( false, shotsPerAmmo, spread, 0.0f, 1.0f );
+			nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
 			// Play the exhaust effects
 			viewModel->PlayEffect ( "fx_exhaust", jointSteamRightView, false );
 			viewModel->PlayEffect ( "fx_exhaust", jointSteamLeftView, false );
 
-			viewModel->StartSound ( "snd_fire", SND_CHANNEL_WEAPON,	0, false, NULL );
-			viewModel->StartSound ( "snd_fireStereo", SND_CHANNEL_ITEM, 0, false, NULL ); 
-					
+			viewModel->StartSound ( "snd_fire", NAILGUN_FIRE_SNDCHANNEL,	0, false, NULL );
+			viewModel->StartSound ( "snd_fireStereo", NAILGUN_FIRE_SNDCHANNEL, 0, false, NULL ); 
+
 			return SRESULT_STAGE ( STAGE_FIREWAIT );
 
 		case STAGE_FIREWAIT:
@@ -731,6 +741,7 @@ stateResult_t TFHeavyMinigun::State_Fire( const stateParms_t& parms ) {
 			} else {
 				PostState ( "Idle", 4 );
 			}
+			viewModel->StopSound( NAILGUN_FIRE_SNDCHANNEL, false );	
 			return SRESULT_DONE;
 			
 		case STAGE_SPINEMPTY:
@@ -912,7 +923,7 @@ stateResult_t TFHeavyMinigun::State_DrumSpinDown ( const stateParms_t& parms ) {
 				SetState ( "Lower", 4 );
 				return SRESULT_DONE;
 			}
-			if ( wsfl.attack && AmmoInClip ( ) ) {
+			if ( wsfl.attack && AmmoInClip ( ) && currentSpinRate >= maxSpinRate) {
 				viewModel->StopSound ( NAILGUN_SPIN_SNDCHANNEL, false );
 				SetState ( "Fire", 4 );
 				return SRESULT_DONE;

@@ -48,7 +48,7 @@ TFScoutShotgun::Spawn
 ================
 */
 void TFScoutShotgun::Spawn( void ) {
-	hitscans   = spawnArgs.GetFloat( "shots_count" );
+	hitscans   = spawnArgs.GetFloat( "hitscans" );
 	
 	SetState( "Raise", 0 );	
 }

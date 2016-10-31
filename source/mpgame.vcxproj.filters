@@ -531,9 +531,6 @@
     <ClCompile Include="mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp">
       <Filter>Game\TFQuake\Weapons</Filter>
     </ClCompile>
-    <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyKGB.cpp">
-      <Filter>Game\TFQuake\Weapons</Filter>
-    </ClCompile>
     <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp">
       <Filter>Game\TFQuake\Weapons</Filter>
     </ClCompile>

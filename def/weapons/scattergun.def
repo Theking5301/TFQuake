@@ -66,9 +66,9 @@ entityDef weapon_scattergun
 	"spawnclass"				"idItem"
 	"weaponclass"				"TFScoutShotgun"
 	"size"					"32 32 32"
-	"model_view" 				"weapon_shotgun_view"
-	"model_view_strogg" 			"weapon_shotgun_view_strogg"
-  	"model_world"				"weapon_shotgun_world"
+	"model_view" 				"weapon_scattergun_view"
+	"model_view_strogg" 			"weapon_scattergun_view_strogg"
+  	"model_world"				"weapon_scattergun_world"
 	"model"					"models/weapons/shotgun/w_sg.lwo"
 	"def_dropItem"				"weapon_scattergun"
 	"def_ejectBrass"			"debris_brass_shotgun"
@@ -198,7 +198,7 @@ entityDef moveable_item_scattergun
 // Models
 //-------------------------------------------------------------------------------------------------------------------0
 
-model weapon_shotgun_view
+model weapon_scattergun_view
 {
 	mesh						models/weapons/shotgun/view.md5mesh
 
@@ -231,28 +231,28 @@ model weapon_shotgun_view
 		frame 4					sound_item		weapon_shotgun_shell
 	}
 
-	anim reload_end				models/weapons/shotgun/reload_end.md5anim
-	{
-		frame 4					sound			weapon_shotgun_pump1
-		frame 8					sound			weapon_shotgun_pump2
-	}
+	//anim reload_end				models/weapons/shotgun/reload_end.md5anim
+	//{
+	//	frame 4					sound			weapon_shotgun_pump1
+	//	frame 8					sound			weapon_shotgun_pump2
+	//}
 
-	anim reload_clip			models/weapons/shotgun/reload_clip.md5anim
-	{
-		frame 9					sound			weapon_shotgun_clipout
-		frame 22				sound				weapon_shotgun_clipin
-		frame 35				sound			weapon_shotgun_pump1
-		frame 38				sound			weapon_shotgun_pump2
-	}
+	//anim reload_clip			models/weapons/shotgun/reload_clip.md5anim
+	//{
+	//	frame 9					sound			weapon_shotgun_clipout
+	//	frame 22				sound				weapon_shotgun_clipin
+	//	frame 35				sound			weapon_shotgun_pump1
+	//	frame 38				sound			weapon_shotgun_pump2
+	//}
 }
 
-model weapon_shotgun_view_strogg
+model weapon_scattergun_view_strogg
 {
 	inherit						weapon_shotgun_view
 	mesh						models/weapons/shotgun/view_strogg.md5mesh	
 }
 
-model weapon_shotgun_world
+model weapon_scattergun_world
 {
 	mesh						models/weapons/shotgun/world/shotgun.md5mesh
 	anim idle					models/weapons/shotgun/world/idle.md5anim
@@ -326,7 +326,7 @@ entityDef hitscan_shotgun_pellet
 	"def_damage_flesh"			"damage_pellet"
 	// for multiplayer clients. we only sync the hitscan def
 	// must be the same as weapon_shotgun_mp
-	"hitscans"				"11"
+	"hitscans"				"10"
 }
 
 //--------------------------------------------------------------------------------------------------------------------
