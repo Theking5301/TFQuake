@@ -49,9 +49,6 @@
     <Filter Include="Game\TFQuake\Weapons">
       <UniqueIdentifier>{fde49ca7-7216-4545-9d82-460af7d45615}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\TFQuake\Player">
-      <UniqueIdentifier>{ece8f824-b7fa-4d98-a18e-2822fd02b4ab}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mpgame\Actor.cpp">
@@ -557,6 +554,18 @@
     </ClCompile>
     <ClCompile Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.cpp">
       <Filter>Game\TFQuake\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFMedigun.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSyringeGun.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSecondaryPistol.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSecondaryShotgun.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

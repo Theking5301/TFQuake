@@ -1224,6 +1224,9 @@ idPlayer::idPlayer() {
 	cursor					= NULL;
  	talkCursor				= 0;
 	
+	//SD BEGIN
+	bIsInitialized			= false;
+
 	oldMouseX				= 0;
 	oldMouseY				= 0;
 
@@ -1790,8 +1793,93 @@ void idPlayer::Init( void ) {
 	
 	clientIdealWeaponPredictFrame = -1;
 	serverReceiveEvent = false;
-}
 
+	//SD BEGIN
+	initializeClass();
+	initializeClassStats();
+	//SD END
+}
+//SD BEGIN
+void idPlayer::initializeClass() {
+	if(strcmp(modelDecl->head.c_str(),"char_marinehead_helmet_bright_client") == 0) {
+		Class = Sniper;
+		gameLocal.Printf("Player Class: %s \n", "Sniper");
+	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_morris_client") == 0) {
+		Class = Scout;
+		gameLocal.Printf("Player Class: %s \n", "Scout");
+	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_voss_client") == 0) {
+		Class = Heavy;
+		gameLocal.Printf("Player Class: %s \n", "Heavy");
+	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_cortez_client") == 0) {
+		Class = Soldier;
+		gameLocal.Printf("Player Class: %s \n", "Soldier");
+	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_anderson_client") == 0) {
+		Class = Medic;
+		gameLocal.Printf("Player Class: %s \n", "Medic");
+	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_strassa_client") == 0) {
+		Class = Demoman;
+		gameLocal.Printf("Player Class: %s \n", "Demoman");
+	}else{
+		gameLocal.Printf("Player Class: %s \n", "Undefined");
+	}
+}
+void idPlayer::initializeClassStats() {
+	switch(Class) {
+	case Scout:
+		inventory.maxHealth = spawnArgs.GetInt( "scoutMaxHealth", "100" );
+		physicsObj.SetSpeed( spawnArgs.GetInt( "scoutSpeed", "100" ), pm_crouchspeed.GetFloat() );
+		this->addWeapon("weapon_scattergun");
+		this->addWeapon("weapon_secondary_pisol");
+		break;
+	case Medic:
+		inventory.maxHealth = spawnArgs.GetInt( "medicMaxHealth", "100" );
+		physicsObj.SetSpeed( spawnArgs.GetInt( "medicSpeed", "100" ), pm_crouchspeed.GetFloat() );	
+		this->addWeapon("weapon_medigun");
+		this->addWeapon("weapon_syringegun");
+		break;
+	case Soldier:
+		inventory.maxHealth = spawnArgs.GetInt( "soldierMaxHealth", "100" );
+		physicsObj.SetSpeed( spawnArgs.GetInt( "soldierSpeed", "100" ), pm_crouchspeed.GetFloat() );	
+		this->addWeapon("weapon_rocketlauncher");
+		this->addWeapon("weapon_secondary_shotgun");
+		break;
+	case Heavy:
+		inventory.maxHealth = spawnArgs.GetInt( "heavyMaxHealth", "100" );
+		physicsObj.SetSpeed( spawnArgs.GetInt( "heavySpeed", "100" ), pm_crouchspeed.GetFloat() );	
+		this->addWeapon("weapon_minigun");
+		this->addWeapon("weapon_secondary_shotgun");
+		break;
+	case Sniper:
+		inventory.maxHealth = spawnArgs.GetInt( "sniperMaxHealth", "100" );
+		physicsObj.SetSpeed( spawnArgs.GetInt( "sniperSpeed", "100" ), pm_crouchspeed.GetFloat() );
+		this->addWeapon("weapon_sniperSMG");
+		this->addWeapon("weapon_sniperrifle");
+		break;
+	case Demoman:
+		inventory.maxHealth = spawnArgs.GetInt( "demomanMaxHealth", "100" );
+		physicsObj.SetSpeed( spawnArgs.GetInt( "demomanSpeed", "100" ), pm_crouchspeed.GetFloat() );
+		this->addWeapon("weapon_grenadelauncher");
+		break;
+	case Pyro:
+		inventory.maxHealth = spawnArgs.GetInt( "pyroMaxHealth", "100" );
+		physicsObj.SetSpeed( spawnArgs.GetInt( "pyroSpeed", "100" ), pm_crouchspeed.GetFloat() );
+		this->addWeapon("weapon_flamethrower");
+		break;
+	default: break;
+	}
+	inventory.maxarmor = 0;
+	health = inventory.maxHealth;
+}
+void idPlayer::addWeapon(const char *itemname) {
+	idDict	args;
+
+	args.Set( "classname", itemname );
+	args.Set( "owner", name.c_str() );
+	args.Set( "givenToPlayer", va( "%d", entityNumber ) );
+
+	gameLocal.SpawnEntityDef( args );
+}
+//SD ENG
 /*
 ===============
 idPlayer::ProjectHeadOverlay
@@ -2074,6 +2162,7 @@ void idPlayer::Spawn( void ) {
 //RITUAL END
 
 	itemCosts = static_cast< const idDeclEntityDef * >( declManager->FindType( DECL_ENTITYDEF, "ItemCostConstants", false ) );
+
 }
 
 /*
@@ -3030,10 +3119,12 @@ void idPlayer::RestorePersistantInfo( void ) {
 	spawnArgs.Copy( gameLocal.persistentPlayerInfo[entityNumber] );
 
 	inventory.RestoreInventory( this, spawnArgs );
- 	health = spawnArgs.GetInt( "health", "100" );
- 	if ( !gameLocal.isClient ) {
- 		idealWeapon = spawnArgs.GetInt( "current_weapon", "0" );
- 	}
+	//SD BEGIN
+ 	//health = spawnArgs.GetInt( "health", "100" );
+ 	//if ( !gameLocal.isClient ) {
+ 	//	idealWeapon = spawnArgs.GetInt( "current_weapon", "0" );
+ 	//}
+	//SD END
 }
 
 /*
@@ -3436,12 +3527,15 @@ void idPlayer::UpdateHudAmmo( idUserInterface *_hud ) {
 
 	inclip		= weapon->AmmoInClip();
 	ammoamount	= weapon->AmmoAvailable();
+	idStr tempAmmo;
+	sprintf(tempAmmo, "%d%s", ammoamount, "%");
 
 	if ( ammoamount < 0 ) {
 		// show infinite ammo
 		_hud->SetStateString( "player_ammo", "-1" );
 		_hud->SetStateString( "player_totalammo", "-1" );
 		_hud->SetStateFloat ( "player_ammopct", 1.0f );
+		_hud->SetStateString( "player_ubercharge", tempAmmo.c_str());
 	} else if ( weapon->ClipSize ( ) && !gameLocal.isMultiplayer ) {
 		_hud->SetStateInt ( "player_clip_size", weapon->ClipSize() );
 		_hud->SetStateFloat ( "player_ammopct", (float)inclip / (float)weapon->ClipSize ( ) );
@@ -3452,10 +3546,12 @@ void idPlayer::UpdateHudAmmo( idUserInterface *_hud ) {
 			_hud->SetStateInt ( "player_totalammo", ammoamount - inclip );
 		}
 		_hud->SetStateInt ( "player_ammo", inclip );
+		_hud->SetStateString( "player_ubercharge", tempAmmo.c_str());
 	} else {
 		_hud->SetStateFloat ( "player_ammopct", (float)ammoamount / (float)weapon->maxAmmo );
 		_hud->SetStateInt ( "player_totalammo", ammoamount );
 		_hud->SetStateInt ( "player_ammo", -1 );
+		_hud->SetStateString( "player_ubercharge", tempAmmo.c_str());
 	} 
 	
 	_hud->SetStateBool( "player_ammo_empty", ( ammoamount == 0 ) );
@@ -8698,9 +8794,15 @@ void idPlayer::AdjustSpeed( void ) {
  	} else if ( !physicsObj.OnLadder() && ( usercmd.buttons & BUTTON_RUN ) && ( usercmd.forwardmove || usercmd.rightmove ) && ( usercmd.upmove >= 0 ) ) {
 		bobFrac = 1.0f;
 		speed = pm_speed.GetFloat();
+		//SD BEGIN
+		return;
+		//SD END
 	} else {
 		speed = pm_walkspeed.GetFloat();
 		bobFrac = 0.0f;
+		//SD BEGIN
+		return;
+		//SD END
 	}
 
 	speed *= PowerUpModifier(PMOD_SPEED);

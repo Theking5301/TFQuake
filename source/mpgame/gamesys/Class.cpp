@@ -1433,6 +1433,11 @@ void idClass::RegisterClasses( void )
 	REGISTER(TFSniperRifle); 
 	REGISTER(TFSniperSMG); 
 	REGISTER(TFSoldierRocketLauncher); 
+	REGISTER(TFMedigun); 
+	REGISTER(TFSyringeGun); 
+	REGISTER(TFSecondaryPistol); 
+	REGISTER(TFSecondaryShotgun); 
+	//SD END
 
 // RITUAL BEGIN
 	REGISTER(riDeadZonePowerup); // ..\..\code\game\Item.cpp

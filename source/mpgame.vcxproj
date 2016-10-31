@@ -249,11 +249,15 @@
     <ClCompile Include="mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyKGB.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp" />
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFMedigun.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutPistol.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutShotgun.cpp" />
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSecondaryPistol.cpp" />
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSecondaryShotgun.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFSniperRifle.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFSniperSMG.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFSoldierRocketLauncher.cpp" />
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFSyringeGun.cpp" />
     <ClCompile Include="mpgame\TramGate.cpp" />
     <ClCompile Include="mpgame\Trigger.cpp" />
     <ClCompile Include="mpgame\WorldSpawn.cpp" />
