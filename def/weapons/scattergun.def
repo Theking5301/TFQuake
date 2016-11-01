@@ -248,7 +248,7 @@ model weapon_scattergun_view
 
 model weapon_scattergun_view_strogg
 {
-	inherit						weapon_shotgun_view
+	inherit						weapon_scattergun_view
 	mesh						models/weapons/shotgun/view_strogg.md5mesh	
 }
 

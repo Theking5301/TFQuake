@@ -91,8 +91,18 @@ typedef enum {
 	Sniper,
 	Medic,
 	Demoman,
+	Spy,
 	Pyro
 } EPlayerClass;
+typedef enum {
+	MedicCall,
+	Ouch,
+	Attacking,
+	KillEnemy,
+	Random,
+	Start,
+	Death
+} EVocalizeType;
 
 struct idItemInfo {
 	idStr name;
@@ -430,6 +440,11 @@ public:
 	void					initializeClass();
 	void					initializeClassStats();
 	void					addWeapon(const char *itemname);
+	void					setSpeed(int walkSpeed, int crouchSpeed);
+	int						getMovementSpeeds(int& crouchSpeed);
+	bool					playerVocalize(EVocalizeType Vocalization, bool bRandom = false, float randomChance = 1.0);
+
+	int						demoHeads;
 	//SD END
 
 public:

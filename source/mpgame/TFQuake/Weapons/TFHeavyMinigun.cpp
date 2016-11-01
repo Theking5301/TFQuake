@@ -57,6 +57,8 @@ protected:
 	bool								bIsPlayingSpinSound;
 	float								currentSpinRate;
 	float								maxSpinRate;
+	bool								bIsVocalizing;
+	float								vocalizingTime;
 	//SD END
 
 	jointHandle_t						jointDrumView;
@@ -110,6 +112,11 @@ TFHeavyMinigun::~TFHeavyMinigun
 ================
 */
 TFHeavyMinigun::~TFHeavyMinigun ( void ) {
+	if(drumSpeedIdeal != NAILGUN_DRUMSPEED_STOPPED) {
+		int currentCrouchSpeed = 0;
+		int currentWalkSpeed = owner->getMovementSpeeds(currentCrouchSpeed);
+		owner->setSpeed(currentWalkSpeed + 100, currentCrouchSpeed +100);
+	}
 	if ( guideEffect ) {
 		guideEffect->Stop();
 	}
@@ -134,6 +141,8 @@ void TFHeavyMinigun::Spawn ( void ) {
 	maxSpinRate = spawnArgs.GetFloat("maxSpinRate", ".87");
 	currentSpinRate = 0;
 	bIsPlayingSpinSound = false;
+	bIsVocalizing = false;
+	vocalizingTime = 0.0;
 	//SD END
 
 	jointDrumView		= viewAnimator->GetJointHandle ( spawnArgs.GetString ( "joint_view_drum" ) );
@@ -336,8 +345,11 @@ void TFHeavyMinigun::Think ( void ) {
 
 
 	if(wsfl.zoom || wsfl.attack) {
-		if(drumSpeedIdeal == NAILGUN_DRUMSPEED_STOPPED) {
+		if(drumSpeedIdeal == NAILGUN_DRUMSPEED_STOPPED || drumSpeedIdeal == NAILGUN_DRUMSPEED_SLOW) {
 			viewModel->StartSound ( "snd_spinup", SND_CHANNEL_ANY, 0, false, 0 );
+			int currentCrouchSpeed = 0;
+			int currentWalkSpeed = owner->getMovementSpeeds(currentCrouchSpeed);
+			owner->setSpeed(currentWalkSpeed - 100, currentCrouchSpeed - 100);
 		}
 		DrumSpin ( NAILGUN_DRUMSPEED_FAST, 2);
 		if(currentSpinRate < maxSpinRate) {
@@ -349,12 +361,30 @@ void TFHeavyMinigun::Think ( void ) {
 			viewModel->StartSound ( "snd_spinfast", NAILGUN_SPIN_SNDCHANNEL, 0, false, NULL );
 			bIsPlayingSpinSound = true;
 		}
+
+		if(wsfl.attack) {
+			if(!bIsVocalizing) {
+				if(owner->playerVocalize(static_cast<EVocalizeType>(2), true, .05f)) {
+					bIsVocalizing = true;
+					vocalizingTime = 10.0;
+				}
+			}else{
+				vocalizingTime -=((float)gameLocal.msec/1000.0f);
+				if(vocalizingTime <= 0) {
+					bIsVocalizing = false;
+				}
+			}
+			
+		}
 	}
 	if(!wsfl.zoom && !wsfl.attack) {
 		bIsPlayingSpinSound = false;
 		viewModel->StopSound ( NAILGUN_SPIN_SNDCHANNEL, false );
 		if(drumSpeedIdeal == NAILGUN_DRUMSPEED_FAST) {
 			viewModel->StartSound ( "snd_spindown", SND_CHANNEL_ANY, 0, false, 0 );
+			int currentCrouchSpeed = 0;
+			int currentWalkSpeed = owner->getMovementSpeeds(currentCrouchSpeed);
+			owner->setSpeed(currentWalkSpeed + 100, currentCrouchSpeed + 100);
 		}
 		if(currentSpinRate > 0) {
 			currentSpinRate -= ((float)gameLocal.msec/1000.0f);

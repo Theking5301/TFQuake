@@ -112,6 +112,7 @@ rvCTF_AssaultPoint::Event_Activate
 ================
 */
 void rvCTF_AssaultPoint::Event_Touch( idEntity *activator, trace_t *trace ) {
+	gameLocal.Printf("%s", "TOUCHING");
 	if( !activator->IsType( idPlayer::GetClassType() ) || ((gameLocal.mpGame.GetGameState())->GetMPGameState() != GAMEON && !cvarSystem->GetCVarBool( "g_testCTF" )) ) {
 		return;
 	}

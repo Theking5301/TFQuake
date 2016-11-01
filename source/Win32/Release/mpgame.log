@@ -1,11 +1,11 @@
-﻿Build started 10/31/2016 4:20:12 AM.
+﻿Build started 11/1/2016 4:08:00 AM.
      1>Project "G:\TFQuake\source\mpgame.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Win32\Release\mpgame.unsuccessfulbuild".
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\TFQuake\Weapons\TFMedigun.cpp
-         TFMedigun.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\Player.cpp
+         Player.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Win32\Release\mpgamex86.dll" /INCREMENTAL:NO /NOLOGO Win32\Release\idLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\mpgame\mpgame.def" /MANIFEST /ManifestFile:"Win32\Release\mpgamex86.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Win32\Release\mpgamex86.pdb" /MAP:"Win32\Release\mpgamex86.map" /MAPINFO:EXPORTS /STACK:"4194304" /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /TLBID:1 /BASE:"0x20000000" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Win32\Release\mpgame/Actor.obj
          Win32\Release\mpgame/AF.obj
@@ -41,8 +41,10 @@
          Win32\Release\mpgame/Target.obj
          Win32\Release\mpgame/TFQuakeUtils.obj
          Win32\Release\mpgame/TFDemoGrenadeLauncher.obj
+         Win32\Release\mpgame/TFEyelander.obj
          Win32\Release\mpgame/TFHeavyMinigun.obj
          Win32\Release\mpgame/TFMedigun.obj
+         Win32\Release\mpgame/TFMelee.obj
          Win32\Release\mpgame/TFScoutPistol.obj
          Win32\Release\mpgame/TFScoutShotgun.obj
          Win32\Release\mpgame/TFSecondaryPistol.obj
@@ -183,9 +185,11 @@
          mpgame.vcxproj -> G:\TFQuake\source\Win32\Release\mpgamex86.dll
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"Win32\Release\mpgamex86.dll;#2" /manifest Win32\Release\mpgamex86.dll.intermediate.manifest
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(574,5): error MSB6006: "mt.exe" exited with code 31.
-     1>Done Building Project "G:\TFQuake\source\mpgame.vcxproj" (build target(s)) -- FAILED.
+       FinalizeBuildStatus:
+         Deleting file "Win32\Release\mpgame.unsuccessfulbuild".
+         Touching "Win32\Release\mpgame.lastbuildstate".
+     1>Done Building Project "G:\TFQuake\source\mpgame.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:05.05
+Time Elapsed 00:00:07.04

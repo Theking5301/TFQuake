@@ -73,9 +73,9 @@ entityDef weapon_sniperrifle
 	"spawnclass"				"idItem"
 	"weaponclass"				"TFSniperRifle"
 	"size"					"32 32 32"
-	"model_view" 				"weapon_railgun_view"
-	"model_view_strogg" 			"weapon_railgun_view_strogg"
-  	"model_world"				"weapon_railgun_world"
+	"model_view" 				"weapon_sniper_rifle_view"
+	"model_view_strogg" 		"weapon_sniper_rifle_view_strogg"
+  	"model_world"				"weapon_sniper_rifle_world"
 	//"model"					"models/weapons/railgun/world/w_rg.lwo"
 	"model"						"models/capturepoint/CapturePoint.lwo"
 	"def_dropItem"				"weapon_sniperrifle"
@@ -212,7 +212,7 @@ entityDef moveable_item_railgun
 // Models
 //-------------------------------------------------------------------------------------------------------------------0
 
-model weapon_railgun_view
+model weapon_sniper_rifle_view
 {
 	mesh						models/weapons/railgun/view.md5mesh
 
@@ -246,7 +246,7 @@ model weapon_railgun_view
 	}
 }
 
-model weapon_railgun_view_mp
+model weapon_sniper_rifle_view_mp
 {
 	mesh						models/weapons/railgun/view.md5mesh
 
@@ -281,9 +281,9 @@ model weapon_railgun_view_mp
 	}
 }
 
-model weapon_railgun_view_strogg
+model weapon_sniper_rifle_view_strogg
 {
-	inherit						weapon_railgun_view
+	inherit						weapon_sniper_rifle_view
 	mesh						models/weapons/railgun/view_strogg.md5mesh
 }
 

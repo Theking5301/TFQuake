@@ -309,7 +309,7 @@ model weapon_syringegun_view
 
 model weapon_syringegun_view_strogg
 {
-	inherit						weapon_machinegun_view
+	inherit						weapon_syringegun_view
 
 	offset						(-1.5 1.7 .25)
 

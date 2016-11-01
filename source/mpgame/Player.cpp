@@ -1226,7 +1226,8 @@ idPlayer::idPlayer() {
 	
 	//SD BEGIN
 	bIsInitialized			= false;
-
+	demoHeads				= 0;
+	//SD END
 	oldMouseX				= 0;
 	oldMouseY				= 0;
 
@@ -1350,6 +1351,8 @@ idPlayer::idPlayer() {
 	prevOnGround = true;
 	clientIdealWeaponPredictFrame = -1;
 	serverReceiveEvent = false;
+
+	//StartSound ( "snd_music", SND_CHANNEL_BODY2, 0, false, NULL );
 }
 
 /*
@@ -1801,25 +1804,38 @@ void idPlayer::Init( void ) {
 }
 //SD BEGIN
 void idPlayer::initializeClass() {
-	if(strcmp(modelDecl->head.c_str(),"char_marinehead_helmet_bright_client") == 0) {
-		Class = Sniper;
-		gameLocal.Printf("Player Class: %s \n", "Sniper");
-	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_morris_client") == 0) {
-		Class = Scout;
-		gameLocal.Printf("Player Class: %s \n", "Scout");
-	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_voss_client") == 0) {
-		Class = Heavy;
-		gameLocal.Printf("Player Class: %s \n", "Heavy");
-	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_cortez_client") == 0) {
-		Class = Soldier;
-		gameLocal.Printf("Player Class: %s \n", "Soldier");
-	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_anderson_client") == 0) {
-		Class = Medic;
-		gameLocal.Printf("Player Class: %s \n", "Medic");
-	}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_strassa_client") == 0) {
-		Class = Demoman;
-		gameLocal.Printf("Player Class: %s \n", "Demoman");
+	if(modelDecl) {
+		if(strcmp(modelDecl->head.c_str(),"char_marinehead_helmet_bright_client") == 0) {
+			Class = Sniper;
+			gameLocal.Printf("Player Class: %s \n", "Sniper");
+		}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_morris_client") == 0) {
+			Class = Scout;
+			gameLocal.Printf("Player Class: %s \n", "Scout");
+		}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_voss_client") == 0) {
+			Class = Heavy;
+			gameLocal.Printf("Player Class: %s \n", "Heavy");
+		}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_cortez_client") == 0) {
+			Class = Soldier;
+			gameLocal.Printf("Player Class: %s \n", "Soldier");
+		}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_anderson_client") == 0) {
+			Class = Medic;
+			gameLocal.Printf("Player Class: %s \n", "Medic");
+		}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_strassa_client") == 0) {
+			Class = Demoman;
+			gameLocal.Printf("Player Class: %s \n", "Demoman");
+		}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_kane2_client") == 0) {
+			Class = Spy;
+			gameLocal.Printf("Player Class: %s \n", "Spy");
+		}else if(strcmp(modelDecl->head.c_str(), "char_marinehead_kanestrg_client") == 0) {
+			Class = Pyro;
+			gameLocal.Printf("Player Class: %s \n", "Pyro");
+		}else{
+			this->Kill(false, false);
+			gameLocal.Printf("Player Class: %s \n", "Undefined");
+		}
 	}else{
+		this->Kill(false, false);
+		//Class = Scout;
 		gameLocal.Printf("Player Class: %s \n", "Undefined");
 	}
 }
@@ -1827,48 +1843,167 @@ void idPlayer::initializeClassStats() {
 	switch(Class) {
 		case Scout:
 			inventory.maxHealth = spawnArgs.GetInt( "scoutMaxHealth", "100" );
-			physicsObj.SetSpeed( spawnArgs.GetInt( "scoutSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "scoutSpeed", "100" ), spawnArgs.GetInt( "scoutSpeed", "100" ) - 20);
+			physicsObj.maxJumpCount = 2;
+			this->addWeapon("weapon_gauntlet");
+			//this->addWeapon("weapon_bat");		
+			//this->addWeapon("weapon_bonk");		
 			this->addWeapon("weapon_secondary_pistol");
 			this->addWeapon("weapon_scattergun");
 			break;
 		case Medic:
 			inventory.maxHealth = spawnArgs.GetInt( "medicMaxHealth", "100" );
-			physicsObj.SetSpeed( spawnArgs.GetInt( "medicSpeed", "100" ), pm_crouchspeed.GetFloat() );	
+			physicsObj.SetSpeed( spawnArgs.GetInt( "medicSpeed", "100" ), spawnArgs.GetInt( "medicSpeed", "100" ) - 20);	
+			physicsObj.maxJumpCount = 1;
+			this->addWeapon("weapon_gauntlet");
+			this->addWeapon("weapon_ubersaw");				
 			this->addWeapon("weapon_syringegun");
 			this->addWeapon("weapon_medigun");
 			break;
 		case Soldier:
 			inventory.maxHealth = spawnArgs.GetInt( "soldierMaxHealth", "100" );
-			physicsObj.SetSpeed( spawnArgs.GetInt( "soldierSpeed", "100" ), pm_crouchspeed.GetFloat() );	
+			physicsObj.SetSpeed( spawnArgs.GetInt( "soldierSpeed", "100" ), spawnArgs.GetInt( "soldierSpeed", "100" ) - 20);	
+			physicsObj.maxJumpCount = 1;
+			this->addWeapon("weapon_gauntlet");			
+			//this->addWeapon("weapon_shovel");
 			this->addWeapon("weapon_secondary_shotgun");
 			this->addWeapon("weapon_soldier_rocket_launcher");
 			break;
 		case Heavy:
 			inventory.maxHealth = spawnArgs.GetInt( "heavyMaxHealth", "100" );
-			physicsObj.SetSpeed( spawnArgs.GetInt( "heavySpeed", "100" ), pm_crouchspeed.GetFloat() );	
+			physicsObj.SetSpeed( spawnArgs.GetInt( "heavySpeed", "100" ), spawnArgs.GetInt( "heavySpeed", "100" ) - 20);	
+			physicsObj.maxJumpCount = 1;			
+			this->addWeapon("weapon_gauntlet");			
+			this->addWeapon("weapon_KGB");
 			this->addWeapon("weapon_secondary_shotgun");
 			this->addWeapon("weapon_minigun");
 			break;
 		case Sniper:
 			inventory.maxHealth = spawnArgs.GetInt( "sniperMaxHealth", "100" );
-			physicsObj.SetSpeed( spawnArgs.GetInt( "sniperSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "sniperSpeed", "100" ),  spawnArgs.GetInt( "sniperSpeed", "100" ) - 20);
+			physicsObj.maxJumpCount = 1;			
+			//this->addWeapon("weapon_kukri");	
+			this->addWeapon("weapon_gauntlet");
 			this->addWeapon("weapon_sniperSMG");
 			this->addWeapon("weapon_sniperrifle");
 			break;
 		case Demoman:
 			inventory.maxHealth = spawnArgs.GetInt( "demomanMaxHealth", "100" );
-			physicsObj.SetSpeed( spawnArgs.GetInt( "demomanSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "demomanSpeed", "100" ), spawnArgs.GetInt( "demomanSpeed", "100" ) - 20);
+			physicsObj.maxJumpCount = 1;			
+			//this->addWeapon("weapon_eyelander");
+			this->addWeapon("weapon_gauntlet");
 			this->addWeapon("weapon_demo_grenade_launcher");
+			break;
+		case Spy:
+			inventory.maxHealth = spawnArgs.GetInt( "spyMaxHealth", "100" );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "spySpeed", "100" ), spawnArgs.GetInt( "spySpeed", "100" ) - 20);
+			physicsObj.maxJumpCount = 1;			
+			this->addWeapon("weapon_ambassador");
+			this->addWeapon("weapon_butterfyl_knife");
+			this->addWeapon("weapon_cloak_watch");
 			break;
 		case Pyro:
 			inventory.maxHealth = spawnArgs.GetInt( "pyroMaxHealth", "100" );
-			physicsObj.SetSpeed( spawnArgs.GetInt( "pyroSpeed", "100" ), pm_crouchspeed.GetFloat() );
+			physicsObj.SetSpeed( spawnArgs.GetInt( "pyroSpeed", "100" ), spawnArgs.GetInt( "pyroSpeed", "100" ) - 20);
+			physicsObj.maxJumpCount = 1;			
+			this->addWeapon("weapon_flaregun");
 			this->addWeapon("weapon_flamethrower");
 			break;
 		default: break;
 	}
 	inventory.maxarmor = 0;
 	health = inventory.maxHealth;
+}
+int	idPlayer::getMovementSpeeds(int& crouchSpeed) {
+	crouchSpeed = physicsObj.crouchSpeed;
+	return physicsObj.walkSpeed;
+}
+void idPlayer::setSpeed(int walkSpeed, int crouchSpeed) {
+	physicsObj.SetSpeed(idMath::ClampInt(0, 10000, walkSpeed), idMath::ClampInt(0, 10000, crouchSpeed));
+}
+bool idPlayer::playerVocalize(EVocalizeType Vocalization, bool bRandom, float randomChance) {
+	if(bRandom) {
+		float diceRoll = gameLocal.random.RandomFloat();
+		if(randomChance < diceRoll) {
+			return false;
+		}
+	}
+	switch(Class) {
+		case Scout:
+			switch(Vocalization) {
+				case MedicCall: break;
+				case Ouch: break;
+				case Attacking: break;
+				case KillEnemy: break;
+				case Random: StartSound( "snd_scout_random_yell", SND_CHANNEL_ANY, 0, true, NULL );
+								break;
+				case Start: break;
+				case Death: break;
+				default: break;
+			}
+			break;
+		case Medic:
+			switch(Vocalization) {
+				case MedicCall: break;
+				case Ouch: break;
+				case Attacking: break;
+				case KillEnemy: break;
+				case Random: StartSound( "snd_medic_random_yell", SND_CHANNEL_ANY, 0, true, NULL );
+								break;
+				case Start: break; 						
+				case Death: break;
+				default: break;
+			}
+			break;
+		case Soldier:
+			switch(Vocalization) {
+				case MedicCall: break;
+				case Ouch: break;
+				case Attacking: break;
+				case KillEnemy: break;
+				case Start: break;
+				case Death: break;
+				default: break;
+			}
+			break;
+		case Heavy:
+			switch(Vocalization) {
+				case MedicCall: break;
+				case Ouch: break;
+				case Attacking: StartSound( "snd_heavy_yell", SND_CHANNEL_ANY, 0, true, NULL );
+								break;
+				case KillEnemy: break;
+				case Start: break;
+				case Death: break;
+				default: break;
+			}
+			break;
+		case Sniper:
+			switch(Vocalization) {
+				case MedicCall: break;
+				case Ouch: break;
+				case Attacking: break;
+				case KillEnemy: break;
+				case Start: break;
+				case Death: break;
+				default: break;
+			}
+			break;
+		case Demoman:
+			switch(Vocalization) {
+				case MedicCall: break;
+				case Ouch: break;
+				case Attacking: break;
+				case KillEnemy: break;
+				case Start: break;
+				case Death: break;
+				default: break;
+			}
+			break;
+		default: break;
+	}
+	return true;
 }
 void idPlayer::addWeapon(const char *itemname) {
 	idDict	args;
@@ -1879,7 +2014,8 @@ void idPlayer::addWeapon(const char *itemname) {
 
 	gameLocal.SpawnEntityDef( args );
 }
-//SD ENG
+//SD END
+
 /*
 ===============
 idPlayer::ProjectHeadOverlay
@@ -3534,7 +3670,7 @@ void idPlayer::UpdateHudAmmo( idUserInterface *_hud ) {
 	sprintf(tempUberPrecent, "%d%s", ammoamount, "%");
 
 	idStr tempClipLeft;
-	sprintf(tempClipLeft, "%d/%d", inclip, idMath::ClampInt(0, 1000, ammoamount-maxAmmo));
+	sprintf(tempClipLeft, "%d/%d", inclip, idMath::ClampInt(0, 1000, ammoamount-inclip));
 
 	if ( ammoamount < 0 ) {
 		// show infinite ammo
@@ -3563,6 +3699,10 @@ void idPlayer::UpdateHudAmmo( idUserInterface *_hud ) {
 			}else if(currentWeapon == 18){
 				_hud->SetStateInt ( "player_totalammo", ammoamount );
 				_hud->SetStateFloat ( "player_ammopct", (float)ammoamount / (float)weapon->maxAmmo );
+			}else if(currentWeapon == 22) {
+				idStr tempHeads;
+				sprintf(tempHeads, "Heads %d", demoHeads);
+				_hud->SetStateString( "player_totalammo", tempHeads.c_str());
 			}else{
 				_hud->SetStateString ( "player_totalammo", tempClipLeft );
 				_hud->SetStateFloat ( "player_ammopct", (float)inclip / (float)weapon->maxAmmo);
@@ -3590,34 +3730,46 @@ void idPlayer::UpdateHudStats( idUserInterface *_hud ) {
 	assert ( _hud );
 
 	idStr tempClassName;
+	int tempClassIndex = 0;
 	switch(Class) {
 		case Scout:
 			tempClassName = "Scout";
+			tempClassIndex = 0;
 			break;
 		case Medic:
 			tempClassName = "Medic";
+			tempClassIndex = 4;
 			break;
 		case Soldier:
 			tempClassName = "Soldier";
+			tempClassIndex = 2;
 			break;
 		case Heavy:
 			tempClassName = "Heavy";
+			tempClassIndex = 1;
 			break;
 		case Sniper:
 			tempClassName = "Sniper";
+			tempClassIndex = 3;
 			break;
 		case Demoman:
 			tempClassName = "Demoman";
+			tempClassIndex = 5;
+			break;
+		case Spy:
+			tempClassName = "Spy";
+			tempClassIndex = 6;
 			break;
 		case Pyro:
 			tempClassName = "Pyro";
+			tempClassIndex = 7;
 			break;
 		default: break;
 	}
 	_hud->SetStateString ( "player_class", tempClassName);
+	_hud->SetStateInt ( "player_class_index", tempClassIndex);
 	_hud->SetStateInt ( "player_team", team);
 	_hud->HandleNamedEvent ( "updateHealth" );
-
 	temp = _hud->State().GetInt ( "player_health", "-1" );
 	if ( temp != health ) {		
 		_hud->SetStateInt   ( "player_healthDelta", temp == -1 ? 0 : (temp - health) );
@@ -9229,8 +9381,10 @@ void idPlayer::Move( void ) {
 		// a cleaner fix would be to make sure PMF_JUMP gets cleared, but this close to release, that will do
 		// (the AF becomes the active physics object, so physics don't run on idPlayer_Physics and that flag never gets cleared)
 		if ( health > 0 ) {
+			playerVocalize(Random, true, .25);
 			// don't use the sound broadcasting facility in StartSound, we only need unreliable, and we need to filter for local client prediction
 			if ( gameLocal.isServer || IsLocalClient() ) {
+
 				StartSound( "snd_jump", (s_channelType)FC_SOUND, 0, false, NULL );
 			}
 

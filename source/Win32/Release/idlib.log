@@ -1,4 +1,4 @@
-﻿Build started 10/31/2016 4:20:12 AM.
+﻿Build started 11/1/2016 4:08:00 AM.
      1>Project "G:\TFQuake\source\idlib.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Win32\Release\idlib.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -16,4 +16,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.14
+Time Elapsed 00:00:00.13

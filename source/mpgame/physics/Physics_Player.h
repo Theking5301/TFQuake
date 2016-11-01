@@ -112,14 +112,19 @@ public:	// common physics interface
 
 	void					SetClipModelNoLink( idClipModel *clip );
 
+	//SD BEGIN
+	//Should've made getters/setters. Too Lazy.
+	float					walkSpeed;
+	float					crouchSpeed;
+	int						jumpCount;
+	int						maxJumpCount;
 private:
 	// player physics state
 	playerPState_t			current;
 	playerPState_t			saved;
 
 	// properties
-	float					walkSpeed;
-	float					crouchSpeed;
+
 	float					maxStepHeight;
 	float					maxJumpHeight;
 	int						debugLevel;				// if set, diagnostic output will be printed

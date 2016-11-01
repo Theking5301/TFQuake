@@ -210,7 +210,7 @@ model weapon_secondary_pistol_view
 
 model weapon_secondary_pistol_view_strogg
 {
-	inherit						weapon_blaster_view
+	inherit						weapon_secondary_pistol_view
 	mesh						models/weapons/blaster/view_strogg.md5mesh
 }
 

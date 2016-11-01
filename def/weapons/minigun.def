@@ -118,7 +118,7 @@ entityDef weapon_minigun
 	"inv_start_ammo_nailgun"	"200" //Was 50
 	"inv_item"					"1"
 	"inv_icon"					"gfx/guis/hud/icons/item_nailgun"
-	"inv_name"					"#str_117414"
+	"inv_name"					"#str_117417"
 
 	//"gui"						"guis/weapons/nailgun_ammo.gui"
 	//"gui_zoom"					"guis/weapons/nailgun_scope.gui"
@@ -300,7 +300,7 @@ model weapon_minigun_view
 
 model weapon_minigun_view_strogg
 {
-	inherit					weapon_nailgun_view
+	inherit					weapon_minigun_view
 
 	mesh					models/weapons/nailgun/view_strogg.md5mesh
 

@@ -40,6 +40,7 @@ const int PMF_TIME_KNOCKBACK	= 64;		// movementTime is an air-accelerate only ti
 const int PMF_TIME_WATERJUMP	= 128;		// movementTime is waterjump
 const int PMF_ALL_TIMES			= (PMF_TIME_WATERJUMP|PMF_TIME_LAND|PMF_TIME_KNOCKBACK);
 
+
 float idPhysics_Player::Pm_Accelerate( void ) {
 	return gameLocal.IsMultiplayer() ? PM_ACCELERATE_MP : PM_ACCELERATE_SP;
 }
@@ -754,7 +755,9 @@ void idPhysics_Player::WalkMove( void ) {
 		}
 		return;
 	}
-
+	if(jumpCount > 0 ) {
+		return;
+	}
 	idPhysics_Player::Friction();
 
 	scale = idPhysics_Player::CmdScale( command );
@@ -1269,6 +1272,7 @@ bool idPhysics_Player::CheckJump( void ) {
 	// CheckJump only called from WalkMove, therefore with walking == true
 	// in MP game we always have groundPlane == walking
 	// (this mostly matters to velocity clipping against ground when the jump is ok'ed)
+
 	assert( groundPlane );
 
 	if ( command.upmove < 10 ) {
@@ -1296,6 +1300,7 @@ bool idPhysics_Player::CheckJump( void ) {
 	addVelocity *= idMath::Sqrt( addVelocity.Normalize() );
 	current.velocity += addVelocity;
 
+
 	groundPlane = false;		// jumping away
 	walking = false;
 	groundEntityPtr = NULL;
@@ -1303,7 +1308,7 @@ bool idPhysics_Player::CheckJump( void ) {
 
 	// crouch slide
 	current.crouchSlideTime = 0;
-
+	jumpCount++;
 	return true;
 }
 
@@ -1541,15 +1546,21 @@ void idPhysics_Player::MovePlayer( int msec ) {
 		// swimming
 		idPhysics_Player::WaterMove();
 	}
-	else if ( walking ) {
+	//SD BEGIN
+	else if ( walking) {
 		// walking on ground
+		jumpCount = 0;
 		idPhysics_Player::WalkMove();
-	}
-	else {
+	}else if(!walking && jumpCount > 0 && jumpCount < maxJumpCount) {
+		idPhysics_Player::WalkMove();
+		idPhysics_Player::AirMove();
+	}else if(!walking && jumpCount == 0 && command.upmove >= 10 && current.velocity.z <=0) {
+		idPhysics_Player::CheckJump();
+	}else {
 		// airborne
 		idPhysics_Player::AirMove();
 	}
-
+	//SD END
 	if ( !gameLocal.isMultiplayer ) {
 		idPhysics_Player::SetWaterLevel();
 	}
@@ -1666,6 +1677,7 @@ idPhysics_Player::idPhysics_Player( void ) {
 	ladderNormal.Zero();
 	waterLevel = WATERLEVEL_NONE;
 	waterType = 0;
+	maxJumpCount = 1;
 }
 
 /*

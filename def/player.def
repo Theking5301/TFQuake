@@ -715,13 +715,21 @@ entityDef player_marine
 	"weapon18_best"						"1"
 	"weapon18_cycle"					"1"	
 	
-	"def_weapon19"						"weapon_soldier_rocket_launcher"
+	"def_weapon19"						"weapon_kukri"
 	"weapon19_best"						"1"
 	"weapon19_cycle"					"1"	
-	
-	"def_weapon20"						"weapon_demogrenadelauncher"
+		
+	"def_weapon20"						"weapon_demo_grenade_launcher"
 	"weapon20_best"						"1"
 	"weapon20_cycle"					"1"	
+	
+	"def_weapon21"						"weapon_soldier_rocket_launcher"
+	"weapon21_best"						"1"
+	"weapon21_cycle"					"1"	
+
+	"def_weapon22"						"weapon_eyelander"
+	"weapon22_best"						"1"
+	"weapon22_cycle"					"1"	
 	
 	
 	"mtr_wound"						"textures/decals/hurt02"
@@ -771,6 +779,7 @@ entityDef player_marine
 	"heavyHealth"					"300"
 	"sniperHealth"					"125"
 	"demomanHealth"					"175"
+	"spyHealth"						"125"
 	"pyroHealth"					"175"
 	
 	"scoutMaxHealth"				"125"
@@ -779,14 +788,16 @@ entityDef player_marine
 	"heavyMaxHealth"				"300"
 	"sniperMaxHealth"				"125"
 	"demomanMaxHealth"				"175"
-	"pyroMaxHealth"					"175"
-		
+	"spyMaxHealth"					"125"
+	"pyroMaxHealth"					"175"	
+	
 	"scoutSpeed"					"400"
-	"medicSpeed"					"270"
+	"medicSpeed"					"260"
 	"soldierSpeed"					"215"
-	"heavySpeed"					"170"
+	"heavySpeed"					"160"
 	"sniperSpeed"					"260"
 	"demomanSpeed"					"215"
+	"spySpeed"						"270"
 	"pyroSpeed"						"250"
 	
 	"armor"							"0"
@@ -842,6 +853,13 @@ entityDef player_marine
 	"snd_footstep_flesh"				"player_steps_liquid"
 	"snd_footstep_water"				"player_sounds_water"
 	"snd_gear2"							"player_gear_movement2"
+	
+	"snd_music"							"player_main_menu_music"
+	
+	//VOCALIZATIONS
+	"snd_heavy_attack_yell"				"player_heavy_attack_yell"
+	"snd_scout_random_yell"				"player_scout_random_yell"
+	"snd_medic_random_yell"				"player_medic_random_yell"
 	
 	"snd_jump"						"player_gear_movement"
 
@@ -970,7 +988,7 @@ playerModel model_player_marine_helmeted_bright { //Sniper
 	"def_head"		"char_marinehead_helmet_bright_client"
 	"def_head_ui"		"char_marinehead_helmet_bright_mp"
 	"skin"			"skins/multiplayer/marine_bright"
-	"team"			"marine"
+	//"team"			"marine"
 	"description"		"#str_110100"
 }
 playerModel model_player_marine_morris { //Scout
@@ -1012,6 +1030,84 @@ playerModel model_player_marine_tech { //Demoman
 	"skin"			"skins/characters/marine/tech_strauss_mp"
 	"description"		"#str_108008"
 }
+playerModel model_player_corpse_spy { //Spy
+	"model"			"model_player_corpse"
+	"def_head"		"char_marinehead_kane2_client"
+	"skin"			""
+	"team"			"marine"
+	"description"		"#str_108011"
+}
+playerModel model_player_tactical_elite_pyro { //Pyro
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_kanestrg_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			"skins/characters/kane_strogg/tactical_elite"
+	"team"			"marine"
+	"description"		"#str_108012"
+}
+
+// Red team models
+playerModel model_player_tactical_transfer_bright { //Sniper
+	"model"			"model_player_tactical_transfer"
+	"def_head"		"char_marinehead_helmet_bright_client"
+	"skin"			"skins/multiplayer/strogg_bright"
+	"team"			"strogg"
+	"description"		"#str_110100"
+}
+playerModel model_player_kane_strogg { //Scout
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_morris_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			""
+	"team"			"strogg"
+	"description"		"#str_108004"
+}
+playerModel model_player_tactical_elite { //Heavy
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_voss_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			"skins/characters/kane_strogg/tactical_elite"
+	"team"			"strogg"
+	"description"		"#str_108005"
+}
+playerModel model_player_tactical_command { //Soldier
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_cortez_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			"skins/characters/kane_strogg/tactical_command"
+	"team"			"strogg"	
+	"description"		"#str_108006"
+}
+playerModel model_player_failed_transfer { //Medic
+	"model"			"model_player_failed_transfer"
+	"def_head"		"char_marinehead_anderson_client"
+	"skin"			""
+	"team"			"strogg"
+	"description"		"#str_108009"
+}
+
+playerModel model_player_slimy_transfer { //Demoman
+	"model"			"model_player_slimy_transfer"
+	"def_head"		"char_marinehead_strassa_client"
+	"skin"			""
+	"team"			"strogg"
+	"description"		"#str_108008"
+}
+playerModel model_player_corpse { //Spy
+	"model"			"model_player_corpse"
+	"def_head"		"char_marinehead_kane2_client"
+	"skin"			""
+	"team"			"strogg"
+	"description"		"#str_108011"
+}
+playerModel model_player_tactical_elite_red_pyro { //Pyro
+	"model"			"model_player_strogg"
+	"def_head"		"char_marinehead_kanestrg_client"
+	"def_head_ui"		"char_marinehead_kanestrg_mp"
+	"skin"			"skins/characters/kane_strogg/tactical_elite"
+	"team"			"strogg"	
+	"description"		"#str_108012"
+}
 
 
 entityDef player_marine_mp  
@@ -1022,7 +1118,7 @@ entityDef player_marine_mp
 	"current_weapon"		"3"
 
 	// replce blaster with gauntlet in MP
-	"def_weapon0"						"weapon_scattergun"
+	"def_weapon0"						"weapon_gauntlet"
 	"weapon0_best"						"1"
 	"weapon0_cycle"						"1"
 	"weapon0_flashlight"					"0"
@@ -1044,6 +1140,10 @@ entityDef player_marine_mp
 	"weapon16_best"			"1"	
 	"weapon17_best"			"1"	
 	
+	
+
+	
+	
 	// stats
 	"health"			"125"
 	"armor"				"0"
@@ -1051,12 +1151,12 @@ entityDef player_marine_mp
 	"ammo_none"			"-1"
 	"ammo_railgun"			"25" //was 0
 	"ammo_machinegun"		"100" //was 100
-	"ammo_nailgun"			"25" //was 0
+	"ammo_nailgun"			"200" //was 0
 	"ammo_blaster"			"36" //was -1
 	"ammo_shotgun"			"25" //was 0
 	"ammo_hyperblaster"		"25" //was 0
-	"ammo_rocketlauncher"	"10" //was 0
-	"ammo_grenadelauncher"	"10" //was 0
+	"ammo_rocketlauncher"	"20" //was 0
+	"ammo_grenadelauncher"	"16" //was 0W
 	"ammo_lightninggun"		"1" //was 100
 
 	"powerup_effect_joints"		"*body -*r_wrist r_wrist -*l_wrist l_wrist"

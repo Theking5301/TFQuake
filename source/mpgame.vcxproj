@@ -247,8 +247,10 @@
     <ClCompile Include="mpgame\Target.cpp" />
     <ClCompile Include="mpgame\TFQuake\Gameplay\TFQuakeUtils.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp" />
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFEyelander.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFMedigun.cpp" />
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFMelee.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutPistol.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFScoutShotgun.cpp" />
     <ClCompile Include="mpgame\TFQuake\Weapons\TFSecondaryPistol.cpp" />

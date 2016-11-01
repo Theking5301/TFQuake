@@ -564,6 +564,12 @@
     <ClCompile Include="mpgame\TFQuake\Weapons\TFSecondaryShotgun.cpp">
       <Filter>Game\TFQuake\Weapons</Filter>
     </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFMelee.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="mpgame\TFQuake\Weapons\TFEyelander.cpp">
+      <Filter>Game\TFQuake\Weapons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mpgame\Actor.h">

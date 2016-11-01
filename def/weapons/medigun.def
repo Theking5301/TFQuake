@@ -56,9 +56,9 @@ entityDef weapon_medigun
 	"spawnclass"				"idItem"
 	"weaponclass"				"TFMedigun"
 	"size"						"32 32 32"
-	"model_view" 				"weapon_lightninggun_view"
-	"model_view_strogg" 		"weapon_lightninggun_view_strogg"
-  	"model_world"				"weapon_lightninggun_world"
+	"model_view" 				"weapon_medigun_view"
+	"model_view_strogg" 		"weapon_medigun_view_strogg"
+  	"model_world"				"weapon_medigun_world"
 	"model"						"models/weapons/lightning_gun/w_lg.lwo"
 	"def_dropItem"				"weapon_medigun"
 
@@ -232,7 +232,7 @@ entityDef weaponmod_lightninggun_chain
 //												Models
 //--------------------------------------------------------------------------------------------------------------------
 
-model weapon_lightninggun_view
+model weapon_medigun_view
 {
 	mesh						models/weapons/lightning_gun/mesh.md5mesh
 	anim idle 					models/weapons/lightning_gun/idle.md5anim	
@@ -249,13 +249,13 @@ model weapon_lightninggun_view
 	}
 }
 
-model weapon_lightninggun_view_strogg
+model weapon_medigun_view_strogg
 {
-	inherit						weapon_lightninggun_view
+	inherit						weapon_medigun_view
 	mesh						models/weapons/lightning_gun/mesh_strogg.md5mesh
 }
 
-model weapon_lightninggun_world 
+model weapon_medigun__world 
 {
 	mesh					models/weapons/lightning_gun/world/lightninggun.md5mesh
 	anim idle				models/weapons/lightning_gun/world/idle.md5anim

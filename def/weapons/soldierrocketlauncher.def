@@ -220,7 +220,7 @@ model weapon_soldier_rocket_launcher_view
 
 model weapon_soldier_rocket_launcher_strogg
 {
-	inherit					weapon_rocketlauncher_view
+	inherit					weapon_soldier_rocket_launcher_view
 	
 	mesh					models/weapons/rocketlauncher/mesh_strogg.md5mesh
 

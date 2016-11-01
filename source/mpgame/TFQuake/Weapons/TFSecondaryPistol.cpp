@@ -132,10 +132,11 @@ bool TFSecondaryPistol::UpdateAttack ( void ) {
 					//make sure the player isn't looking at a gui first
 					SetState ( "Lower", 0 );
 				} else {
-					if(this->AmmoInClip() > 0){ 
+					if(this->AmmoInClip() > 0 && !wsfl.reload){ 
 						SetState ( "Fire", 0 );
 					}else{
 						SetState ( "Reload", 0);
+						wsfl.reload = true;
 					}
 					//this->UseAmmo(1);
 				}
@@ -359,6 +360,7 @@ stateResult_t TFSecondaryPistol::State_Reload ( const stateParms_t& parms ) {
 			PlayAnim( ANIMCHANNEL_ALL, "raise", parms.blendFrames );
 			viewModel->StartSound ( "snd_reload", SND_CHANNEL_ANY, 0, false, 0 );
 			SetState ( "Idle", 4 );
+			wsfl.reload = false;
 			NetEndReload ( );
 			return SRESULT_DONE;
 	}

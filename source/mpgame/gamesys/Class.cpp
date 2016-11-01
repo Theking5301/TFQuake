@@ -1436,7 +1436,9 @@ void idClass::RegisterClasses( void )
 	REGISTER(TFMedigun); 
 	REGISTER(TFSyringeGun); 
 	REGISTER(TFSecondaryPistol); 
-	REGISTER(TFSecondaryShotgun); 
+	REGISTER(TFSecondaryShotgun);
+	REGISTER(TFMelee); 
+	REGISTER(TFEyelander); 
 	//SD END
 
 // RITUAL BEGIN

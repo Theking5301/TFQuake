@@ -89,7 +89,7 @@ entityDef weapon_demo_grenade_launcher
 	"weaponname"				"Grenade Launcher"
 	"def_projectile"			"projectile_grenade"
 	"ammoType"					"ammo_grenadelauncher"
-	"clipSize"					"8"
+	"clipSize"					"4"
 	"ammoRequired"				"1"
 	"mtr_icon"					"gfx/guis/hud/icons/gun_grenadelauncher"
 
@@ -184,8 +184,8 @@ model weapon_demo_grenade_launcher_view
 	anim idle_empty				models/weapons/grenadelauncher/idle_empty.md5anim	
 	anim fire 					models/weapons/grenadelauncher/fire.md5anim	
 	{
-		frame 1					sound_weapon	player_grenadelauncher_fire
-		frame 1					sound_item		player_grenadelauncher_fire_stereo
+		frame 1					sound_weapon	player_demo_grenade_launcher_fire
+		frame 1					sound_item		player_demo_grenade_launcher_fire_stereo
 	}
 	anim fire_empty				models/weapons/grenadelauncher/fire_empty.md5anim	
 	anim raise 					models/weapons/grenadelauncher/raise.md5anim	
@@ -195,14 +195,15 @@ model weapon_demo_grenade_launcher_view
 	}
 	anim reload					models/weapons/grenadelauncher/reload.md5anim
 	{
-		frame 2					sound_weapon	player_grenadelauncher_clipout
-		frame 25				sound_weapon	player_grenadelauncher_clipin
+		rate					1.75
+		frame 2					sound_weapon	player_demo_grenade_launcher_clipout
+		frame 25				sound_weapon	player_demo_grenade_launcher_clipin
 	}	
 }
 
 model weapon_demo_grenade_launcher_view_strogg
 {
-	inherit					weapon_grenadelauncher_view
+	inherit					weapon_demo_grenade_launcher_view
 	mesh					models/weapons/grenadelauncher/mesh_strogg.md5mesh
 }
 
@@ -300,13 +301,13 @@ entityDef damage_grenadeDirect
 entityDef damage_grenadeDirect_mp
 {
 	"inherit"					"damage_grenadeDirect"
-	"damage"					"100"
+	"damage"					"100" //perfect
 	"knockback"					"100"
 }
 
 entityDef damage_grenadeSplash 
 {
-	"damage"					"200"
+	"damage"					"200" //was 200
 	"radius"					"250"
 	"knockback"					"100"
 	"push"						"10000"
@@ -324,6 +325,6 @@ entityDef damage_grenadeSplash
 entityDef damage_grenadeSplash_mp
 {
 	"inherit"					"damage_grenadeSplash"
-	"damage"					"100"
+	"damage"					"50" //was 200
 	"radius"					"150"
 }

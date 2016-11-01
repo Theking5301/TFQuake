@@ -310,7 +310,7 @@ model weapon_sniperSMG_view
 
 model weapon_sniperSMG_view_strogg
 {
-	inherit						weapon_machinegun_view
+	inherit						weapon_sniperSMG_view
 
 	offset						(-1.5 1.7 .25)
 
