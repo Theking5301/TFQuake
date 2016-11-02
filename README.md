@@ -11,11 +11,17 @@ BUY ENABLED: False
 
 **CLASSES**:
 Scout
+
 Demoman
+
 Soldier
+
 Heavy
+
 Medic
+
 Sniper
+
 
 **WEAPONS**:
 Scattergun
