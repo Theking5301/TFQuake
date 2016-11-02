@@ -35,7 +35,7 @@ Medic Uber - Godmode for medic and initially targeted player (I had it change dy
 Sniper Charged Shot - Sniper can charge shot for extra damage
 Heavy Slowdown - Slowdown and Yelling during firing
 Rocket Jump - Reduced Damage to Soldier for Rocketjump
-
+ 
 UNUSABLE FEATURES:
 **Pyro
 **Spy
