@@ -25,21 +25,35 @@ Sniper
 
 **WEAPONS**:
 Scattergun
+
 Secondary Pistol
+
 Soldier's Rocket Launcher
+
 Secondary Shotgun
+
 Demoman's Grenade Launcher
+
 Heavy's Minigun
+
 Sniper Rifle
+
 SMG
+
 Medigun
+
 Syringe Gun
+
 
 **ABILITIES**:
 Scout Double Jump - Double Jump (with Vocalization)
+
 Medic Uber - Godmode for medic and initially targeted player (I had it change dynamically, but the system was too unstable. Right now, the ent != null check is removed for demonstration purposes)
+
 Sniper Charged Shot - Sniper can charge shot for extra damage
+
 Heavy Slowdown - Slowdown and Yelling during firing
+
 Rocket Jump - Reduced Damage to Soldier for Rocketjump
  
 **UNUSABLE FEATURES**:
