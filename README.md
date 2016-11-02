@@ -1,8 +1,6 @@
 # TFQuake
 Most of the changes are in source/mpgame/TFQuake and the pk4
 
-# TFQuake
-
 **HOW TO PLAY**:
 
 Each team has a capture point (flag used as a placeholder since I couldn't get my models into the engine). The first team to capture the other team's control point wins. I had a map with one capture point in the middle, and I found it more fun because it got everyone into a giant team fight, but then I realized you asked for two CP's.
