@@ -1,0 +1,1572 @@
+
+
+sound med_gun_heal
+{
+	minDistance	40
+	maxDistance	800
+	volumeDb	0
+
+	sound/objects/med_gun/heal
+	shakeData 0 zzwwuxvxzzwwwuwyxuuuwvszyvusoswxtopnnnnonaaaaaaaaaaaaa
+}
+
+
+sound weapon_blaster_ready
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/blaster/ready
+	shakeData 0 ajtcacvcaaa
+}
+
+
+sound weapon_blaster_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/blaster/fire01
+	shakeData 0 zzzztsolggeedccbbbaaaaaaaa
+	sound/weapons/blaster/fire02
+	shakeData 1 zzzztsolggeedccbbbaaaaaaaa
+}
+
+
+sound weapon_blaster_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-6
+	frequentlyused
+
+	sound/weapons/blaster/stereo_vent
+	shakeData 0 zuookihhhedcbaaaaaaaaaaaaaaaaa
+}
+
+
+sound weapon_blaster_fire_charged
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/blaster/charged_fire01
+	shakeData 0 yyyyyxxwttqmkklilifffcdcbaaaa
+	sound/weapons/blaster/charged_fire02
+	shakeData 1 xyyvwxwvsrliffecccbaaaaaa
+	sound/weapons/blaster/charged_fire03
+	shakeData 2 yyzywyxwtqpljijhjgeddbbaa
+}
+
+
+sound weapon_blaster_charge
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+
+	sound/weapons/blaster/charge
+	shakeData 0 abbbbccccccbbccccccbcc
+}
+
+
+sound weapon_blaster_charged
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	looping
+
+	sound/weapons/blaster/charge_loop
+	shakeData 0 dcccddccccccccdccccdcdcccccdddcccccccccccccccb
+}
+
+
+sound weapon_blaster_charge_click
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-6
+
+	sound/weapons/blaster/charge_click
+	shakeData 0 fhefgd
+}
+
+
+sound weapon_blaster_flashlight
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/blaster/light_off
+	shakeData 0 p
+}
+
+
+sound weapon_hyperblaster_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/hyperblaster/fire1
+	shakeData 0 zyyzkjgecbbaaaaaa
+	sound/weapons/hyperblaster/fire2
+	shakeData 1 zzyxnjgebbaaaaaaaaaa
+}
+
+
+sound weapon_hyperblaster_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+	frequentlyused
+
+	sound/weapons/hyperblaster/hyper_stereo
+	shakeData 0 zzzsjdcbaaaa
+}
+
+
+sound weapon_hyperblaster_spindown
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-6
+
+	sound/weapons/hyperblaster/spin_down
+	shakeData 0 fggffeeedccbaaa
+}
+
+
+sound weapon_hyperblaster_spinup
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-6
+
+	sound/weapons/hyperblaster/spin_up
+	shakeData 0 de
+}
+
+
+sound weapon_hyperblaster_spinfast
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-6
+	looping
+
+	sound/weapons/hyperblaster/spin
+	shakeData 0 eefeeeed
+}
+
+
+sound weapon_hyperblaster_cell_out
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/hyperblaster/cell_out
+	shakeData 0 zzvyhbackbaaaaaa
+}
+
+
+sound weapon_hyperblaster_cell_in
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/hyperblaster/cell_in
+	shakeData 0 pvuxrxvxtgvjheddcccbbabaaaa
+}
+
+
+sound weapon_hyperblaster_close
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/hyperblaster/close
+	shakeData 0 yvzsvfbawaaaa
+}
+
+
+sound weapon_machinegun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/machinegun/fire0
+	shakeData 0 zzvzzwwsolgfddbbaaaaaaaa
+	sound/weapons/machinegun/fire1
+	shakeData 1 yzzyzzytonkgfdcbaaaaaa
+}
+
+sound weapon_machinegun_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/machinegun/dry_fire
+	shakeData 0 zsgedbbaaaaaaaaaaa
+}
+
+
+sound weapon_machinegun_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+	frequentlyused
+
+	sound/weapons/machinegun/stereo_crack_b
+	shakeData 0 zuppkeddcbbaabaaaaaaaaaa
+}
+
+
+sound weapon_machinegun_clipin
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/machinegun/clipin
+	shakeData 0 fqzujlbbaa
+}
+
+
+sound weapon_machinegun_click
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/machinegun/click
+	shakeData 0 urqfbbebcaa
+}
+
+
+sound weapon_machinegun_clipout
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/machinegun/clipout
+	shakeData 0 lyoofcca
+}
+
+
+sound weapon_machinegun_scope_in
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-12
+
+	sound/weapons/machinegun/zoom_in
+	shakeData 0 filkgrk
+}
+
+
+sound weapon_machinegun_scope_out
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-12
+
+	sound/weapons/machinegun/zoom_out
+	shakeData 0 efefgeeba
+}
+
+
+sound weapon_machinegun_bolt
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/machinegun/bolt
+	shakeData 0 nvszidtsycaaa
+}
+
+
+sound player_machinegun_reload
+{
+	minDistance	39
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/machinegun/reload
+	shakeData 0 qcfuzuwagcgaazfyzzztvl
+}
+
+
+sound weapon_shotgun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/scattergun/scatter_gun_shoot
+	shakeData 0 zzzozzzzzzxyxrtuttrukkiifegfeebbbaaaaaaaaaaaa
+}
+
+sound weapon_shotgun_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/machinegun/dry_fire
+	shakeData 0 zsgedbbaaaaaaaaaaa
+}
+
+
+sound weapon_shotgun_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-5
+	frequentlyused
+
+	sound/weapons/scattergun/scatter_gun_shoot
+	shakeData 0 sqpnppooolhfdbbbbabbaaaaaaaaaaaaa
+}
+
+
+sound weapon_shotgun_pump1
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+
+	sound/weapons/shotgun/pump1
+	shakeData 0 eiellbaaaaaa
+}
+
+
+sound weapon_shotgun_pump2
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+
+	sound/weapons/shotgun/pump2
+	shakeData 0 eghddbaaaa
+}
+
+
+sound weapon_shotgun_shell
+{
+	description	"loading a shell into the shotgun"
+
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+	frequentlyused
+
+	sound/weapons/scattergun/scatter_gun_reload
+	shakeData 0 cbbbkxaaaa
+	sound/weapons/scattergun/scatter_gun_reload
+	shakeData 1 babbbjlbaa
+	sound/weapons/scattergun/scatter_gun_reload
+	shakeData 2 bacadebaa
+}
+
+
+sound weapon_shotgun_clipin
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/scattergun/scatter_gun_reload
+	shakeData 0 bkpfbaaa
+}
+
+
+sound weapon_shotgun_clipout
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/shotgun/clip_out
+	shakeData 0 knkfbhba
+}
+
+
+sound weapon_nailgun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/minigun/minigun_shoot
+	shakeData 0 zzzzzyyuokhigfeccbcbbbccbbbbaaaaaaaaaaaaaaaaaaaa
+	sound/weapons/minigun/minigun_shoot
+	shakeData 1 zzzzzyzmknigieeccbcbbbccbbbbaaaaaaaaaaaaaaaaaaaa
+	sound/weapons/minigun/minigun_shoot
+	shakeData 2 zzzzzzzwnjegfeeccbcbbbccbbbbaaaaaaaaaaaaaaaaaaaaaa
+}
+
+sound weapon_nailgun_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/minigun/minigun_empty
+	shakeData 0 yxkedbbbbaaaaaaaaaaaaaaaa
+}
+
+
+
+sound weapon_nailgun_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+	frequentlyused
+
+	sound/weapons/minigun/minigun_shoot
+	shakeData 0 zzzvpmjecbaaaaa
+}
+
+
+sound weapon_nailgun_clipin
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/nailgun/clipin
+	shakeData 0 irduwugedbbaaaaaa
+}
+
+
+sound weapon_nailgun_clipout
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/nailgun/clipout
+	shakeData 0 rlpbgaagaaabaaa
+}
+
+
+sound weapon_nailgun_handle
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/nailgun/handle
+	shakeData 0 mllaebea
+}
+
+
+sound weapon_nailgun_spindown
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-2
+
+	sound/weapons/minigun/minigun_wind_down
+	shakeData 0 gfgfggfeeeedccbbbbaaaaaaa
+}
+
+
+sound weapon_nailgun_spinup
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-2
+
+	sound/weapons/minigun/minigun_wind_up
+	shakeData 0 dedddeefgfgghggfgf
+}
+
+
+sound weapon_nailgun_spinfast
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	0
+	looping
+
+	sound/weapons/minigun/minigun_spin
+	shakeData 0 feefefeeee
+}
+
+
+sound weapon_nailgun_spinslow
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-18
+	looping
+
+	sound/weapons/minigun/minigun_spin
+	shakeData 0 ddcddddddccddcddedcccdcdccccddddddcdccddcdddddec
+}
+
+
+sound player_rocketlauncher_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/tfrocketlauncher/rocket_shoot
+	shakeData 0 zzzzxzyxsysuwvqqtotplljifgdcbaaaa
+	sound/weapons/tfrocketlauncher/rocket_shoot
+	shakeData 1 zzztuxyxyxyvxvvuusrrjkljhffccaaaaa
+}
+
+sound weapon_rocketlauncher_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/nailgun/dry_fire
+	shakeData 0 yxkedbbbbaaaaaaaaaaaaaaaa
+}
+
+
+
+sound player_rocketlauncher_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+	frequentlyused
+
+	sound/weapons/tfrocketlauncher/rocket_shoot
+	shakeData 0 xxzwuvqroqsliheddbbaaa
+}
+
+
+sound player_rocketlauncher_load
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+
+	sound/weapons/tfrocketlauncher/rocket_reload
+	shakeData 0 acdevud
+	sound/weapons/tfrocketlauncher/rocket_reload
+	shakeData 1 fedfnzhbaa
+	sound/weapons/tfrocketlauncher/rocket_reload
+	shakeData 2 hcblxlea
+}
+
+
+sound player_rocketlauncher_servo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-12
+
+	sound/weapons/rocketlauncher/servo
+	shakeData 0 efdeeedba
+}
+
+
+sound player_rocketlauncher_fly
+{
+	minDistance	40
+	maxDistance	800
+	volumeDb	0
+	looping
+	frequentlyused
+
+	sound/weapons/rocketlauncher/fly
+	shakeData 0 nshopppkimjkmqnr
+}
+
+
+sound player_rocketlauncher_explode
+{
+	minDistance	585
+	maxDistance	2340
+	volumeDb	0
+	frequentlyused
+
+	sound/effects/explosions/no_debris04
+	shakeData 0 vvvwzzzzzzzzzyyzyxyyyvtwrrpqvuwtsqtnsxvstntskpplrollnmmmjjjhilkegffilihedcedccdbccbbbbcbbaaaaaaaaaaaaaaaaaa
+}
+
+
+sound player_rocketlauncher_explode2
+{
+	minDistance	585
+	maxDistance	2340
+	volumeDb	0
+	soundclass	1
+	frequentlyused
+
+	sound/weapons/rocketlauncher/explode0
+	shakeData 0 zyvyxyuutvtssqtqqrtqrsrkpmnnmlnnmokmopkkokkmkfkkhhjhhfggeedecccccbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	sound/weapons/rocketlauncher/explode1
+	shakeData 1 xzyxxvwvwtuuuuuuututqsopqpmpnqjnmmojhlmklihjljgkigghhfefecccbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	sound/weapons/rocketlauncher/explode2
+	shakeData 2 yzyzzzzyyvtwuquvuutrnpnqqrqqoqnqmprkknplnijimjgljghhigefgdcdcccccbaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+}
+
+
+sound player_grenadelauncher_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-1
+	frequentlyused
+
+	sound/weapons/grenade/fire
+	shakeData 0 yxzxvuuvovsrpolkedfdcbbabaaaaaaaaaaaaa
+}
+
+sound weapon_grenadelauncher_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/nailgun/dry_fire
+	shakeData 0 yxkedbbbbaaaaaaaaaaaaaaaa
+}
+
+
+
+sound player_grenadelauncher_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/grenade/stereo_launch
+	shakeData 0 zzyyyurnnmigggjggejebbaaaaaaaaaa
+}
+
+
+sound player_grenadelauncher_clipin
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/grenade/clip_in
+	shakeData 0 dnfiejcbaaabccxbaaaaaa
+}
+
+
+sound player_grenadelauncher_clipout
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/grenade/clip_out
+	shakeData 0 fwwjfbaaamgaa
+}
+
+
+sound player_grenadelauncher_explode
+{
+	minDistance	585
+	maxDistance	2340
+	volumeDb	0
+	frequentlyused
+
+	sound/weapons/grenade/explode1
+	shakeData 0 zzzsxvyqnnlkmmltijggolihklirnlnkjjjkihjhjigffedddccbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	sound/weapons/grenade/explode2
+	shakeData 1 yzmnstutsqnlolonhimhkhghfghpljmlihkhghjgggfffeecdbcbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	sound/weapons/grenade/explode3
+	shakeData 2 zyyvvyxwwsutommhfghhiggfefgkhhigfdedddcdccbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	sound/weapons/grenade/explode4
+	shakeData 3 zzsxpvywvwropijjkhkkikhjlmpmjkklkjkiihhgffhfgeddcccbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+}
+
+
+sound weapon_railgun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+
+	sound/weapons/sniperrifle/sniper_shoot
+	shakeData 0 zzzzzzyyxxooomiidcddccbccbabbaaaaaaa
+	sound/weapons/sniperrifle/sniper_shoot
+	shakeData 1 zzzzzzzzwxqqpmoiecdeccccbbbbbaaaaa
+	sound/weapons/sniperrifle/sniper_shoot
+	shakeData 2 zzzzzzzyrxprrmliedefcdbccbbbcaaaaaa
+}
+
+sound weapon_railgun_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/nailgun/dry_fire
+	shakeData 0 yxkedbbbbaaaaaaaaaaaaaaaa
+}
+
+
+sound weapon_railgun_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+
+	sound/weapons/sniperrifle/sniper_shoot
+	shakeData 0 zzzyrzqooljjgfffedccbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+}
+
+
+sound weapon_railgun_readjust
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-18
+
+	sound/weapons/railgun/readjust
+	shakeData 0 igggiiiljgfdfcdedddeddeedddccccbccbbcbaaaa
+}
+
+
+sound weapon_railgun_readjust2
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-18
+
+	sound/weapons/railgun/readjust2
+	shakeData 0 dgbaaaaaaaa
+}
+
+
+sound weapon_railgun_readjust3
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-18
+
+	sound/weapons/railgun/readjust3
+	shakeData 0 hgdaaaaaa
+}
+
+
+sound weapon_railgun_scope_in
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-12
+
+	sound/weapons/railgun/zoom_in
+	shakeData 0 filkgrk
+}
+
+
+sound weapon_railgun_scope_out
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-12
+
+	sound/weapons/railgun/zoom_out
+	shakeData 0 efefgeeba
+}
+
+
+sound weapon_railgun_clipin
+{
+	minDistance	118
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/sniperrifle/sniper_bolt_back
+	shakeData 0 dqizxea
+}
+
+
+sound weapon_railgun_clipout
+{
+	minDistance	118
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/sniperrifle/sniper_bolt_forward
+	shakeData 0 ysegjgf
+}
+
+
+sound weapon_railgun_charge
+{
+	minDistance	118
+	maxDistance	1181
+	volumeDb	10
+
+	sound/weapons/railgun/charge
+	shakeData 0 aaaaaaaabbbbbbbbbbbbbbbbcbcccccccbcbbbbbbaaaaaaa
+}
+
+sound weapon_railgun_powerup
+{
+	minDistance	40
+	maxDistance	600
+	volumeDb	-10
+
+	sound/weapons/railgun/powerup
+}
+
+sound weapon_railgun_beep
+{
+	minDistance	118
+	maxDistance	1181
+	volumeDb	5
+
+	sound/weapons/railgun/beep
+}
+
+
+sound weapon_railgun_smallcharge
+{
+	minDistance	118
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/railgun/charge_small
+	shakeData 0 aaaabbcccaa
+}
+
+
+sound weapon_railgun_hum
+{
+	minDistance	118
+	maxDistance	787
+	volumeDb	-16
+	looping
+
+	sound/weapons/railgun/rg_hum
+	shakeData 0 ddddddddedddfdedddddccdddccddcdcccdccccccccccccccccccbbdcbccccbcccbccbccccccccbbbccccbccccccccccccccddccccccccccccddddcdccdedc
+}
+
+
+sound weapon_railgun_impact
+{
+	minDistance	118
+	maxDistance	787
+	volumeDb	0
+
+	sound/weapons/railgun/impact
+	shakeData 0 twvrookhhedbaaaaaa
+}
+
+
+sound brass_casing
+{
+	description	"casings for bullets hitting the ground"
+
+	minDistance	39
+	maxDistance	393
+	volumeDb	-6
+	frequentlyused
+
+	sound/impact/bullet/brass_case01
+	shakeData 0 ojgeeccbatjgdecbbplicdcfggeddbgbbbbaaaaaa
+	sound/impact/bullet/brass_case02
+	shakeData 1 wkiebbaaaaaagbaaaaadcbaaafcacaabaabaaaaaaaaaaaaaaaa
+	sound/impact/bullet/brass_case03
+	shakeData 2 xdcaaaaaaaawbbaaaancbgaaaaaaa
+	sound/impact/bullet/brass_case04
+	shakeData 3 yidbaaaaajlbaaaaafcaaabaaaaaaaaaaaaa
+	sound/impact/bullet/brass_case05
+	shakeData 4 rbbaaedhhgbeecbabaabaaaaaaaaaa
+}
+
+
+sound grenade_bounce
+{
+	description	"grenade bouncing around"
+
+	minDistance	118
+	maxDistance	984
+	volumeDb	0
+	no_dups
+	frequentlyused
+
+	sound/weapons/grenade/bounce1
+	shakeData 0 xslhfedcbaaaaaa
+	sound/weapons/grenade/bounce2
+	shakeData 1 ypfeedccaaaa
+	sound/weapons/grenade/bounce3
+	shakeData 2 nwmjgdccbaaa
+}
+
+
+sound shotgun_shell
+{
+	description	"plastic shotgun shell hitting the ground"
+
+	minDistance	39
+	maxDistance	393
+	volumeDb	-5
+	frequentlyused
+
+	sound/impact/bullet/shotgun_shell01
+	shakeData 0 ocbaaaaaaaaudaaaaaadbjaacbfacaaaaa
+	sound/impact/bullet/shotgun_shell02
+	shakeData 1 rbaaaaaaaaaavhaaavcaaawbbidgaabaaaaaaaa
+	sound/impact/bullet/shotgun_shell03
+	shakeData 2 tdcbaaaaaaancanaaaaaaacdbbaaaaaaaaa
+	sound/impact/bullet/shotgun_shell04
+	shakeData 3 tcboxcmeeaabaaaaaaaaa
+}
+
+
+sound weapon_switch
+{
+	description	"switching the weapons around"
+
+	minDistance	393
+	maxDistance	1574
+	volumeDb	0
+
+	sound/weapons/switch
+	shakeData 0 egcghngcbbaaaaaaaaaa
+}
+
+
+sound weapon_tracer_fire
+{
+	minDistance	1181
+	maxDistance	5905
+	volumeDb	-12
+
+	sound/ambience/convoy/battlebackground/guns01
+	shakeData 0 ababacaacaadadaaaaaaccbcbadbabaaadbcecededdeefgecbaaaaaabaaaaaabaabababbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	sound/ambience/convoy/battlebackground/guns02
+	shakeData 1 addbcebbebcedbdecbecbedbedbeecbebbedbedbeecdecbeccedceecdecbddbbbbabbabbabbaabbabbabbabbaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	sound/ambience/convoy/battlebackground/guns03
+	shakeData 2 bcfecefcefecffcffdefecfecffdffedgfcffcfhfdgebccbbbbabbabbbbbbabbabbabcbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+}
+
+
+sound weapon_quaddamage_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-4
+
+	sound/weapons/quaddamage
+	shakeData 0 ivvtxuwtutttrqrpnmlnljihiggfddccbba
+}
+sound weapon_medigunuber_loop
+{
+	minDistance	40
+	maxDistance	472
+	volumeDb	-12
+	frequentlyused
+
+	sound/medigun/medigun_uber
+	shakeData 0 oossvsqttqootqnspqtopstqpqrsqrqno
+}
+sound weapon_hit
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/mp/misc/weapon_hit
+	shakeData 0 aqvwod
+}
+
+sound armor_hit
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/mp/misc/armor_hit.wav
+	shakeData 0 su
+}
+
+
+sound player_sounds_hitflesh
+{
+	minDistance	39
+	maxDistance	1377
+	volumeDb	0
+	frequentlyused
+
+	sound/marine/player/armor_hit01
+	shakeData 0 yvsxdcbaaaaaaaaa
+	sound/marine/player/armor_hit02
+	shakeData 1 yywvhfebaaaaaaaaa
+	sound/marine/player/armor_hit03
+	shakeData 2 zyqtmfecbaaaaaaaaaa
+	sound/marine/player/armor_hit04
+	shakeData 3 ytvcaaaaa
+}
+
+
+sound weapon_energy_projectile_loop
+{
+	minDistance	40
+	maxDistance	472
+	volumeDb	-12
+	frequentlyused
+
+	sound/impact/energy/blast_loop
+	shakeData 0 oossvsqttqootqnspqtopstqpqrsqrqno
+}
+
+
+sound weapon_lightninggun_tube
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	-5
+
+	sound/weapons/lightninggun/tube1
+	shakeData 0 kiidbccbccccccddddddcdccbbbaaa
+	sound/weapons/lightninggun/tube2
+	shakeData 1 giigccdbcbccccddddddcdccbbbaaa
+}
+
+
+sound weapon_lightninggun_tubeloop
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-30
+	looping
+
+	sound/weapons/lightninggun/tube_loop
+	shakeData 0 qosroqoprstssrrrsrrrtqsqnqssrpsrqmmqpqmlrnmmponrn
+}
+
+
+sound weapon_lightninggun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+
+	sound/weapons/lightninggun/fire
+	shakeData 0 tvzzyzzyyywwzywwvyvsqtpqmmjjhgfedbbbaaaaaaa
+}
+sound weapon_medigun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+
+	sound/weapons/medigun/medigun_heal
+	shakeData 0 tvzzyzzyyywwzywwvyvsqtpqmmjjhgfedbbbaaaaaaa
+}
+sound weapon_lightninggun_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/nailgun/dry_fire
+	shakeData 0 yxkedbbbbaaaaaaaaaaaaaaaa
+}
+
+
+sound weapon_lightninggun_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/lightninggun/fire_stereo
+	shakeData 0 hflkqjjmmpswyvxwotxstklkklnjpwxwxoiqklligtehfikngmjvrmjjhigihddccbccbbbcbcbdbbddbbdbcbbbbbbcbbbbbaaaaaaaaaaaaaaaaaa
+}
+sound weapon_medigun_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/medigun/medigun_heal
+	shakeData 0 hflkqjjmmpswyvxwotxstklkklnjpwxwxoiqklligtehfikngmjvrmjjhigihddccbccbbbcbcbdbbddbbdbcbbbbbbcbbbbbaaaaaaaaaaaaaaaaaa
+}
+
+sound weapon_lightninggun_fireloop
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-6
+	looping
+
+	sound/weapons/lightninggun/loop
+	shakeData 0 tuussvvrvtwsuvxttvuvusrrtrusrswttvtsrrqrvuttvsuvvupqsrpsururstttttqsutvtrsuutwttvxs
+}
+sound weapon_medigun_fireloop
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-6
+	looping
+
+	sound/weapons/medigun/medigun_heal_loop
+	shakeData 0 tuussvvrvtwsuvxttvuvusrrtrusrswttvtsrrqrvuttvsuvvupqsrpsururstttttqsutvtrsuutwttvxs
+}
+
+sound weapon_darkmatter_whoosh
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-18
+	looping
+
+	sound/weapons/darkmatter/whoosh_loop
+	shakeData 0 iijihjiijhijiikihjkiikijjhjiihjhg
+}
+
+sound weapon_darkmatter_charge
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-4
+
+	sound/weapons/darkmatter/charge
+	shakeData 0 izzwtwqrvpswtwtqwxxuvstsqttvuptptzzxrvypyxzuxtuuyrzszuynyxxwswzwtyqyuzvsxtrupwsvsyutysvwysuztwtuxzupxsyuysuzvzrssvswyxxxqxxuwwtwvrspqqtrlnpommmkknomzzyxyrkjliggggiddcdbbcbbbaaaaaaaaaaaaaaaaaaaaa
+}
+
+
+
+sound weapon_darkmatter_energy_loop
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+	looping
+
+	sound/weapons/darkmatter/energy_loop
+	shakeData 0 llmnlmnmomkilmjkmmmolijlliiiikkjhhhhhhhihhfffggfhffggghghkikihhjiijihihjhiiiijijhjijjkkkiijjikkmnnlmloonlnnmlnk
+}
+
+
+sound weapon_darkmatter_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	
+
+	sound/weapons/darkmatter/fire
+	shakeData 0 yzyzzzzxxxxywwxwwustrtpvqlqrolijijhhjjhhigkkljhghiehhknkheggeededbbbbbaaaaaaaaaaaaaaaaaaaa
+}
+
+sound weapon_darkmatter_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/nailgun/dry_fire
+	shakeData 0 yxkedbbbbaaaaaaaaaaaaaaaa
+}
+
+
+sound weapon_darkmatter_stereo_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+
+	sound/weapons/darkmatter/stereo_fire
+	shakeData 0 yxrnggkhhhgiiiggfigigggfgfeffeggefeeeeddfdddccbccccbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+}
+
+sound weapon_darkmatter_energy_burst
+{
+	minDistance	1000
+	maxDistance	2400
+	volumeDb	4
+
+	sound/weapons/darkmatter/energy_burst
+	shakeData 0 zzyyzyxxxuyxytwuxxwwswyvvxywxpxuutuoghheddigdccddfcdedcddddbbbaaa
+}
+
+
+sound npc_machinegun_fire
+{
+	minDistance	40
+	maxDistance	900
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/machinegun/npc_fire1.wav
+	shakeData 0 ymyyywrliihedbbaaaaaaa
+	sound/weapons/machinegun/npc_fire2.wav
+	shakeData 1 yyyyywrliihedbbaaaaaaaaaaaaaaaaaaa
+}
+
+sound npc_cortez_fire
+{
+	minDistance	120
+	maxDistance	1200
+	volumeDb	0
+
+	sound/weapons/machinegun/cortez_rifle
+	shakeData 0 zzzzzzzzytnpwsumpnmqnljhfgeeddedddccbbbabbbaaaaaaaaaaaaaaaaaaaaaaaaaa
+}
+
+
+sound npc_shotgun_fire
+{
+	minDistance	40
+	maxDistance	900
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/shotgun/npc_fire
+	shakeData 0 zzzozzzzzzxyxrtuttrukkiifegfeebbbaaaaaaaaaaaa
+}
+
+sound npc_hyperblaster_fire
+{
+	minDistance	40
+	maxDistance	900
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/hyperblaster/npc_fire1
+	shakeData 0 zyyzkjgecbbaaaaaa
+	sound/weapons/hyperblaster/npc_fire2
+	shakeData 1 zzyxnjgebbaaaaaaaaaa
+}
+
+sound weapon_hyperblaster_dryfire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/hyperblaster/dry_fire
+	shakeData 0 veccbaaaaaaaaa
+}
+
+
+sound weapon_gauntlet_spinup
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	0
+
+	sound/weapons/gauntlet/gaunt_start
+	shakeData 0 acffhhllomttuvmlngkie
+}
+
+
+sound weapon_gauntlet_spindown
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	0
+
+	sound/weapons/gauntlet/gaunt_stop
+	shakeData 0 egftpnljjhfeccbaaa
+}
+
+
+sound weapon_gauntlet_spin
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	0
+	looping
+
+	sound/weapons/gauntlet/gaunt_spin
+	shakeData 0 gfhgghghhhhgfgghgghihgghihgihgf
+}
+
+
+sound weapon_gauntlet_wall
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	4
+	looping
+
+	sound/weapons/gauntlet/gaunt_wall
+	shakeData 0 lnqnloqnrsnqmpmmnjnokmnnmnoolooposvornqtsmnopnlnpqlmnkolpqsvqontt
+}
+
+
+sound weapon_gauntlet_flesh
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	4
+	looping
+
+	sound/weapons/gauntlet/gaunt_flesh
+	shakeData 0 tnnoopoonomolnqqpplpqpqnpononmopvnompnmplnqspwrrrpomtqrnsnmmpommpi
+}
+
+sound weapon_medic_fully_charged
+{
+	minDistance	40
+	maxDistance	472
+	volumeDb	0
+	frequentlyused
+
+	sound/weapons/medigun/medic_fully_charged
+	shakeData 0 oossvsqttqootqnspqtopstqpqrsqrqno
+}
+sound weapon_medic_uber_started
+{
+	minDistance	40
+	maxDistance	472
+	volumeDb	0
+
+	
+	sound/weapons/medigun/medic_uber_started0
+	shakeData 0 zyyzkjgecbbaaaaaa
+	sound/weapons/medigun/medic_uber_started1
+	shakeData 1 zzyxnjgebbaaaaaaaaaa
+}
+sound weapon_medic_ready
+{
+	minDistance	40
+	maxDistance	472
+	volumeDb	0
+
+	sound/weapons/medigun/medic_ready_to_charge
+	shakeData 0 oossvsqttqootqnspqtopstqpqrsqrqno
+}
+sound weapon_SMG_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/SMG/smg_shoot
+	shakeData 0 zzvzzwwsolgfddbbaaaaaaaa
+	sound/weapons/SMG/smg_shoot
+	shakeData 1 yzzyzzytonkgfdcbaaaaaa
+}
+sound weapon_SMG_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+	frequentlyused
+
+	sound/weapons/SMG/smg_shoot
+	shakeData 0 zuppkeddcbbaabaaaaaaaaaa
+}
+sound weapon_SMG_clipin
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/SMG/smg_clip_in
+	shakeData 0 fqzujlbbaa
+}
+sound weapon_SMG_clipout
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/SMG/smg_clip_out
+	shakeData 0 lyoofcca
+}
+sound weapon_syringegun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/syringegun/syringegun_shoot
+	shakeData 0 zzvzzwwsolgfddbbaaaaaaaa
+	sound/weapons/syringegun/syringegun_shoot
+	shakeData 1 yzzyzzytonkgfdcbaaaaaa
+}
+sound weapon_syringegun_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+	frequentlyused
+
+	sound/weapons/syringegun/syringegun_shoot
+	shakeData 0 zuppkeddcbbaabaaaaaaaaaa
+}
+sound weapon_syringegun_clipin
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/syringegun/syringegun_reload_clipin
+	shakeData 0 fqzujlbbaa
+}
+sound weapon_syringegun_clipout
+{
+	minDistance	196
+	maxDistance	787
+	volumeDb	-3
+
+	sound/weapons/syringegun/syringegun_reload_clipout0
+	shakeData 0 lyoofcca
+	sound/weapons/syringegun/syringegun_reload_clipout1
+	shakeData 1 lyoofcca
+}
+
+sound weapon_secondary_shotgun_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/secondaryshotgun/secondary_shotgun_shoot
+	shakeData 0 zzzozzzzzzxyxrtuttrukkiifegfeebbbaaaaaaaaaaaa
+}
+sound weapon_secondary_shotgun_cock_back
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+
+	sound/weapons/secondaryshotgun/secondary_shotgun_cock_back
+	shakeData 0 eiellbaaaaaa
+}
+sound weapon_secondary_shotgun_cock_forward
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-3
+
+	sound/weapons/secondaryshotgun/secondary_shotgun_cock_forward
+	shakeData 0 eghddbaaaa
+}
+sound weapon_secondary_shotgun_reload
+{
+	description	"loading a shell into the shotgun"
+
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+	frequentlyused
+
+	sound/weapons/secondaryshotgun/secondary_shotgun_reload
+	shakeData 0 cbbbkxaaaa
+	sound/weapons/secondaryshotgun/secondary_shotgun_reload
+	shakeData 1 babbbjlbaa
+	sound/weapons/secondaryshotgun/secondary_shotgun_reload
+	shakeData 2 bacadebaa
+}
+sound weapon_secondary_pistol_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/secondarypistol/secondary_pistol_shoot
+	shakeData 0 zzzztsolggeedccbbbaaaaaaaa
+	sound/weapons/secondarypistol/secondary_pistol_shoot
+	shakeData 1 zzzztsolggeedccbbbaaaaaaaa
+}
+
+
+sound weapon_secondary_pistol_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-6
+	frequentlyused
+
+	sound/weapons/secondarypistol/secondary_pistol_shoot
+	shakeData 0 zuookihhhedcbaaaaaaaaaaaaaaaaa
+}
+sound weapon_secondary_pistol_reload
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	3
+
+	sound/weapons/secondarypistol/secondary_pistol_reload
+	shakeData 0 zuookihhhedcbaaaaaaaaaaaaaaaaa
+}
+sound player_demo_grenade_launcher_fire
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-1
+	frequentlyused
+
+	sound/weapons/demogrenadelauncher/grenade_launcher_shoot
+	shakeData 0 yxzxvuuvovsrpolkedfdcbbabaaaaaaaaaaaaa
+}
+sound player_demo_grenade_launcher_fire_stereo
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	-2
+	frequentlyused
+
+	sound/weapons/demogrenadelauncher/grenade_launcher_shoot
+	shakeData 0 zzyyyurnnmigggjggejebbaaaaaaaaaa
+}
+sound player_demo_grenade_launcher_clipin
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/demogrenadelauncher/grenade_launcher_drum_load
+	shakeData 0 dnfiejcbaaabccxbaaaaaa
+}
+sound player_demo_grenade_launcher_clipout
+{
+	minDistance	393
+	maxDistance	1181
+	volumeDb	0
+
+	sound/weapons/demogrenadelauncher/grenade_launcher_drum_open
+	shakeData 0 fwwjfbaaamgaa
+}
+sound weapon_kukri_swing
+{
+	minDistance	39
+	maxDistance	393
+	volumeDb	1
+
+	sound/weapons/melee/kukri_swing
+	shakeData 0 lnqnloqnrsnqmpmmnjnokmnnmnoolooposvornqtsmnopnlnpqlmnkolpqsvqontt
+}

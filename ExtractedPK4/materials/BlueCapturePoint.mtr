@@ -1,0 +1,15 @@
+models/capturepoint/capturepoint
+{
+        noselfshadow
+       // unsmoothedtangents
+        materialImage   models/capturepoint/CapturePoint_d.tga
+        diffusemap      models/capturepoint/CapturePoint_d.tga
+
+        bumpmap         addnormals ( models/capturepoint/CapturePoint_local.tga, heightmap ( models/capturepoint/CapturePoint_s.tga, 2 ))
+
+	specularmap	 models/capturepoint/CapturePoint_s.tga
+        {
+                blend add
+                 models/capturepoint/CapturePoint_s.tga
+        }
+}

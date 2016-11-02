@@ -1,0 +1,4 @@
+skin skins/capturePoints/CapturePoint
+{
+	"models/capturepoint/CapturePoint:pCylinder1SG" 		"models/capturepoint/CapturePoint"
+}
