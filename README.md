@@ -5,9 +5,9 @@ Each team has a capture point (flag used as a placeholder since I couldn't get m
 
 **REQUIRED SERVER SETTINGS**:
 **MAP: Relativity 
-**GAME MODE: CTF
-**CAPTURE LIMIT: 100
-**BUY ENABLED: False
+*GAME MODE: CTF
+*CAPTURE LIMIT: 100
+*BUY ENABLED: False
 
 **CLASSES**:
 Scout
