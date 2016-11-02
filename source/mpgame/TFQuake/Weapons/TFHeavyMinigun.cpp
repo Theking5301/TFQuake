@@ -364,7 +364,7 @@ void TFHeavyMinigun::Think ( void ) {
 
 		if(wsfl.attack) {
 			if(!bIsVocalizing) {
-				if(owner->playerVocalize(static_cast<EVocalizeType>(2), true, .05f)) {
+				if(owner->playerVocalize(static_cast<EVocalizeType>(2), true, .2f)) {
 					bIsVocalizing = true;
 					vocalizingTime = 10.0;
 				}

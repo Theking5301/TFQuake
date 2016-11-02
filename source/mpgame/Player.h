@@ -445,6 +445,12 @@ public:
 	bool					playerVocalize(EVocalizeType Vocalization, bool bRandom = false, float randomChance = 1.0);
 
 	int						demoHeads;
+	
+	idVec3					flagPickupLocation;
+	bool					hasFlag;
+	void					giveFlag();
+	idStr					classAsString();
+
 	//SD END
 
 public:

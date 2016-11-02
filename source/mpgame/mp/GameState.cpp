@@ -1301,7 +1301,6 @@ rvCTFGameState::Run
 void rvCTFGameState::Run( void ) {
 	// run common stuff	
 	rvGameState::Run();
-
 	switch( currentState ) {
 		case GAMEON: {
 			int team = ( ( gameLocal.mpGame.GetScoreForTeam( TEAM_MARINE ) >= gameLocal.serverInfo.GetInt( "si_captureLimit" ) ) ? TEAM_MARINE : ( ( gameLocal.mpGame.GetScoreForTeam( TEAM_STROGG ) >= gameLocal.serverInfo.GetInt( "si_captureLimit" ) ) ? TEAM_STROGG : -1 ) );

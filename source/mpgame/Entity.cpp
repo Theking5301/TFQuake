@@ -3663,8 +3663,10 @@ void idEntity::Damage( idEntity *inflictor, idEntity *attacker, const idVec3 &di
 	if ( damage ) {
 		// do the damage
 		//jshepard: this is kinda important, no?
-		health -= damage;
-
+		//amine: yeah it is dude
+		//SD BEGIN
+		health = idMath::ClampInt(0, 100000, health - damage);
+		//SD END
 		if ( health <= 0 ) {
 			if ( health < -999 ) {
 				health = -999;

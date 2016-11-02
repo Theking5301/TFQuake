@@ -1804,6 +1804,7 @@ void idPlayer::Init( void ) {
 }
 //SD BEGIN
 void idPlayer::initializeClass() {
+	hasFlag = false;
 	if(modelDecl) {
 		if(strcmp(modelDecl->head.c_str(),"char_marinehead_helmet_bright_client") == 0) {
 			Class = Sniper;
@@ -1867,7 +1868,7 @@ void idPlayer::initializeClassStats() {
 			this->addWeapon("weapon_gauntlet");			
 			//this->addWeapon("weapon_shovel");
 			this->addWeapon("weapon_secondary_shotgun");
-			this->addWeapon("weapon_soldier_rocket_launcher");
+			this->addWeapon("weapon_soldier_rocketlauncher");
 			break;
 		case Heavy:
 			inventory.maxHealth = spawnArgs.GetInt( "heavyMaxHealth", "100" );
@@ -2013,6 +2014,48 @@ void idPlayer::addWeapon(const char *itemname) {
 	args.Set( "givenToPlayer", va( "%d", entityNumber ) );
 
 	gameLocal.SpawnEntityDef( args );
+}
+idStr idPlayer::classAsString() {
+	idStr tempClassName;
+	switch(Class) {
+		case Scout:
+			tempClassName = "Scout";
+			break;
+		case Medic:
+			tempClassName = "Medic";
+			break;
+		case Soldier:
+			tempClassName = "Soldier";
+			break;
+		case Heavy:
+			tempClassName = "Heavy";
+			break;
+		case Sniper:
+			tempClassName = "Sniper";
+			break;
+		case Demoman:
+			tempClassName = "Demoman";
+			break;
+		case Spy:
+			tempClassName = "Spy";
+			break;
+		case Pyro:
+			tempClassName = "Pyro";
+			break;
+		default: break;
+	}
+	return tempClassName;
+}
+void idPlayer::giveFlag() {
+	hasFlag = true;
+	StartSound( "snd_capturing_point", SND_CHANNEL_VOICE2, 0, true, NULL );
+	if(team == 0) {
+		rvItemCTFFlag::ResetFlag(5);
+		gameLocal.mpGame.bRedBeingCaptured = 1;
+	}else{
+		rvItemCTFFlag::ResetFlag(4);
+		gameLocal.mpGame.bBluBeingCaptured = 1;
+	}
 }
 //SD END
 
@@ -3766,6 +3809,10 @@ void idPlayer::UpdateHudStats( idUserInterface *_hud ) {
 			break;
 		default: break;
 	}
+	_hud->SetStateFloat ( "red_percent", ((float)gameLocal.mpGame.GetScoreForTeam(1))/100.0f);
+	_hud->SetStateFloat ( "blu_percent", ((float)gameLocal.mpGame.GetScoreForTeam(0))/100.0f);
+	_hud->SetStateInt( "blu_being_captured", gameLocal.mpGame.bBluBeingCaptured);
+	_hud->SetStateInt( "red_being_captured", gameLocal.mpGame.bRedBeingCaptured);
 	_hud->SetStateString ( "player_class", tempClassName);
 	_hud->SetStateInt ( "player_class_index", tempClassIndex);
 	_hud->SetStateInt ( "player_team", team);
@@ -9381,7 +9428,7 @@ void idPlayer::Move( void ) {
 		// a cleaner fix would be to make sure PMF_JUMP gets cleared, but this close to release, that will do
 		// (the AF becomes the active physics object, so physics don't run on idPlayer_Physics and that flag never gets cleared)
 		if ( health > 0 ) {
-			playerVocalize(Random, true, .25);
+			playerVocalize(Random, true, .1);
 			// don't use the sound broadcasting facility in StartSound, we only need unreliable, and we need to filter for local client prediction
 			if ( gameLocal.isServer || IsLocalClient() ) {
 
@@ -9608,7 +9655,36 @@ Called every tic for each player
 */
 void idPlayer::Think( void ) {
 	renderEntity_t *headRenderEnt;
+	if(hasFlag){ 
+		//I really think it's bad design to only have a multi return getPosition(). Or I'm just stupid and missing what I should be using instead. Wasted allocation on the idMat3
+		idVec3 origin;
+		idMat3 axis;
+		GetPosition(origin, axis);
+		if(idMath::Sqrt(idMath::Pow(flagPickupLocation.Dist(origin), 2)) <= 150) {
+			if(gameLocal.time % 50 == 0) {
+				if(gameLocal.mpGame.GetScoreForTeam(team) < 100) {
+					//gameLocal.Printf("Scoring %f", flagPickupLocation.Dist(origin));
+					if(gameLocal.mpGame.GetScoreForTeam(gameLocal.mpGame.OpposingTeam(team)) <= 0) {
+						gameLocal.mpGame.AddTeamScore(team, 1);				
+					}else{
+						gameLocal.mpGame.AddTeamScore(gameLocal.mpGame.OpposingTeam(team), -1);
+					}
+				}
+			}
+		}else{
+			if(team == 0) {
+				rvItemCTFFlag::ResetFlag(5);
+				gameLocal.mpGame.bRedBeingCaptured = 0;
+			}else{
+				rvItemCTFFlag::ResetFlag(4);
+				gameLocal.mpGame.bBluBeingCaptured = 0;
+			}
 
+			gameLocal.Printf("Dropping Flag");
+			StopSound(SND_CHANNEL_VOICE2, false );
+			hasFlag = false;
+		}
+	}
 	if ( talkingNPC ) {
 		if ( !talkingNPC.IsValid() ) {
 			talkingNPC = NULL;
@@ -10056,7 +10132,14 @@ idPlayer::Killed
 */
 void idPlayer::Killed( idEntity *inflictor, idEntity *attacker, int damage, const idVec3 &dir, int location ) {
 	float delay;
-
+	hasFlag = false;
+	if(team == 0) {
+		rvItemCTFFlag::ResetFlag(5);
+		gameLocal.mpGame.bRedBeingCaptured = 0;
+	}else{
+		rvItemCTFFlag::ResetFlag(4);
+		gameLocal.mpGame.bBluBeingCaptured = 0;
+	}
 	assert( !gameLocal.isClient );
 
 	// stop taking knockback once dead
@@ -10150,7 +10233,9 @@ void idPlayer::Killed( idEntity *inflictor, idEntity *attacker, int damage, cons
 	if ( weapon ) {					// cnicholson: Fix for crash if player dies while in vehicle
 		weapon->OwnerDied();		// get rid of weapon
 		if ( !noDrop ) {
-			DropWeapon( );				// drop the weapon as an item 
+			//SD BEGIN
+			//DropWeapon( );				// drop the weapon as an item 
+			//SD END
 		}
 		delete weapon;
 	}

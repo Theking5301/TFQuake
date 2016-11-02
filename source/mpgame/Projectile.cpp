@@ -868,7 +868,12 @@ bool idProjectile::Collide( const trace_t &collision, const idVec3 &velocity, bo
  				if ( damageDefName[0] != '\0' ) {
 					idVec3 dir = velocity;
 					dir.Normalize();
-					actualHitEnt->Damage( this, owner, dir, damageDefName, damagePower, CLIPMODEL_ID_TO_JOINT_HANDLE( collision.c.id ) );
+					//SD BEGIN
+					if(owner.GetEntity() == actualHitEnt && (strcmp(damageDefName, "damage_rocketSplash") == 0|| strcmp(damageDefName, "damage_rocketDirect") == 0)) {
+						actualHitEnt->Damage( this, owner, dir, damageDefName, damagePower, CLIPMODEL_ID_TO_JOINT_HANDLE( collision.c.id ) );
+					}else{
+						actualHitEnt->Damage( this, owner, dir, damageDefName, damagePower, CLIPMODEL_ID_TO_JOINT_HANDLE( collision.c.id ) );
+					}
 				}
 			}
 			return false;		

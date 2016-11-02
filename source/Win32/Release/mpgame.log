@@ -1,11 +1,220 @@
-﻿Build started 11/1/2016 4:08:00 AM.
+﻿Build started 11/1/2016 11:30:14 PM.
      1>Project "G:\TFQuake\source\mpgame.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Win32\Release\mpgame.unsuccessfulbuild".
+         Creating "Win32\Release\mpgame.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\Player.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc /Fp"Win32\Release\mpgame/mpgame.pch" /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\AF.cpp
+         AF.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D _CRT_SECURE_NO_WARNINGS /D GAME_MPAPI /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Release\mpgame/" /Fd"Win32\Release\mpgamex86.pdb" /Gd /TP /analyze- /errorReport:prompt mpgame\AFEntity.cpp mpgame\Actor.cpp mpgame\BrittleFracture.cpp mpgame\Camera.cpp mpgame\Effect.cpp mpgame\Entity.cpp mpgame\GameEdit.cpp mpgame\Game_Debug.cpp mpgame\Game_Log.cpp mpgame\Game_local.cpp mpgame\Game_network.cpp mpgame\Healing_Station.cpp mpgame\IK.cpp mpgame\Icon.cpp mpgame\IconManager.cpp mpgame\Instance.cpp mpgame\Item.cpp mpgame\Lagometer.cpp mpgame\Light.cpp mpgame\LipSync.cpp mpgame\Misc.cpp mpgame\Moveable.cpp mpgame\Mover.cpp mpgame\MultiplayerGame.cpp mpgame\Playback.cpp mpgame\Player.cpp mpgame\PlayerView.cpp mpgame\Player_Cheats.cpp mpgame\Player_States.cpp mpgame\Projectile.cpp mpgame\Pvs.cpp mpgame\SecurityCamera.cpp mpgame\Sound.cpp mpgame\SplineMover.cpp mpgame\TFQuake\Weapons\TFDemoGrenadeLauncher.cpp mpgame\TFQuake\Weapons\TFEyelander.cpp mpgame\TFQuake\Weapons\TFHeavyMinigun.cpp mpgame\TFQuake\Weapons\TFMedigun.cpp mpgame\TFQuake\Weapons\TFMelee.cpp mpgame\TFQuake\Weapons\TFScoutPistol.cpp mpgame\TFQuake\Weapons\TFScoutShotgun.cpp mpgame\TFQuake\Weapons\TFSecondaryPistol.cpp mpgame\TFQuake\Weapons\TFSecondaryShotgun.cpp mpgame\TFQuake\Weapons\TFSniperRifle.cpp mpgame\TFQuake\Weapons\TFSniperSMG.cpp mpgame\TFQuake\Weapons\TFSoldierRocketLauncher.cpp mpgame\TFQuake\Weapons\TFSyringeGun.cpp mpgame\Target.cpp mpgame\TramGate.cpp mpgame\Trigger.cpp mpgame\Weapon.cpp mpgame\WorldSpawn.cpp mpgame\ai\AAS.cpp mpgame\ai\AAS_Find.cpp mpgame\ai\AAS_debug.cpp mpgame\ai\AAS_pathing.cpp mpgame\ai\AAS_routing.cpp mpgame\ai\AAS_tactical.cpp mpgame\ai\AI.cpp mpgame\ai\AI_Actions.cpp mpgame\ai\AI_Announcements.cpp mpgame\ai\AI_Debug.cpp mpgame\ai\AI_Manager.cpp mpgame\ai\AI_Medic.cpp mpgame\ai\AI_Move.cpp mpgame\ai\AI_States.cpp mpgame\ai\AI_Tactical.cpp mpgame\ai\AI_Util.cpp mpgame\ai\AI_events.cpp mpgame\ai\AI_pathing.cpp mpgame\ai\Monster_Berserker.cpp mpgame\ai\Monster_BossBuddy.cpp mpgame\ai\Monster_BossMakron.cpp mpgame\ai\Monster_ConvoyGround.cpp mpgame\ai\Monster_ConvoyHover.cpp mpgame\ai\Monster_FailedTransfer.cpp mpgame\ai\Monster_Fatty.cpp mpgame\ai\Monster_Gladiator.cpp mpgame\ai\Monster_Grunt.cpp mpgame\ai\Monster_Gunner.cpp mpgame\ai\Monster_Harvester.cpp mpgame\ai\Monster_HarvesterDispersal.cpp mpgame\ai\Monster_HeavyHoverTank.cpp mpgame\ai\Monster_IronMaiden.cpp mpgame\ai\Monster_LightTank.cpp mpgame\ai\Monster_NetworkGuardian.cpp mpgame\ai\Monster_RepairBot.cpp mpgame\ai\Monster_Scientist.cpp mpgame\ai\Monster_Sentry.cpp mpgame\ai\Monster_SlimyTransfer.cpp mpgame\ai\Monster_StreamProtector.cpp mpgame\ai\Monster_StroggFlyer.cpp mpgame\ai\Monster_StroggHover.cpp mpgame\ai\Monster_StroggMarine.cpp mpgame\ai\Monster_TeleportDropper.cpp mpgame\ai\Monster_Turret.cpp mpgame\ai\Monster_TurretFlying.cpp mpgame\ai\VehicleAI.cpp mpgame\anim\Anim.cpp mpgame\anim\Anim_Blend.cpp mpgame\anim\Anim_Import.cpp mpgame\anim\Anim_Testmodel.cpp mpgame\client\ClientAFEntity.cpp mpgame\client\ClientEffect.cpp mpgame\client\ClientEntity.cpp mpgame\client\ClientModel.cpp mpgame\client\ClientMoveable.cpp mpgame\gamesys\Class.cpp mpgame\gamesys\DebugGraph.cpp mpgame\gamesys\Event.cpp mpgame\gamesys\SaveGame.cpp mpgame\gamesys\State.cpp mpgame\gamesys\SysCmds.cpp mpgame\gamesys\SysCvar.cpp mpgame\mp\Buying.cpp mpgame\mp\CTF.cpp mpgame\mp\GameState.cpp mpgame\mp\Tourney.cpp mpgame\mp\VoiceComms.cpp mpgame\mp\stats\StatEvent.cpp mpgame\mp\stats\StatManager.cpp mpgame\mp\stats\StatWindow.cpp mpgame\physics\Clip.cpp mpgame\physics\Force.cpp mpgame\physics\Force_Constant.cpp mpgame\physics\Force_Drag.cpp mpgame\physics\Force_Field.cpp mpgame\physics\Force_Spring.cpp mpgame\physics\Physics.cpp mpgame\physics\Physics_AF.cpp mpgame\physics\Physics_Actor.cpp mpgame\physics\Physics_Base.cpp mpgame\physics\Physics_Monster.cpp mpgame\physics\Physics_Parametric.cpp mpgame\physics\Physics_Particle.cpp mpgame\physics\Physics_Player.cpp mpgame\physics\Physics_RigidBody.cpp mpgame\physics\Physics_Static.cpp mpgame\physics\Physics_StaticMulti.cpp mpgame\physics\Physics_VehicleMonster.cpp mpgame\physics\Push.cpp mpgame\script\ScriptFuncUtility.cpp mpgame\script\Script_Compiler.cpp mpgame\script\Script_Interpreter.cpp mpgame\script\Script_Program.cpp mpgame\script\Script_Thread.cpp mpgame\spawner.cpp mpgame\vehicle\Vehicle.cpp mpgame\vehicle\VehicleAnimated.cpp mpgame\vehicle\VehicleController.cpp mpgame\vehicle\VehicleDriver.cpp mpgame\vehicle\VehicleMonster.cpp mpgame\vehicle\VehicleParts.cpp mpgame\vehicle\VehiclePosition.cpp mpgame\vehicle\VehicleRigid.cpp mpgame\vehicle\VehicleSpline.cpp mpgame\vehicle\VehicleStatic.cpp mpgame\vehicle\Vehicle_DropPod.cpp mpgame\vehicle\Vehicle_Walker.cpp mpgame\weapon\WeaponBlaster.cpp mpgame\weapon\WeaponDarkMatterGun.cpp mpgame\weapon\WeaponGauntlet.cpp mpgame\weapon\WeaponGrenadeLauncher.cpp mpgame\weapon\WeaponHyperblaster.cpp mpgame\weapon\WeaponLightningGun.cpp mpgame\weapon\WeaponMachinegun.cpp mpgame\weapon\WeaponNailgun.cpp mpgame\weapon\WeaponNapalmGun.cpp mpgame\weapon\WeaponRailgun.cpp mpgame\weapon\WeaponRocketLauncher.cpp mpgame\weapon\WeaponShotgun.cpp
+         AFEntity.cpp
+         Actor.cpp
+         BrittleFracture.cpp
+         Camera.cpp
+         Effect.cpp
+         Entity.cpp
+         GameEdit.cpp
+         Game_Debug.cpp
+         Game_Log.cpp
+         Game_local.cpp
+         Game_network.cpp
+         Healing_Station.cpp
+         IK.cpp
+         Icon.cpp
+         IconManager.cpp
+         Instance.cpp
+         Item.cpp
+         Lagometer.cpp
+         Light.cpp
+         LipSync.cpp
+         Generating Code...
+         Compiling...
+         Misc.cpp
+         Moveable.cpp
+         Mover.cpp
+         MultiplayerGame.cpp
+         Playback.cpp
          Player.cpp
+     1>mpgame\Player.cpp(9431): warning C4305: 'argument' : truncation from 'double' to 'float'
+         PlayerView.cpp
+         Player_Cheats.cpp
+         Player_States.cpp
+         Projectile.cpp
+         Pvs.cpp
+         SecurityCamera.cpp
+         Sound.cpp
+         SplineMover.cpp
+         TFDemoGrenadeLauncher.cpp
+         TFEyelander.cpp
+         TFHeavyMinigun.cpp
+         TFMedigun.cpp
+         TFMelee.cpp
+         TFScoutPistol.cpp
+         Generating Code...
+     1>g:\tfquake\source\idlib\math\curve.h(240): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(225): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(263): warning C4750: 'float __thiscall idCurve<class idVec3>::GetLengthBetweenKnots(int,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(285): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(240): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(225): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(263): warning C4750: 'float __thiscall idCurve<class idVec3>::GetLengthBetweenKnots(int,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(285): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(326): warning C4750: 'float __thiscall idCurve<class idVec3>::GetLengthBetweenKnots(int,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\mpgame\mover.cpp(2139): warning C4750: 'float __thiscall idCurve<class idVec3>::GetTimeForLength(float,float)const ': function with _alloca() inlined into a loop
+         Compiling...
+         TFScoutShotgun.cpp
+         TFSecondaryPistol.cpp
+         TFSecondaryShotgun.cpp
+         TFSniperRifle.cpp
+         TFSniperSMG.cpp
+         TFSoldierRocketLauncher.cpp
+         TFSyringeGun.cpp
+         Target.cpp
+         TramGate.cpp
+         Trigger.cpp
+         Weapon.cpp
+         WorldSpawn.cpp
+         AAS.cpp
+         AAS_Find.cpp
+         AAS_debug.cpp
+         AAS_pathing.cpp
+         AAS_routing.cpp
+         AAS_tactical.cpp
+         AI.cpp
+         AI_Actions.cpp
+         Generating Code...
+         Compiling...
+         AI_Announcements.cpp
+         AI_Debug.cpp
+         AI_Manager.cpp
+         AI_Medic.cpp
+         AI_Move.cpp
+         AI_States.cpp
+         AI_Tactical.cpp
+         AI_Util.cpp
+         AI_events.cpp
+         AI_pathing.cpp
+         Monster_Berserker.cpp
+         Monster_BossBuddy.cpp
+         Monster_BossMakron.cpp
+         Monster_ConvoyGround.cpp
+         Monster_ConvoyHover.cpp
+         Monster_FailedTransfer.cpp
+         Monster_Fatty.cpp
+         Monster_Gladiator.cpp
+         Monster_Grunt.cpp
+         Monster_Gunner.cpp
+         Generating Code...
+         Compiling...
+         Monster_Harvester.cpp
+         Monster_HarvesterDispersal.cpp
+         Monster_HeavyHoverTank.cpp
+         Monster_IronMaiden.cpp
+         Monster_LightTank.cpp
+         Monster_NetworkGuardian.cpp
+         Monster_RepairBot.cpp
+         Monster_Scientist.cpp
+         Monster_Sentry.cpp
+         Monster_SlimyTransfer.cpp
+         Monster_StreamProtector.cpp
+         Monster_StroggFlyer.cpp
+         Monster_StroggHover.cpp
+         Monster_StroggMarine.cpp
+         Monster_TeleportDropper.cpp
+         Monster_Turret.cpp
+         Monster_TurretFlying.cpp
+         VehicleAI.cpp
+         Anim.cpp
+         Anim_Blend.cpp
+         Generating Code...
+         Compiling...
+         Anim_Import.cpp
+         Anim_Testmodel.cpp
+         ClientAFEntity.cpp
+         ClientEffect.cpp
+         ClientEntity.cpp
+         ClientModel.cpp
+         ClientMoveable.cpp
+         Class.cpp
+         DebugGraph.cpp
+         Event.cpp
+         SaveGame.cpp
+         State.cpp
+         SysCmds.cpp
+         SysCvar.cpp
+         Buying.cpp
+         CTF.cpp
+         GameState.cpp
+         Tourney.cpp
+         VoiceComms.cpp
+         StatEvent.cpp
+         Generating Code...
+         Compiling...
+         StatManager.cpp
+         StatWindow.cpp
+         Clip.cpp
+         Force.cpp
+         Force_Constant.cpp
+         Force_Drag.cpp
+         Force_Field.cpp
+         Force_Spring.cpp
+         Physics.cpp
+         Physics_AF.cpp
+         Physics_Actor.cpp
+         Physics_Base.cpp
+         Physics_Monster.cpp
+         Physics_Parametric.cpp
+         Physics_Particle.cpp
+         Physics_Player.cpp
+         Physics_RigidBody.cpp
+         Physics_Static.cpp
+         Physics_StaticMulti.cpp
+         Physics_VehicleMonster.cpp
+         Generating Code...
+     1>g:\tfquake\source\idlib\math\curve.h(240): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(225): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(263): warning C4750: 'float __thiscall idCurve<class idVec3>::GetLengthBetweenKnots(int,int)const ': function with _alloca() inlined into a loop
+     1>g:\tfquake\source\idlib\math\curve.h(285): warning C4750: 'float __thiscall idCurve<class idVec3>::RombergIntegral(float,float,int)const ': function with _alloca() inlined into a loop
+         Compiling...
+         Push.cpp
+         ScriptFuncUtility.cpp
+         Script_Compiler.cpp
+         Script_Interpreter.cpp
+         Script_Program.cpp
+         Script_Thread.cpp
+         spawner.cpp
+         Vehicle.cpp
+         VehicleAnimated.cpp
+         VehicleController.cpp
+         VehicleDriver.cpp
+         VehicleMonster.cpp
+         VehicleParts.cpp
+         VehiclePosition.cpp
+         VehicleRigid.cpp
+         VehicleSpline.cpp
+         VehicleStatic.cpp
+         Vehicle_DropPod.cpp
+         Vehicle_Walker.cpp
+         WeaponBlaster.cpp
+         Generating Code...
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(347): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1008): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1302): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1336): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1347): warning C4702: unreachable code
+     1>g:\tfquake\source\mpgame\script\script_compiler.cpp(1379): warning C4702: unreachable code
+         Compiling...
+         WeaponDarkMatterGun.cpp
+         WeaponGauntlet.cpp
+         WeaponGrenadeLauncher.cpp
+         WeaponHyperblaster.cpp
+         WeaponLightningGun.cpp
+         WeaponMachinegun.cpp
+         WeaponNailgun.cpp
+         WeaponNapalmGun.cpp
+         WeaponRailgun.cpp
+         WeaponRocketLauncher.cpp
+         WeaponShotgun.cpp
+         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Win32\Release\mpgamex86.dll" /INCREMENTAL:NO /NOLOGO Win32\Release\idLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\mpgame\mpgame.def" /MANIFEST /ManifestFile:"Win32\Release\mpgamex86.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Win32\Release\mpgamex86.pdb" /MAP:"Win32\Release\mpgamex86.map" /MAPINFO:EXPORTS /STACK:"4194304" /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /TLBID:1 /BASE:"0x20000000" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Win32\Release\mpgame/Actor.obj
          Win32\Release\mpgame/AF.obj
@@ -185,11 +394,9 @@
          mpgame.vcxproj -> G:\TFQuake\source\Win32\Release\mpgamex86.dll
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"Win32\Release\mpgamex86.dll;#2" /manifest Win32\Release\mpgamex86.dll.intermediate.manifest
-       FinalizeBuildStatus:
-         Deleting file "Win32\Release\mpgame.unsuccessfulbuild".
-         Touching "Win32\Release\mpgame.lastbuildstate".
-     1>Done Building Project "G:\TFQuake\source\mpgame.vcxproj" (build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(574,5): error MSB6006: "mt.exe" exited with code 31.
+     1>Done Building Project "G:\TFQuake\source\mpgame.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:07.04
+Time Elapsed 00:02:16.51

@@ -119,6 +119,8 @@ idMultiplayerGame::idMultiplayerGame() {
 	privatePlayers = 0;
 
 	lastAnnouncerSound = AS_NUM_SOUNDS;
+	bRedBeingCaptured = false;
+	bBluBeingCaptured = false;
 }
 
 /*
@@ -663,7 +665,6 @@ void idMultiplayerGame::FlagCaptured( idPlayer *player ) {
 	if( !gameLocal.isClient ) {
 		AddTeamScore( player->team, 1 );
 		AddPlayerTeamScore( player, 5 );
-		
 // RITUAL BEGIN
 // squirrel: Mode-agnostic buymenus
 		if( gameLocal.mpGame.IsBuyingAllowedInTheCurrentGameMode() )
@@ -1159,6 +1160,9 @@ void idMultiplayerGame::UpdateTeamScoreboard( idUserInterface *scoreBoard ) {
 				( player->IsFriend( rankedPlayer ) ? I_FRIEND_ENABLED : I_FRIEND_DISABLED ),	// friend icon
 				flagString,																		// shouchard: twhitaker: updated steve's original flag system 
 				rankedPlayer->GetUserInfo()->GetString( "ui_name" ),							// name
+				//SD BEGIN
+				//unrankedPlayers[ i ]->classAsString().c_str(),							// clan
+				//SD END			
 				rankedPlayer->GetUserInfo()->GetString( "ui_clan" ),							// clan
 				rankedScore,										 							// score
 				playerState[ rankedPlayer->entityNumber ].fragCount,							// kills
@@ -1183,6 +1187,9 @@ void idMultiplayerGame::UpdateTeamScoreboard( idUserInterface *scoreBoard ) {
 			( player->spectating && player->IsPlayerMuted( unrankedPlayers[ i ] ) ? I_VOICE_DISABLED : I_VOICE_ENABLED ), // mute icon
 			( player->IsFriend( unrankedPlayers[ i ] ) ? I_FRIEND_ENABLED : I_FRIEND_DISABLED ),	// friend icon
 			unrankedPlayers[ i ]->GetUserInfo()->GetString( "ui_name" ),							// name
+			//SD BEGIN
+			//unrankedPlayers[ i ]->classAsString().c_str(),							// clan
+			//SD END
 			unrankedPlayers[ i ]->GetUserInfo()->GetString( "ui_clan" ),							// clan
 			"",																						// score
 			GetPlayerTime( unrankedPlayers[ i ] ),													// time

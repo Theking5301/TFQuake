@@ -2024,7 +2024,18 @@ bool rvItemCTFFlag::GiveToPlayer( idPlayer* player ) {
 	if ( player->spectating || ((gameLocal.mpGame.GetGameState())->GetMPGameState() != GAMEON && (gameLocal.mpGame.GetGameState())->GetMPGameState() != SUDDENDEATH && !cvarSystem->GetCVarBool( "g_testCTF" )) ) {
 		return false;
 	}
-
+	for(int i=0; i<gameLocal.mpGame.unrankedPlayers.Num(); i++) {
+		if(gameLocal.mpGame.GetUnrankedPlayer(i)->hasFlag) {
+			return false;
+		}
+	}
+	if(team != player->team && player->health > 0) {
+		player->hasFlag = true;
+		idVec3 origin;
+		idMat3 axis;
+		GetPosition(origin, axis);
+		player->flagPickupLocation = origin;
+	}
 	int teamPowerup;
 	int enemyPowerup;
 
@@ -2070,7 +2081,6 @@ bool rvItemCTFFlag::GiveToPlayer( idPlayer* player ) {
 			}
 			
 			ResetFlag( enemyPowerup );
-			
 			gameLocal.mpGame.FlagCaptured( player );
 		}
 		return false;

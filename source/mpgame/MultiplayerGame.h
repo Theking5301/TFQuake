@@ -309,6 +309,10 @@ public:
 	void			AddChatLine( const char *fmt, ... ) id_attribute((format(printf,2,3)));
 	void			PrintChatLine( const char *message, const bool teamChat );
 
+	
+//SD BEGIN
+	int				bRedBeingCaptured;
+	int				bBluBeingCaptured;
 // RITUAL BEGIN
 // squirrel: Mode-agnostic buymenus
 	void			OnBuyModeTeamVictory( int winningTeam );

@@ -723,7 +723,7 @@ entityDef player_marine
 	"weapon20_best"						"1"
 	"weapon20_cycle"					"1"	
 	
-	"def_weapon21"						"weapon_soldier_rocket_launcher"
+	"def_weapon21"						"weapon_soldier_rocketlauncher"
 	"weapon21_best"						"1"
 	"weapon21_cycle"					"1"	
 
@@ -744,7 +744,7 @@ entityDef player_marine
 	"weapon"						"weapon_blaster"
 	"current_weapon"					"0"
 
-	"pm_jumpheight"						"48"
+	"pm_jumpheight"						"50" //was 48
 	"pm_stepsize"						"16"
 	"pm_speed"						"160"  	//DOOM speed was 140
 	"pm_walkspeed"						"80"
@@ -767,7 +767,7 @@ entityDef player_marine
 	"pm_bboxwidth"						"32"
 	"pm_modelview"						"0"			// 0 == normal, 1 == view inside model, 2 == view inside model when dead
 	"pain_delay"						"0.5"		// how long to wait before playing pain sound
-	"respawn_delay"						"1.7"		// minimum delay for respawning after death
+	"respawn_delay"						"10"		// minimum delay for respawning after death
 
 	// stats
 	"health"						"100"

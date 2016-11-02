@@ -45,7 +45,7 @@ entityDef viewStyle_q3_rocketlauncher {
 //--------------------------------------------------------------------------------------------------------------------
 // Weapon Definition
 //--------------------------------------------------------------------------------------------------------------------
-entityDef weapon_soldier_rocket_launcher
+entityDef weapon_soldier_rocketlauncher
 {
 	"editor_menu"				"pickup"
 	"editor_color"				".3 .3 1"
@@ -57,11 +57,11 @@ entityDef weapon_soldier_rocket_launcher
 	"spawnclass"				"idItem"
 	"weaponclass"				"TFSoldierRocketLauncher"
 	"size"						"32 32 32"
-  	"model_view"				"weapon_soldier_rocket_launcher_view"
-  	"model_view_strogg"			"weapon_soldier_rocket_launcher_view_strogg"
-  	"model_world"				"weapon_soldier_rocket_launcher_world"
+  	"model_view"				"weapon_soldier_rocketlauncher_view"
+  	"model_view_strogg"			"weapon_soldier_rocketlauncher_view_strogg"
+  	"model_world"				"wweapon_soldier_rocketlauncher_world"
 	"model"						"models/weapons/rocketlauncher/w_rl.lwo"
-	"def_dropItem"				"weapon_soldier_rocket_launcher"
+	"def_dropItem"				"weapon_soldier_rocketlauncher"
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_rocketlauncher"
 
 	"joint_attach"				"RKT_ATTACHER"
@@ -69,14 +69,14 @@ entityDef weapon_soldier_rocket_launcher
 	"joint_view_barrel"			"muzzle_flash"
 	"joint_world_flash"			"muzzle_flash"
 
-	"inv_weapon"				"weapon_soldier_rocket_launcher"
+	"inv_weapon"				"weapon_soldier_rocketlauncher"
 	"inv_start_ammo_rocketlauncher"	"10"
 	"inv_item"					"1"
 	"inv_icon"					"gfx/guis/hud/icons/item_rocket.tga"
-	"inv_name"					"#str_117415"	
+	"inv_name"					"#str_107409"	
 
-	"fireRate"					".8" //perfect
-	"reloadRate"				".9" //was .8
+	"fireRate"					".8"
+	"reloadRate"				".92" //was .8
 	"spread"					"0"
 
 	"ammoRegenStep"				"1"
@@ -133,9 +133,9 @@ entityDef weapon_soldier_rocket_launcher
 	"net_syncPhysics"			"1"
 }
 
-entityDef moveable_item_soldier_rocket_launcher
+entityDef moveable_item_rocketlauncher
 {
-	"inherit"					"weapon_soldier_rocket_launcher"
+	"inherit"					"weapon_soldier_rocketlauncher"
 
 	"editor_rotatable"			"1"
 
@@ -149,9 +149,9 @@ entityDef moveable_item_soldier_rocket_launcher
 	"bouncyness"				"0"
 }
 
-entityDef weapon_soldier_rocket_launcher_mp
+entityDef weapon_soldier_rocketlauncher_mp
 {
-	"inherit"				"weapon_soldierrocketlauncher"
+	"inherit"				"weapon_soldier_rocketlauncher"
 	
 	//"muzzle_kick_time"			"0"
 	//"muzzle_kick_maxtime"			"0"
@@ -176,7 +176,7 @@ entityDef weapon_soldier_rocket_launcher_mp
 // Models
 //--------------------------------------------------------------------------------------------------------------------
 
-model weapon_soldier_rocket_launcher_view
+model weapon_soldier_rocketlauncher_view
 {
 	mesh						models/weapons/rocketlauncher/mesh.md5mesh
 
@@ -218,9 +218,9 @@ model weapon_soldier_rocket_launcher_view
 	anim ammo_pickup			models/weapons/rocketlauncher/ammo_pickup.md5anim
 }
 
-model weapon_soldier_rocket_launcher_strogg
+model wweapon_soldier_rocketlauncher_view_strogg
 {
-	inherit					weapon_soldier_rocket_launcher_view
+	inherit					weapon_rocketlauncher_view
 	
 	mesh					models/weapons/rocketlauncher/mesh_strogg.md5mesh
 
@@ -228,7 +228,7 @@ model weapon_soldier_rocket_launcher_strogg
 	channel torso			( *reload_rack *ram iris_bone_6 iris_bone_5 iris_bone_4 iris_bone_3 iris_bone_2 iris_bone_1 )
 }
 
-model weapon_soldier_rocket_launcher_world
+model weapon_soldier_rocketlauncher_world
 {
 	mesh					models/weapons/rocketlauncher/world/rocketlauncher.md5mesh
 	anim idle				models/weapons/rocketlauncher/world/idle.md5anim
@@ -408,7 +408,7 @@ entityDef damage_rocketDirect_mp
 {
 	"inherit"					"damage_rocketDirect"
 	"damage"					"90" //was 100
-	"knockback"					"110"
+	"knockback"					"130"
 }
 
 entityDef damage_rocketSplash 
@@ -431,7 +431,7 @@ entityDef damage_rocketSplash
 entityDef damage_rocketSplash_mp
 {
 	"inherit"					"damage_rocketSplash"
-	"knockback"					"110"
-	"damage"					"50" //was 100
+	"knockback"					"300"
+	"damage"					"60" //was 100
 	"radius"					"120"
 }
